@@ -29,8 +29,8 @@
 | column name | data type | details               |
 |-------------| --------- |---------------------- |
 | id          |  integer  | not null, primary key |
-| city_id     |  integer  | not null              |
-| host_id     |  integer  | not null              |
+| city_id     |  integer  | not null, indexed     |
+| host_id     |  integer  | not null, indexed     |
 | date        |  datetime | not null              |
 | time        |  datetime | not null              |
 | title       |  string   | not null              |
