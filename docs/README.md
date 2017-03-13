@@ -57,4 +57,5 @@ Note model
 ### Bonus Features (TBD)
 - [ ] Profile viewing available
 - [ ] Google map API integration for events
+- [ ] Add ability to choose home city
 - [ ] Add attendances view list on individual events

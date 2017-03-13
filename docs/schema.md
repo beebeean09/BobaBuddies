@@ -31,8 +31,8 @@
 | id          |  integer  | not null, primary key |
 | city_id     |  integer  | not null, indexed     |
 | host_id     |  integer  | not null, indexed     |
+| title       |  string   | not null              |
 | date        |  datetime | not null              |
 | time        |  datetime | not null              |
-| title       |  string   | not null              |
 | address     |  string   | not null              |
 | seats       |  integer  | not null              |

@@ -27,13 +27,13 @@
 
 # Routes
 
-| path                 | component                |
-| -------------------- | ------------------------ |
-| "/sign-in"           | AuthFormContainer        |
-| "/sign-up"           | AuthFormContainer        |
-| "/home"              | HomeContainer            |
-| "/cities"            | CitiesContainer          |
-| "/cities/:id"        | CityDetail               |
-| "/new-event          | EventForm                |
-| "/dashboard          | DashboardEventContainer  |
+| path                 | component                  |
+| -------------------- | -------------------------- |
+| "/sign-in"           | AuthFormContainer          |
+| "/sign-up"           | AuthFormContainer          |
+| "/home"              | HomeContainer              |
+| "/cities"            | CitiesContainer            |
+| "/cities/:id"        | CityDetail                 |
+| "/new-event          | EventForm                  |
+| "/dashboard          | DashboardEventContainer    |
 | "/dashboard/history  | DashboardHistoryContainer  |
