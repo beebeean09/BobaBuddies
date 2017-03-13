@@ -10,7 +10,7 @@
 | password_digest | string     | not null                  |
 | first_name      | string     | not null                  |
 | last_name       | string     |                           |
-| city_id         | integer    | not null                  |
+| city_id         | integer    |                           |
 | boba_choice     | string     |                           |
 | description     | text       |                           |
 | profile_image   | string     |                           |

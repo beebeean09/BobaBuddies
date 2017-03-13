@@ -48,8 +48,9 @@ Note model
 - [ ] Style cities page and individual cities page
 - [ ] Seed cities and events
 
-### Phase 3: Events Dashboard and Guest Login (2 days)
+### Phase 3: Events Dashboard, Join Events, and Guest Login (2 days)
 - [ ] Create a guest login
+- [ ] Ability to join events
 - [ ] Create a dashboard so users can see all events
   - [ ] Current events
   - [ ] Past events (History)
