@@ -50,7 +50,9 @@ Note model
 
 ### Phase 3: Events Dashboard and Guest Login (2 days)
 - [ ] Create a guest login
-- [ ] Create a dashboard so users can see all events (Past/Upcoming)
+- [ ] Create a dashboard so users can see all events
+  - [ ] Current events
+  - [ ] Past events (History)
 
 ### Bonus Features (TBD)
 - [ ] Profile viewing available
