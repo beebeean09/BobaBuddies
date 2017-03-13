@@ -1,6 +1,6 @@
 # BobaBuddies
 
-[Heroku Link]()
+[Heroku Link](https://bobabuddies.herokuapp.com/)
 
 ## Minimum Viable Product
 
@@ -15,11 +15,11 @@ BobaBuddies is a web application inspired by TeaWithStrangers built using Ruby o
 
 ## Design Docs
 
-- [View Wireframes]()
-- [React Components]()
-- [API Endpoints]()
-- [DB Schema]()
-- [Sample State]()
+- [View Wireframes](https://github.com/beebeean09/BobaBuddies/tree/master/docs/wireframes)
+- [React Components](https://github.com/beebeean09/BobaBuddies/blob/master/docs/component-hierarchy.md)
+- [API Endpoints](https://github.com/beebeean09/BobaBuddies/blob/master/docs/api-endpoints.md)
+- [DB Schema](https://github.com/beebeean09/BobaBuddies/blob/master/docs/schema.md)
+- [Sample State](https://github.com/beebeean09/BobaBuddies/blob/master/docs/sample-state.md)
 
 ## Implementation Timeline
 
@@ -55,7 +55,7 @@ Note model
   - [ ] Past events (History)
 
 ### Bonus Features (TBD)
-- [ ] Profile viewing available
+- [ ] User Profile viewing available
 - [ ] Google map API integration for events
 - [ ] Add ability to choose home city
 - [ ] Add attendances view list on individual events

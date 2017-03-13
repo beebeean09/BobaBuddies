@@ -1,3 +1,4 @@
+```js
 {
   currentUser: {
     id: 1,
@@ -16,9 +17,10 @@
       host_id: 2,
       title: "Milk Tea Lovers",
       date: 5/5/2017,
-      time: 12:30PMPST
+      time: 12:00 PM PST,
       address: "160 Spear St.",
       seats: 3
     }
   }
 }
+```
