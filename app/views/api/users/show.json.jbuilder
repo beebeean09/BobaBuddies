@@ -1,1 +1,1 @@
-json.extract! user, :id, :username
+json.extract! user, :id, :first_name, :boba_choice, :email, :host

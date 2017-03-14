@@ -25,10 +25,10 @@ BobaBuddies is a web application inspired by TeaWithStrangers built using Ruby o
 
 ### Phase 1: Backend Setup and Front End User Authentication (2 days)
 **Objective:** Functioning rails project with front-end Authentication
-- [ ] `User` model/migration
-- [ ] Back end authentication (session/password)
-- [ ] `StaticPages` controller and root view
-- [ ] Webpack & react/redux modules
+- [x] `User` model/migration
+- [x] Back end authentication (session/password)
+- [x] `StaticPages` controller and root view
+- [x] Webpack & react/redux modules
 - [ ] `APIUtil` to interact with the API
 - [ ] Redux cycle for frontend authentication
 - [ ] `User` signup/signin components
