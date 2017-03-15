@@ -12,3 +12,18 @@ export const fetchUser = id => (
     url: `/api/users/${id}`
   })
 );
+// 
+// export const demoUser = (user) => {
+//   $.ajax({
+//     method: 'GET',
+//     url: '/api/user',
+//     data: {
+//       user: {
+//         email: "bobabuddies@gmail.com",
+//         password: "bobaboba",
+//         first_name: "Buddy",
+//         host:
+//
+//     }
+//   })
+// }

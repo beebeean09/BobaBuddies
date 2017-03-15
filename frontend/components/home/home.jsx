@@ -1,17 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
+import { logout } from '../../actions/session_actions';
 
 const Home = ({currentUser}) => {
-  let button;
+
+  let mainButton;
+
   if (currentUser) {
-    button = <Link to="/cities">Let's get boba!</Link>;
-  } else {
-    button = <Link to="/sign-up">Let's get boba!</Link>;
-  }
+    mainButton = <Link to="/cities">Let's get boba!</Link>;
+    } else {
+    mainButton = <Link to="/sign-up">Let's get boba!</Link>;
+    }
 
   return(
     <div>
-      {button}
+      {mainButton}
     </div>
   );
 };
