@@ -9,6 +9,16 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidUpdate() {
+    this.redirectIfLoggedIn();
+  }
+
+  redirectIfLoggedIn() {
+    if (this.props.loggedIn) {
+      this.props.router.push("/");
+    }
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
@@ -19,12 +29,6 @@ class SessionForm extends React.Component {
     return e => {
       this.setState({[field]: e.target.value});
     };
-  }
-
-  redirectIfLoggedIn() {
-    if (this.props.loggedIn) {
-      this.props.router.push("/");
-    }
   }
 
   navLink() {
@@ -47,8 +51,6 @@ class SessionForm extends React.Component {
       </ul>
     );
   }
-
-
 
   render() {
     const inputName = this.props.formType === 'sign-up' ?
