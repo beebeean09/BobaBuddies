@@ -33,9 +33,9 @@ class SessionForm extends React.Component {
 
   navLink() {
     if (this.props.formType === "sign-in") {
-      return <Link to="/sign-up">Sign Up</Link>;
+      return <Link to="/sign-up">sign up</Link>;
     } else {
-      return <Link to="/sign-in">Sign In</Link>;
+      return <Link to="/sign-in">sign in</Link>;
     }
   }
 
@@ -53,8 +53,15 @@ class SessionForm extends React.Component {
   }
 
   render() {
+
+    const linkMessage = this.props.formType === 'sign-up' ?
+    "If you've already done this before, click the link here to" :
+    "If you've never signed up before, click the link here to";
+
     const inputName = this.props.formType === 'sign-up' ?
       <div>
+        {linkMessage} {this.navLink()}.
+        <br /><br />
         <label> First Name:
           <input
             type="text"
@@ -62,14 +69,16 @@ class SessionForm extends React.Component {
             onChange={this.update('first_name')}/>
         </label><br /><br />
       </div>
-       : <div></div>;
-
+       :
+       <div>
+         {linkMessage} {this.navLink()}.
+         <br /><br />
+       </div>;
 
     return (
       <div>
         <h1>Hello this is the session form!</h1>
 
-        Please {this.props.formType} or {this.navLink()}
         {this.renderErrors()}
         <form onSubmit={this.handleSubmit}>
           {inputName}
