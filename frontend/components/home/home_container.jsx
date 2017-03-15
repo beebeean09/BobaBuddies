@@ -3,7 +3,6 @@ import Home from './home';
 
 const mapStateToProps = ({ session }) => ({
   currentUser: session.currentUser,
-
 });
 
 
