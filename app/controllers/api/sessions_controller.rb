@@ -5,16 +5,13 @@ class Api::SessionsController < ApplicationController
     user_params[:email],
     user_params[:password]
     )
-    @user[:host] = true;
-    @user[:first_name] = "vivian"
-
 
     if @user
       login(@user)
-      render json: ["yay you signed up!"]
+      render json: ["yay you are signed in!"]
     else
       render(
-      json: ["Invalid username/password combination"],
+      json: ["Invalid email/password combination."],
       status: 401
       )
     end
@@ -27,7 +24,7 @@ class Api::SessionsController < ApplicationController
       render "api/users/show"
     else
       render(
-      json: ["Nobody signed in"],
+      json: ["Nobody signed in."],
       status: 404
       )
     end
