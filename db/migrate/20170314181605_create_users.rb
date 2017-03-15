@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :password_digest, null: false
       t.string :first_name, null: false
       t.string :last_name
-      t.boolean :host, null: false
+      t.boolean :host, null: false, default: false
       t.string :boba_choice
       t.integer :city_id
       t.string :profile_image

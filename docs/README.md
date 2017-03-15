@@ -29,7 +29,7 @@ BobaBuddies is a web application inspired by TeaWithStrangers built using Ruby o
 - [x] Back end authentication (session/password)
 - [x] `StaticPages` controller and root view
 - [x] Webpack & react/redux modules
-- [ ] `APIUtil` to interact with the API
+- [x] `APIUtil` to interact with the API
 - [ ] Redux cycle for frontend authentication
 - [ ] `User` signup/signin components
 - [ ] Style signup/signin components
