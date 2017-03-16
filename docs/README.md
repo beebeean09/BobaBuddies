@@ -36,7 +36,7 @@ BobaBuddies is a web application inspired by TeaWithStrangers built using Ruby o
 - [x] Create a guest login
 - [ ] Seed users for database
 - [x] Create Navbar component
-- [ ] Home component
+- [x] Home component
 
 ### Phase 2: Cities and Events Model, API, and Components (3 days)
 **Objective:** Cities are listed and events in those cities can be created, read, edited and destroyed through the API.
