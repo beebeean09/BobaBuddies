@@ -1,11 +1,13 @@
-.navbar-header {
-  padding: 10px 0;
+.navbar-header , #a {
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid grey;
   background-color: #75B3B3;
-  font: sans-serif
+  font: arial;
 }
+// #a {
+//   font: arial;
+// }
 
 .navbar-main-right, .navbar-main-left {
   display: flex;
