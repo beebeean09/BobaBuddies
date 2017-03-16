@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
-import DemologinContainer from '../demologin/demologin_container';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -62,11 +61,6 @@ class SessionForm extends React.Component {
     e.preventDefault();
     this.props.demoLogin();
   }
-  //
-  // const demoLogin =
-  // this.props.formType === 'sign-up' ?
-  // <button onClick={this.handleDemoLogin}>Demo Login</button> :
-  //   <div></div>;
 
   render() {
 
