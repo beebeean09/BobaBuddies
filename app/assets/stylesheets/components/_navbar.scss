@@ -1,0 +1,24 @@
+.navbar-header {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid grey;
+  background-color: #75B3B3;
+  font: sans-serif
+}
+
+.navbar-main-right, .navbar-main-left {
+  display: flex;
+  align-items: center;
+}
+
+.login-button {
+  display: flex;
+  margin: 5px 12px;
+  color: white
+}
+
+.navbar-main-left {
+  margin: 5px 12px;
+  color: white
+}

@@ -11,17 +11,18 @@ class Navbar extends React.Component {
     let navbarButton;
 
     if (this.props.currentUser) {
-      navbarButton = <button onClick={() => this.props.logout()}>Log Out</button>;
+      navbarButton = <button className="navbar-main-right" onClick={() => this.props.logout()}>Log Out</button>;
     } else {
       navbarButton =
-      <div>
-        <Link to="/sign-in">Sign In</Link>
-        <Link to="/sign-up">Sign Up</Link>
+      <div className="navbar-main-right">
+        <Link className="login-button" to="/sign-in">Sign In</Link>
+        <Link className="login-button" to="/sign-up">Sign Up</Link>
       </div>;
     }
 
     return(
-      <div>
+      <div className="navbar-header">
+        <p className="navbar-main-left">Boba Buddies</p>
         {navbarButton}
       </div>
     );

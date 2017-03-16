@@ -13,7 +13,7 @@ const Home = ({currentUser}) => {
     }
 
   return(
-    <div>
+    <div className="home-container">
       {mainButton}
     </div>
   );

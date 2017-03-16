@@ -56,6 +56,7 @@ Note model
 - [ ] Create a dashboard so users can see all events
   - [ ] Current events
   - [ ] Past events (History)
+- [ ] Footer Component
 
 ### Bonus Features (TBD)
 - [ ] User Profile viewing available
