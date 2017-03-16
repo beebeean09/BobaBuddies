@@ -2,6 +2,8 @@ $serif: 'Delius Swash Caps', serif;
 $sans-serif: arial, helvetica, sans-serif;
 
 .boba-buddies-text {
+  display: flex;
+  align-items: center;
   font-family: $serif;
   color: white;
   font-size: 22px;

@@ -1,5 +1,5 @@
 .navbar-header {
-  padding: 20px 40px;
+  padding: 15px 34px;
   display: flex;
   justify-content: space-between;
   background-color: #75B3B3;
@@ -8,18 +8,30 @@
 
 .navbar-main-right, .navbar-main-left {
   display: flex;
-  align-items: center;
+  align-content: center;
 }
 
 
-
-.login-button {
+.log-button {
   display: flex;
-  margin: 5px 12px;
-  color: white
+  margin: 4px 9px;
+  color: white;
+  cursor: pointer;
+  background: none;
+  padding: 14px 8px;
+  font-size: 18px;
 }
 
+.log-button:hover {
+  padding: 14px 8px;
+  border-radius: 7px;
+  background: #91999A;
+}
+
+// 707171, #5A6465
 .navbar-main-left {
-  margin: 5px 12px;
-  color: white
+  display: flex;
+  align-items: center;
+  margin: auto 12px;
+  padding: 3px 3px;
 }

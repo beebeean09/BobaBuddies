@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import NavbarContainer from '../navbar/navbar';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -86,35 +87,40 @@ class SessionForm extends React.Component {
        </div>;
 
     return (
-      <div className="session-form-container">
-        <h1>Hello this is the session form!</h1>
-        {this.renderErrors()}
+      <div>
+        <div>
+          <NavbarContainer />
+        </div>
+        <div className="session-form-container">
+          <h1>Hello this is the session form!</h1>
+          {this.renderErrors()}
 
-        <form onSubmit={this.handleDemoLogin}>
-          <input type="submit" value="Click here for demo" />
-        </form>
+          <form onSubmit={this.handleDemoLogin}>
+            <input type="submit" value="Click here for demo" />
+          </form>
 
-        <form onSubmit={this.handleSubmit}>
-          {inputName}
-          <label>Email Address:
-            <input
-              type="text"
-              value={this.state.email}
-              onChange={this.update('email')}/>
-          </label>
-          <br />
-          <br />
-          <label>Password:
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.update('password')}/>
-          </label>
-          <br /><br />
-          <input type="submit" value="Submit"/>
-        </form>
+          <form onSubmit={this.handleSubmit}>
+            {inputName}
+            <label>Email Address:
+              <input
+                type="text"
+                value={this.state.email}
+                onChange={this.update('email')}/>
+            </label>
+            <br />
+            <br />
+            <label>Password:
+              <input
+                type="password"
+                value={this.state.password}
+                onChange={this.update('password')}/>
+            </label>
+            <br /><br />
+            <input type="submit" value="Submit"/>
+          </form>
 
-        <Link to="/">Back to Home</Link>
+          <Link to="/">Back to Home</Link>
+        </div>
       </div>
     );
   }

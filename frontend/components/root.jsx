@@ -5,6 +5,7 @@ import App from './app';
 import SessionFormContainer from './session_form/session_form_container';
 import { clearErrors } from '../actions/session_actions';
 import HomeContainer from './home/home_container';
+import NavbarContainer from './navbar/navbar';
 
 
 const Root = ({ store }) => {

@@ -13,7 +13,7 @@
   },
   "scripts": {
     "webpack": "webpack --watch",
-    "postinstall": "webpack"
+    "heroku-postbuild": "webpack --config webpack.config.prod.js"
   },
   "repository": {
     "type": "git",
