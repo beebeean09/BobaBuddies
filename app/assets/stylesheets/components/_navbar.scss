@@ -1,18 +1,17 @@
-.navbar-header , #a {
+.navbar-header {
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   background-color: #75B3B3;
-  font: arial;
+  font-family: arial;
 }
-// #a {
-//   font: arial;
-// }
 
 .navbar-main-right, .navbar-main-left {
   display: flex;
   align-items: center;
 }
+
+
 
 .login-button {
   display: flex;

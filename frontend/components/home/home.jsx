@@ -7,16 +7,16 @@ const Home = ({currentUser}) => {
   let mainButton;
 
   if (currentUser) {
-    mainButton = <Link to="/cities"
-      className="home-container-links">Let's get boba!</Link>;
+    mainButton = <Link to="/cities">Let's get boba!</Link>;
     } else {
-    mainButton = <Link to="/sign-up"
-      className="home-container-links">Let's get boba!</Link>;
+    mainButton = <Link to="/sign-up">Let's get boba!</Link>;
     }
 
   return(
     <div className="home-container">
-      {mainButton}
+      <div className="home-container-links">
+        {mainButton}
+      </div>
     </div>
   );
 };

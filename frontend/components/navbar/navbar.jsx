@@ -22,7 +22,7 @@ class Navbar extends React.Component {
 
     return(
       <div className="navbar-header">
-        <p className="navbar-main-left">Boba Buddies</p>
+        <p className="navbar-main-left" className="boba-buddies-text">Boba Buddies</p>
         {navbarButton}
       </div>
     );
