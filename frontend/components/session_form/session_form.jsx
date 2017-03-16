@@ -39,9 +39,9 @@ class SessionForm extends React.Component {
 
   navLink() {
     if (this.props.formType === "sign-in") {
-      return <Link to="/sign-up">sign up</Link>;
+      return <Link to="/sign-up">If you've never signed up before, click the link here to sign up.</Link>;
     } else {
-      return <Link to="/sign-in">sign in</Link>;
+      return <Link to="/sign-in">If you've already done this before, click the link here to sign-in.</Link>;
     }
   }
 
@@ -65,13 +65,9 @@ class SessionForm extends React.Component {
 
   render() {
 
-    const linkMessage = this.props.formType === 'sign-up' ?
-    "If you've already done this before, click the link here to" :
-    "If you've never signed up before, click the link here to";
-
     const inputName = this.props.formType === 'sign-up' ?
       <div>
-        {linkMessage} {this.navLink()}.
+        {this.navLink()}
         <br /><br />
         <label> First Name:
           <input
@@ -82,44 +78,59 @@ class SessionForm extends React.Component {
       </div>
        :
        <div>
-         {linkMessage} {this.navLink()}.
+         {this.navLink()}
          <br /><br />
        </div>;
 
+    const greeting = this.props.formType === 'sign-up' ?
+      <div className="greeting-container">
+        <h1>Hello, join us for boba!</h1>
+        <h2>We will find you a boba buddy in no time!</h2>
+      </div> :
+      <div className="greeting-container">
+        <h1>Welcome back!</h1>
+        <h2>Your boba buddies are waiting for you!</h2>
+      </div>;
+
     return (
-      <div>
+      <div >
         <div>
           <NavbarContainer />
         </div>
-        <div className="session-form-container">
-          <h1>Hello this is the session form!</h1>
-          {this.renderErrors()}
+        <div className="session-form-main-container">
+          <div className="session-form-container">
+            <div className="session-form-greeting">
 
-          <form onSubmit={this.handleDemoLogin}>
-            <input type="submit" value="Click here for demo" />
-          </form>
+            </div>
+            {greeting}
+            {this.renderErrors()}
 
-          <form onSubmit={this.handleSubmit}>
-            {inputName}
-            <label>Email Address:
-              <input
-                type="text"
-                value={this.state.email}
-                onChange={this.update('email')}/>
-            </label>
-            <br />
-            <br />
-            <label>Password:
-              <input
-                type="password"
-                value={this.state.password}
-                onChange={this.update('password')}/>
-            </label>
-            <br /><br />
-            <input type="submit" value="Submit"/>
-          </form>
+            <form onSubmit={this.handleDemoLogin}>
+              <input type="submit" value="Click here to login as a guest." />
+            </form>
 
-          <Link to="/">Back to Home</Link>
+            <form onSubmit={this.handleSubmit}>
+              {inputName}
+              <label>Email Address:
+                <input
+                  type="text"
+                  value={this.state.email}
+                  onChange={this.update('email')}/>
+              </label>
+              <br />
+              <br />
+              <label>Password:
+                <input
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}/>
+              </label>
+              <br /><br />
+              <input type="submit" value="Submit"/>
+            </form>
+
+            <Link to="/">Back to Home</Link>
+          </div>
         </div>
       </div>
     );
