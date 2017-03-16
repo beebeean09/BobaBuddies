@@ -86,7 +86,7 @@ class SessionForm extends React.Component {
        </div>;
 
     return (
-      <div>
+      <div className="session-form">
         <h1>Hello this is the session form!</h1>
         {this.renderErrors()}
 
