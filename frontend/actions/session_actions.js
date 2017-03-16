@@ -5,6 +5,10 @@ export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 export const CLEAR_ERRORS = "CLEAR ERRORS";
 
+const demo = { user: {
+  email: "buddies@gmail.com",
+  password: "bobaboba" }};
+
 export const signup = currentUser => dispatch => (
   UserAPIUtil.signup(currentUser)
     .then(user => dispatch(receiveCurrentUser(user)),
@@ -19,6 +23,10 @@ export const login = currentUser => dispatch => (
 
 export const logout = () => dispatch => (
   SessionAPIUtil.logout().then(user => dispatch(receiveCurrentUser(null)))
+);
+
+export const demoLogin = () => dispatch => (
+  SessionAPIUtil.demoLogin().then(currentUser => dispatch(receiveCurrentUser(currentUser)))
 );
 
 export const receiveCurrentUser = currentUser => ({

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import DemologinContainer from '../demologin/demologin_container';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -7,10 +8,15 @@ class SessionForm extends React.Component {
 
     this.state = { email: "", password: "", first_name: "", host: false};
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
 
   componentDidUpdate() {
     this.redirectIfLoggedIn();
+  }
+
+  componentWillMount() {
+    this.props.clearErrors;
   }
 
   redirectIfLoggedIn() {
@@ -52,6 +58,16 @@ class SessionForm extends React.Component {
     );
   }
 
+  handleDemoLogin(e) {
+    e.preventDefault();
+    this.props.demoLogin();
+  }
+  //
+  // const demoLogin =
+  // this.props.formType === 'sign-up' ?
+  // <button onClick={this.handleDemoLogin}>Demo Login</button> :
+  //   <div></div>;
+
   render() {
 
     const linkMessage = this.props.formType === 'sign-up' ?
@@ -78,11 +94,14 @@ class SessionForm extends React.Component {
     return (
       <div>
         <h1>Hello this is the session form!</h1>
-
         {this.renderErrors()}
+
+        <form onSubmit={this.handleDemoLogin}>
+          <input type="submit" value="Click here for demo" />
+        </form>
+
         <form onSubmit={this.handleSubmit}>
           {inputName}
-
           <label>Email Address:
             <input
               type="text"

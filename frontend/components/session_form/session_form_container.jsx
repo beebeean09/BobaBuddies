@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SessionForm from './session_form';
-import { login, logout, signup } from '../../actions/session_actions';
+import { login, logout, signup, demoLogin, clearErrors } from '../../actions/session_actions';
 
 const mapStateToProps = ({session}) => ({
   currentUser: session.currentUser,
@@ -14,6 +14,8 @@ const mapDispatchToProps = (dispatch, {location}) => {
   const formType = location.pathname.slice(1);
   const processForm = (formType === 'sign-in') ? login : signup;
   return {
+    clearErrors: () => dispatch(clearErrors()),
+    demoLogin: () => dispatch(demoLogin()),
     processForm: user => dispatch(processForm(user)),
     // login: guest => dispatch(login(guest)),
     formType
