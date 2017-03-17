@@ -12,7 +12,7 @@
  - CityIndex
  - CityDetail
 
-**CityDetail**
+**CityEventDetailContainer**
  - EventIndex
 
 **NewEventContainer**
@@ -33,7 +33,7 @@
 | "/sign-up"           | AuthFormContainer          |
 | "/home"              | HomeContainer              |
 | "/cities"            | CitiesContainer            |
-| "/cities/:id"        | CityDetail                 |
-| "/new-event          | EventForm                  |
+| "/cities/:id"        | CityDetailEventContainer   |
+| "/new-event          | NewEventContainer          |
 | "/dashboard          | DashboardEventContainer    |
 | "/dashboard/history  | DashboardHistoryContainer  |

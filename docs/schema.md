@@ -36,3 +36,11 @@
 | time        |  datetime | not null              |
 | address     |  string   | not null              |
 | seats       |  integer  | not null              |
+
+## attendances
+
+| column name | data type | details               |
+|-------------| --------- |---------------------- |
+| id          |  integer  | not null, primary key |
+| user_id     |  integer  | not null, indexed     |
+| event_id    |  integer  | not null, indexed     |

@@ -102,9 +102,6 @@ class SessionForm extends React.Component {
 
     return (
       <div >
-        <div>
-          <NavbarContainer />
-        </div>
         <div className="session-form-main-container" >
 
           {greeting}
@@ -150,9 +147,9 @@ class SessionForm extends React.Component {
             <br /><br />
             <input className="session-form-submit-button" type="submit" value="Submit"/>
           </form>
-          <br />
+          <br /><br />
           <form className="session-form-demo" onSubmit={this.handleDemoLogin}>
-            <input type="submit" value="Click here to sign in as a guest." />
+            <input className="" type="submit" value="Click here to sign in as a guest." />
           </form>
         </div>
       </div>

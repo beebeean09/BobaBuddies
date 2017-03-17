@@ -1,0 +1,2 @@
+class AddEventIdToEvent < ApplicationRecord
+end

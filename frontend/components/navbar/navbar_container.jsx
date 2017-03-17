@@ -7,8 +7,11 @@ const mapStateToProps = ({ session }) => ({
   loggedIn: Boolean(session.currentUser)
 });
 
-const mapDispatchToProps = (dispatch) => ({
-    logout: () => dispatch(logout())
-});
+const mapDispatchToProps = (dispatch, {location}) => {
+  return {
+    logout: () => dispatch(logout()),
+    demoLogin: () => dispatch(demoLogin())
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

@@ -6,13 +6,17 @@ class Navbar extends React.Component {
   constructor(props) {
     super(props);
 
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
 
+  handleDemoLogin(e) {
+    e.preventDefault();
+    this.props.demoLogin();
+  }
 
   render() {
     let navbarButton;
 
-    // debugger;
     if (this.props.currentUser) {
       navbarButton = <button className="navbar-main-right" className="log-button" onClick={() => this.props.logout()}>Log Out</button>;
     } else {
@@ -20,7 +24,9 @@ class Navbar extends React.Component {
       <div className="navbar-main-right">
         <Link className="log-button" to="/sign-in">Sign In</Link>
         <Link className="log-button" to="/sign-up">Sign Up</Link>
-        <button className="log-button" onClick={() => this.props.demoLogin()}>Demo Login</button>
+        <form  onSubmit={this.handleDemoLogin}>
+          <input className="log-button" type="submit" value="Demo Login" />
+        </form>
       </div>;
     }
     return(

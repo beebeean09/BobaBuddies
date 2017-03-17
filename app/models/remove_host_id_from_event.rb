@@ -1,0 +1,2 @@
+class RemoveHostIdFromEvent < ApplicationRecord
+end
