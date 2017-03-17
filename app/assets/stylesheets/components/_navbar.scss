@@ -11,6 +11,12 @@
   align-content: center;
 }
 
+.navbar-logo {
+  background: none;
+  width: 51px;
+  height: auto;
+}
+
 
 .log-button {
   display: flex;
@@ -18,12 +24,12 @@
   color: white;
   cursor: pointer;
   background: none;
-  padding: 14px 8px;
-  font-size: 18px;
+  padding: 10px 8px;
+  font-size: 21px;
 }
 
 .log-button:hover {
-  padding: 14px 8px;
+  padding: 10px 8px;
   border-radius: 7px;
   background: #91999A;
 }

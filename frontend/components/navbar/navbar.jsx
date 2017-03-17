@@ -25,7 +25,10 @@ class Navbar extends React.Component {
     }
     return(
       <div className="navbar-header">
-        <Link to="/" className="navbar-main-left" className="boba-buddies-text">Boba Buddies</Link>
+        <div className="navbar-main-left">
+          <img className="navbar-logo" src="assets/bobaIcon2.png" alt="Milk Tea Boba" />
+          <Link to="/" className="boba-buddies-text">Boba Buddies</Link>
+        </div>
         {navbarButton}
       </div>
     );
