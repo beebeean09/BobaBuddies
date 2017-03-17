@@ -28,7 +28,7 @@ export const demoLogin = () => {
     url: '/api/session',
     data:
       { user: {
-        email: "buddies@gmail.com",
+        email: "bobabuddies@gmail.com",
         password: "bobaboba",
         first_name: "Buddy",
         host: false
