@@ -31,6 +31,8 @@
       padding: 8px 170px;
       border-radius: 7px;
       text-align: center;
+      background: ghostwhite;
+      z-index: 1;
     }
 
     .session-form-submit-button {
@@ -48,10 +50,6 @@
       color: white;
       text-align: center;
     }
-    //
-    // .session-form-navlink-main, .session-form-navlink-main {
-    //   margin: 0;
-    // }
 
     .session-form-navlink {
       text-align: center;
@@ -66,11 +64,6 @@
     .session-form-container input {
       margin: 10px;
     }
-
-
-
-
-
 
 
 }

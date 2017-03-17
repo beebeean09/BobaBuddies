@@ -6,20 +6,8 @@ class Navbar extends React.Component {
   constructor(props) {
     super(props);
 
-    // this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   this.props.
-  // }
-
-  // handleDemoLogin(e) {
-  //   e.preventDefault();
-  //   this.props.demoLogin();
-  // }
-  // <form onSubmit={this.handleDemoLogin}>
-  //   <input className="log-button" type="submit" value="Demo Login" />
-  // </form>
 
   render() {
     let navbarButton;
