@@ -27,6 +27,16 @@ class User < ApplicationRecord
 
   before_validation :ensure_session_token
 
+  has_many :attendances
+  
+  has_many :events, through: :attendances
+
+  has_many :hosted_events,
+    primary_key: :id,
+    foreign_key: :host_id,
+    class_name: :Event
+
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)

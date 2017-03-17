@@ -4,9 +4,9 @@
 #
 #  id         :integer          not null, primary key
 #  user_id    :integer          not null
-#  host_id    :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  event_id   :integer          not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
