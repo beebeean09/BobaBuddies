@@ -39,9 +39,17 @@ class SessionForm extends React.Component {
 
   navLink() {
     if (this.props.formType === "sign-in") {
-      return <Link to="/sign-up">If you've never signed up before, click the link here to sign up.</Link>;
+      return (
+      <div className="session-form-navlink">
+        <Link to="/sign-up">If you've never signed up before, click the link here to sign up.</Link>
+      </div>
+      );
     } else {
-      return <Link to="/sign-in">If you've already done this before, click the link here to sign-in.</Link>;
+      return (
+      <div className="session-form-navlink">
+        <Link to="/sign-in">If you've already done this before, click the link here to sign-in.</Link>
+      </div>
+      );
     }
   }
 
@@ -66,29 +74,29 @@ class SessionForm extends React.Component {
   render() {
 
     const inputName = this.props.formType === 'sign-up' ?
-      <div>
+      <div className="session-form-navlink-main">
         {this.navLink()}
-        <br /><br />
-        <label> First Name:
+        <label>
           <input
+            className="session-form-input"
             type="text"
             value={this.state.first_name}
+            placeholder="First Name"
             onChange={this.update('first_name')}/>
         </label><br /><br />
       </div>
        :
-       <div>
+       <div className="session-form-navlink-main">
          {this.navLink()}
-         <br /><br />
        </div>;
 
     const greeting = this.props.formType === 'sign-up' ?
       <div className="greeting-container">
-        <h1>Hello, join us for boba!</h1>
+        <h1>Join us for boba!</h1>
         <h2>We will find you a boba buddy in no time!</h2>
       </div> :
       <div className="greeting-container">
-        <h1>Welcome back!</h1>
+        <h1>Hi there, welcome back!</h1>
         <h2>Your boba buddies are waiting for you!</h2>
       </div>;
 
@@ -97,40 +105,52 @@ class SessionForm extends React.Component {
         <div>
           <NavbarContainer />
         </div>
-        <div className="session-form-main-container">
-          <div className="session-form-container">
-            <div className="session-form-greeting">
+        <div className="session-form-main-container" >
 
-            </div>
-            {greeting}
-            {this.renderErrors()}
+          {greeting}
+          {this.renderErrors()}
 
-            <form onSubmit={this.handleDemoLogin}>
-              <input type="submit" value="Click here to login as a guest." />
-            </form>
 
-            <form onSubmit={this.handleSubmit}>
-              {inputName}
-              <label>Email Address:
-                <input
-                  type="text"
-                  value={this.state.email}
-                  onChange={this.update('email')}/>
-              </label>
-              <br />
-              <br />
-              <label>Password:
-                <input
-                  type="password"
-                  value={this.state.password}
-                  onChange={this.update('password')}/>
-              </label>
-              <br /><br />
-              <input type="submit" value="Submit"/>
-            </form>
-
-            <Link to="/">Back to Home</Link>
+          <div className="session-form-navlink-main">
+            {this.navLink()}
           </div>
+
+          <form onSubmit={this.handleSubmit}>
+              {this.props.formType === 'sign-up' ?
+              <div>
+                <label>
+                  <input
+                    className="session-form-input"
+                    type="text"
+                    value={this.state.first_name}
+                    placeholder="First Name"
+                    onChange={this.update('first_name')}/>
+                </label>
+                <br /><br />
+            </div>
+            :
+          <div></div>}
+            <label>
+              <input
+                className="session-form-input"
+                type="text"
+                value={this.state.email}
+                placeholder="Email Address"
+                onChange={this.update('email')}/>
+            </label>
+            <br />
+            <br />
+            <label>
+              <input
+                className="session-form-input"
+                type="password"
+                value={this.state.password}
+                placeholder="Password"
+                onChange={this.update('password')}/>
+            </label>
+            <br /><br />
+            <input className="session-form-submit-button" type="submit" value="Submit"/>
+          </form>
         </div>
       </div>
     );
