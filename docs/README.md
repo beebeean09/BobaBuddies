@@ -49,7 +49,7 @@ Note model
   - CityEventIndexContainer
     - [ ] `CityEventIndex`
   - NewEventContainer
-    - [ ] `EventForm`
+    - [ ] `NewEventForm`
 - [ ] Style cities page and individual cities page
 - [ ] Seed test data
 - [ ] Seed cities and events

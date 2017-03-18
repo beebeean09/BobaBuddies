@@ -7,10 +7,12 @@ const mapStateToProps = ({ session }) => ({
   loggedIn: Boolean(session.currentUser)
 });
 
-const mapDispatchToProps = (dispatch, {location}) => {
+const mapDispatchToProps = (dispatch, replace) => {
+  // const url = location.pathname
   return {
     logout: () => dispatch(logout()),
-    demoLogin: () => dispatch(demoLogin())
+    demoLogin: () => dispatch(demoLogin()),
+    replace
   };
 };
 

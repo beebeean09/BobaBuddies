@@ -9,7 +9,6 @@ export const CitiesReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_CITIES:
-    debugger;
       return merge({}, action.cities);
     default:
       return state;

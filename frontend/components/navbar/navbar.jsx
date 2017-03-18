@@ -7,6 +7,16 @@ class Navbar extends React.Component {
     super(props);
 
     this.handleDemoLogin = this.handleDemoLogin.bind(this);
+    this.handleLogout = this.handleLogout.bind(this);
+  }
+
+  // componentDidUpdate() {
+  //   this.redirectIfLoggedOut();
+  // }
+  //
+  handleLogout(router) {
+    this.props.logout();
+    this.props.router.push('/');
   }
 
   handleDemoLogin(e) {
@@ -16,9 +26,11 @@ class Navbar extends React.Component {
 
   render() {
     let navbarButton;
+    const { router } = this.props;
+    // debugger;
 
     if (this.props.currentUser) {
-      navbarButton = <button className="navbar-main-right" className="log-button" onClick={() => this.props.logout()}>Log Out</button>;
+      navbarButton = <button className="navbar-main-right" className="log-button" onClick={() => this.handleLogout(router)}>Log Out</button>;
     } else {
       navbarButton =
       <div className="navbar-main-right">
