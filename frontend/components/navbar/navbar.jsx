@@ -14,6 +14,7 @@ class Navbar extends React.Component {
     this.props.demoLogin();
   }
 
+
   render() {
     let navbarButton;
     // debugger;
@@ -33,7 +34,9 @@ class Navbar extends React.Component {
     return(
       <div className="navbar-header">
         <div className="navbar-main-left">
-          <img className="navbar-logo" src="assets/bobaIcon2.png" alt="Milk Tea Boba" />
+          <a href="#/">
+            <img className="navbar-logo" src="assets/bobaIcon2.png" alt="Milk Tea Boba" />
+          </a>
           <Link to="/" className="boba-buddies-text">Boba Buddies</Link>
         </div>
         {navbarButton}
