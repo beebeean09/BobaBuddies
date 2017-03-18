@@ -19,16 +19,6 @@ const Root = ({ store }) => {
     }
   };
 
-  // const _redirectIfLoggedOut = (nextState, replace) => {
-  //   // const currentUser = store.getState().session.currentUser;
-  //   //   store.dispatch(clearErrors());
-  //   if (!!currentUser) {
-  //     replace('/');
-  //   }
-  // };
-
-
-
   return (
     <Provider store={store}>
       <Router history={hashHistory}>
