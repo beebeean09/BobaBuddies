@@ -10,7 +10,6 @@
 
 **CityIndexContainer**
  - CityIndex
- - CityIndexDetail
 
 **CityEventIndexContainer**
  - CityEventIndex

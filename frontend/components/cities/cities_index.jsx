@@ -2,15 +2,6 @@ import React from 'react';
 import { withRouter } from 'react-router';
 
 class CitiesIndex extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //
-  //   this.handleClick = this.handleClick.bind(this);
-  // }
-
-  // handleClick(router, url) {
-  //   router.push(url);
-  // }
 
   componentDidMount() {
     this.props.fetchAllCities();
@@ -22,23 +13,13 @@ class CitiesIndex extends React.Component {
 
   render() {
     // debugger;
-    // const cityList = this.props.cities.map(city => (
-    //   <ul>
-    //     <CityIndexDetail
-    //       key={city.id}
-    //       onClick={this.handleClick()}
-    //       value={city.name} />
-    //   </ul>
-    // ));
 
     const {router} = this.props;
 
     const cityList = this.props.cities.map(city => (
-      <div key={city.id} className="city-index-container">
+      <div key={city.id} className="city-detail-container">
         <a onClick={this.handleClick.bind(this, router, `/`)}>
-          <div>
-            <h1>{city.name}</h1>
-          </div>
+          <h1 className="city-detail-name">{city.name}</h1>
           <img src={`./assets/${city.image}`} alt={`${city.image}`}/>
         </a>
       </div>
@@ -46,9 +27,13 @@ class CitiesIndex extends React.Component {
 
     return (
       <div>
-        {cityList}
+        <div className="city-index-header">
+          <p>Choose a city to find your closest boba buddies!</p>
+        </div>
+        <div className="city-index-container">
+          {cityList}
+        </div>
       </div>
-
     );
   }
 }
