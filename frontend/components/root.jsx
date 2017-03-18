@@ -18,6 +18,7 @@ const Root = ({ store }) => {
     }
   };
 
+  // <Route path="/cities" component={CitiesContainer} />
   return (
     <Provider store={store}>
       <Router history={hashHistory}>
@@ -25,7 +26,7 @@ const Root = ({ store }) => {
           <IndexRoute component={ HomeContainer }/>
           <Route path="/sign-in" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
           <Route path="/sign-up" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
-        </Route>
+      </Route>
       </Router>
     </Provider>
   );

@@ -1,12 +1,13 @@
 export const fetchAllCities = () => (
   $.ajax({
     method: 'GET',
-    url: 'api/'
+    url: '/api/cities'
   })
 );
-// export const fetchCity = (id) => (
-//   $.ajax({
-//     method:
-//     url:
-//   })
-// )
+
+export const fetchCity = id => (
+  $.ajax({
+    method: 'GET',
+    url: `/api/cities/${id}`
+  })
+);

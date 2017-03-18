@@ -5,10 +5,6 @@ export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 export const CLEAR_ERRORS = "CLEAR ERRORS";
 
-const demo = { user: {
-  email: "buddies@gmail.com",
-  password: "bobaboba" }};
-
 export const signup = currentUser => dispatch => (
   UserAPIUtil.signup(currentUser)
     .then(user => dispatch(receiveCurrentUser(user)),
