@@ -8,11 +8,11 @@
  - Navbar
  - Footer
 
-**CityIndexContainer**
+**CitiesIndexContainer**
  - CityIndex
 
-**CityEventIndexContainer**
- - CityEventIndex
+**EventIndexContainer**
+ - EventIndex
 
 **NewEventContainer**
  - NewEventForm
@@ -31,8 +31,8 @@
 | "/sign-in"           | AuthFormContainer          |
 | "/sign-up"           | AuthFormContainer          |
 | "/home"              | HomeContainer              |
-| "/cities"            | CityIndexContainer         |
-| "/cities/:id"        | CityEventIndexContainer    |
+| "/cities"            | CitiesIndexContainer       |
+| "/cities/:id"        | EventIndexContainer        |
 | "/new-event-form     | NewEventContainer          |
 | "/dashboard          | DashboardEventContainer    |
 | "/dashboard/history  | DashboardHistoryContainer  |

@@ -18,7 +18,7 @@ class CitiesIndex extends React.Component {
 
     const cityList = this.props.cities.map(city => (
       <div key={city.id} className="city-detail-container">
-        <a className="city-detail-image-container" onClick={this.handleClick.bind(this, router, `/`)}>
+        <a className="city-detail-image-container" onClick={this.handleClick.bind(this, router, `/cities/${city.id}`)}>
           <h1 className="city-detail-name">{city.name}</h1>
           <img src={`./assets/${city.image}`} alt={`${city.image}`}/>
         </a>

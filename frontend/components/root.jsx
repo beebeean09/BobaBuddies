@@ -7,6 +7,7 @@ import { clearErrors } from '../actions/session_actions';
 import HomeContainer from './home/home_container';
 import NavbarContainer from './navbar/navbar_container';
 import CitiesIndexContainer from './cities/cities_index_container';
+import EventIndexContainer from './events/event_index_container';
 
 
 const Root = ({ store }) => {
@@ -27,6 +28,7 @@ const Root = ({ store }) => {
           <Route path="/sign-in" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
           <Route path="/sign-up" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
           <Route path="/cities" component={CitiesIndexContainer} />
+          <Route path="/cities/:city_id" component={EventIndexContainer} />
         </Route>
       </Router>
     </Provider>
