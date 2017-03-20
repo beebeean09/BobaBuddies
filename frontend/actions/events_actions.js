@@ -1,4 +1,5 @@
 import * as EventAPIUtil from '../util/events_api_util';
+import { hashHistory } from 'react-router';
 
 export const RECEIVE_EVENTS = "RECEIVE_EVENTS";
 export const RECEIVE_EVENT = "RECEIVE_EVENT";
@@ -19,13 +20,14 @@ export const receiveErrors = () => ({
 });
 
 export const fetchEvent = (id) => dispatch => (
-  EventAPIUtil.fetchEvent(id).then(event => dispatch(receiveEvent(event)),
-                          err => dispatch(receiveErrors(err.responseJSON)))
+  EventAPIUtil.fetchEvent(id).then(event => dispatch(receiveEvent(event)))
 );
-export const fetchEvents = () => dispatch => (
-  EventAPIUtil.fetchEvents().then(events => dispatch(receiveEvents(events)),
-                          err => dispatch(receiveErrors(err.responseJSON)))
+
+export const fetchEvents = (cityId) => dispatch => (
+  EventAPIUtil.fetchEvents(cityId).then(events => dispatch(receiveEvents(events)))
 );
+
 export const createEvent = (newEvent) => dispatch => (
-  EventAPIUtil.fetchEvent(newEvent).then(event => dispatch(receiveEvent(event)))
+  EventAPIUtil.createEvent(newEvent).then(event => dispatch(receiveEvent(event)))
+                                   .then(hashHistory.push('/cities'))
 );

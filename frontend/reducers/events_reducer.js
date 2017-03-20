@@ -1,14 +1,13 @@
 import { RECEIVE_EVENTS, RECEIVE_EVENT, RECEIVE_ERRORS } from '../actions/events_actions';
 import merge from 'lodash/merge';
 
-const EventsReducer = (state = {}, action) => {
+export const EventsReducer = (state = {}, action) => {
   switch(action.type) {
     case RECEIVE_EVENTS:
-      return action.events;
+    debugger;
+      return merge({}, state, action.events);
     case RECEIVE_EVENT:
-      return merge({}, action.event);
-    // case RECEIVE_ERRORS:
-    //
+      return merge({}, state, action.event);
     default:
       return state;
   }

@@ -48,7 +48,7 @@ Note model
     - [ ] `CityIndexDetail`
   - CityEventIndexContainer
     - [ ] `CityEventIndex`
-  - NewEventContainer
+  - NewEventFormContainer
     - [ ] `NewEventForm`
 - [ ] Style cities page and individual cities page
 - [ ] Seed test data

@@ -14,7 +14,7 @@
 **EventIndexContainer**
  - EventIndex
 
-**NewEventContainer**
+**NewEventFormContainer**
  - NewEventForm
 
 **DashboardContainer**
@@ -33,6 +33,6 @@
 | "/home"              | HomeContainer              |
 | "/cities"            | CitiesIndexContainer       |
 | "/cities/:id"        | EventIndexContainer        |
-| "/new-event-form     | NewEventContainer          |
+| "/new-event-form     | NewEventFormContainer          |
 | "/dashboard          | DashboardEventContainer    |
 | "/dashboard/history  | DashboardHistoryContainer  |

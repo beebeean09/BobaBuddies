@@ -7,12 +7,14 @@ import { clearErrors } from '../actions/session_actions';
 import HomeContainer from './home/home_container';
 import NavbarContainer from './navbar/navbar_container';
 import CitiesIndexContainer from './cities/cities_index_container';
-import EventIndexContainer from './events/event_index_container';
+import CityEventIndexContainer from './cities/city_event_index_container';
+import NewEventFormContainer from './events/new_event_form_container';
 
 
 const Root = ({ store }) => {
 
-  const _redirectIfLoggedIn = (nextState, replace) => {
+
+  const redirectIfLoggedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
       store.dispatch(clearErrors());
     if (currentUser) {
@@ -20,15 +22,25 @@ const Root = ({ store }) => {
     }
   };
 
+  const redirectIfNotLoggedIn = (nextState, replace) => {
+    const currentUser = store.getState().session.currentUser;
+    if (!currentUser) {
+      replace('/sign-in');
+    }
+  };
+
+
+
   return (
     <Provider store={store}>
       <Router history={hashHistory}>
         <Route path="/" component={ App } >
           <IndexRoute component={ HomeContainer }/>
-          <Route path="/sign-in" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
-          <Route path="/sign-up" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
+          <Route path="/sign-in" component={SessionFormContainer} onEnter={redirectIfLoggedIn} />
+          <Route path="/sign-up" component={SessionFormContainer} onEnter={redirectIfLoggedIn} />
           <Route path="/cities" component={CitiesIndexContainer} />
-          <Route path="/cities/:city_id" component={EventIndexContainer} />
+          <Route path="/cities/:city_id" component={CityEventIndexContainer} />
+          <Route path="/new-event-form" component={NewEventFormContainer} onEnter={redirectIfNotLoggedIn}/>
         </Route>
       </Router>
     </Provider>

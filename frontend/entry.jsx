@@ -4,7 +4,7 @@ import { login, signup, logout } from './actions/session_actions';
 import configureStore from './store/store.js';
 import Root from './components/root';
 
-import { fetchCity, fetchAllCities } from './actions/cities_actions';
+import { fetchEvents } from './actions/events_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   window.store = store;
-  window.fetchCity = fetchCity;
-  window.fetchAllCities = fetchAllCities;
+  window.fetchEvents = fetchEvents;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);
 });

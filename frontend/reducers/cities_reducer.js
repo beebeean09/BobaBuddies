@@ -9,7 +9,7 @@ export const CitiesReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_CITIES:
-      return merge({}, action.cities);
+      return merge({}, state, action.cities);
     default:
       return state;
   }
@@ -19,7 +19,7 @@ export const CityReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_CITY:
-      return merge({}, action.city);
+      return merge({}, state, action.city);
     case CLEAR_CITY:
       return {};
     default:

@@ -1,14 +1,8 @@
-export const fetchEvent = id => (
-  $.ajax({
-    method: 'GET',
-    url: `/api/events/${id}`
-  })
-);
 
-export const fetchEvents = () => (
+export const fetchEvents = cityId => (
   $.ajax({
     method: 'GET',
-    url: '/api/events'
+    url: `/api/cities/${cityId}/events`
   })
 );
 

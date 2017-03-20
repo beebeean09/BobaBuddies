@@ -1,0 +1,27 @@
+.event-index-main-container {
+  border: 2px solid blue;
+}
+
+.event-index-cover {
+  border: 2px solid yellow;
+}
+
+.event-index-container {
+  border: 2px solid green;
+}
+
+.event-index {
+  border: 2px solid red;
+}
+
+.event-title, .event-address {
+
+}
+
+.event-nav-links {
+  display: flex;
+  align-items: center;;
+  justify-content: space-between;;
+  flex-direction: row;
+  margin: 15px 30px;
+}
