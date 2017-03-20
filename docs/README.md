@@ -42,22 +42,23 @@ BobaBuddies is a web application inspired by TeaWithStrangers built using Ruby o
 **Objective:** Cities are listed and events in those cities can be created, read, edited and destroyed through the API.
 Note model
 - [x] CRUD API for `CitiesController` and `EventsController`
-- [ ] Components for Redux loops
+- [x] Components for Redux loops
   - CityIndexContainer
-    - [ ] `CityIndex`
-    - [ ] `CityIndexDetail`
+    - [x] `CityIndex`
   - CityEventIndexContainer
-    - [ ] `CityEventIndex`
+    - [x] `CityEventIndex`
   - NewEventFormContainer
-    - [ ] `NewEventForm`
+    - [x] `NewEventForm`
 - [ ] Style cities page and individual cities page
 - [ ] Seed test data
 - [ ] Seed cities and events
 
 ### Phase 3: Events Dashboard, Join Events, and Guest Login (2 days)
 - [ ] Ability to join events
+- [ ] Ability to host events
 - [ ] Create a dashboard so users can see all events
   - [ ] Current events
+  - [ ] Hosting events
   - [ ] Past events (History)
 - [ ] Footer Component
 

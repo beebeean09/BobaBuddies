@@ -20,7 +20,13 @@ class Event < ApplicationRecord
   belongs_to :city
 
   belongs_to :host,
-  class_name: :User,
-  primary_key: :id,
-  foreign_key: :host_id
+    class_name: :User,
+    primary_key: :id,
+    foreign_key: :host_id
+
+  has_many :attendances
+
+  has_many :attendees,
+    through: :attendances,
+    source: :user
 end

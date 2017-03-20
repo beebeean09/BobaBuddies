@@ -1,5 +1,5 @@
 .city-index-container {
-  // border: 3px solid black;
+  border: 3px solid black;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -9,7 +9,7 @@
 
 .city-detail-container {
   position: relative;
-  // border: 3px solid blue;
+  border: 3px solid blue;
   margin: 12px;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .city-detail-container > a h1 {
-  // border: 3px solid green;
+  border: 3px solid green;
   // position: absolute;
   top: 50%;
   left: 50%;
@@ -29,7 +29,7 @@
 }
 
 .city-detail-container > a img {
-  // border: 3px solid orange;
+  border: 3px solid orange;
   width: 420px;
   height: 245px;
   cursor: pointer;
