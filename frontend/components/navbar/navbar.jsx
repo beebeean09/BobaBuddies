@@ -40,7 +40,7 @@ class Navbar extends React.Component {
       <div className="navbar-header">
         <div className="navbar-main-left">
           <a href="#/">
-            <img className="navbar-logo" src="../../../app/assets/images/bobaIcon2.png" alt="Milk Tea Boba" />
+            <img className="navbar-logo" src="assets/bobaIcon2.png" alt="Milk Tea Boba" />
           </a>
           <Link to="/" className="boba-buddies-text">Boba Buddies</Link>
         </div>

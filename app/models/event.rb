@@ -17,7 +17,10 @@
 class Event < ApplicationRecord
   validates :title, :date, :time, :address, :seats, :host, :city, presence: true
 
-  belongs_to :city
+  belongs_to :city,
+    class_name: :City,
+    primary_key: :id,
+    foreign_key: :city_id
 
   belongs_to :host,
     class_name: :User,

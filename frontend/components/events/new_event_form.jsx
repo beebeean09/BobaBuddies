@@ -5,14 +5,16 @@ class NewEventForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {title: "", address: "", date: "", time: "", seats: 0, host_id: 0};
+    this.state = {title: "", address: "", date: "2017-06-20", time: "01:00:00",
+      seats: 0, city_id: this.props.cityId};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     debugger;
+    // const event = this.state;
     e.preventDefault();
-    this.props.createEvent();
+    this.props.createEvent(this.state);
   }
 
   update(field) {
@@ -22,9 +24,8 @@ class NewEventForm extends React.Component {
   }
 
   render() {
-    debugger;
+    // debugger;
 
-    const { city_id } = this.props;
 
     return (
       <div className="new-event-form-main">
@@ -43,22 +44,13 @@ class NewEventForm extends React.Component {
             </label>
             <label>
               <input
-                type="dateTime"
-                value={this.state.date}
-                onChange={this.update('date')}/>
-            </label>
-            <label>
-              <input
                 type="text"
                 value={this.state.address}
                 placeholder="Address"
                 onChange={this.update('address')}/>
             </label>
-            <label>Seats:
-              {this.state.seats}
-            </label>
             <br/>
-            <input type="submit" value="Create New Event"/>
+            <input className="new-event-submit-button" type="submit" value="Create New Event"/>
           </form>
         </div>
       </div>
@@ -68,6 +60,18 @@ class NewEventForm extends React.Component {
 
 export default NewEventForm;
 
+// <label>Seats:
+//   <input
+//     type="number"
+//     value={this.state.seats}
+//     onChange={this.update('seats')}/>
+// </label>
+// <label>Date:
+//   <input
+//     type="date"
+//     value={this.state.date.time.strtftime()}
+//     onChange={this.update('date')}/>
+// </label>
 // <label>
 //   <input
 //     type="dateTime"

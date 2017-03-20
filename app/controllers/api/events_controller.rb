@@ -1,18 +1,17 @@
 class Api::EventsController < ApplicationController
 
   def index
-    @events = Event.find_current_user(current_user.id)
+    @events = Event.where(city_id: params[:city_id])
   end
 
   def create
     @event = Event.new(event_params)
     @event.host_id = current_user.id
-    @event.city_id = current_user.city_id
 
     if @event.save
-      render :index
+      render :show
     else
-      render json: @event.error.full_messages, status: 422
+      render json: @event.errors.full_messages, status: 422
     end
   end
 
@@ -28,7 +27,7 @@ class Api::EventsController < ApplicationController
     if @event.update(event_params)
       render :show
     else
-      render json: @event.error.full_messages, status: 404
+      render json: @event.errors.full_messages, status: 404
     end
   end
 

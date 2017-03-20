@@ -1,5 +1,8 @@
 .event-index-main-container {
   border: 2px solid blue;
+  color: white;
+  font-size: 30px;
+  font-family: 'Source Sans Pro'
 }
 
 .event-index-cover {
@@ -11,10 +14,23 @@
 
 .event-index-container {
   border: 2px solid green;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 18px;
 }
 
 .event-index {
-  border: 2px solid red;
+  border: 2px solid grey;
+  margin: 40px;
+  padding: 20px;
+  background: ghostwhite;
+  color: gray;
+  box-shadow: 0 4px 9px rgba(0,0,0,.4);
+
+  ul {
+    margin: 18px 0;
+  }
 }
 
 .event-title, .event-address {
@@ -22,11 +38,10 @@
 }
 
 .event-index-header {
-  color: #007E90;
-  font-size: 30px;
-  font-family: 'Source Sans Pro';
   text-align: center;
-  margin: 100px;
+  padding: 80px 0;
+  background: #0E5146;
+  // color: #355161 darkblue;
 }
 
 .event-nav-links {
@@ -34,5 +49,21 @@
   align-items: center;;
   justify-content: space-between;;
   flex-direction: row;
-  margin: 15px 30px;
+  margin: 30px 30px;
+  font-size: 15px;
+
+  a {
+    border: 1px solid gray;
+    padding: 10px 8px;
+    background: #91999A;
+    cursor: pointer;
+    border-radius: 7px;
+    opacity: 0.8;
+    filter: alpha(opacity=50)
+  }
+
+  a:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100)
+  }
 }

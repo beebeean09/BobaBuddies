@@ -14,14 +14,16 @@ class CityEventIndex extends React.Component {
   }
 
   render() {
+
     const { city } = this.props;
     const eventList = city.events.map(event => (
       <div key={event.id} className="event-index">
-        <ul className="event-title">{event.title}</ul>
-        <ul className="event-address">{event.address}</ul>
-        <ul>{event.date}</ul>
-        <ul>{event.time}</ul>
-        <ul>{event.seats}</ul>
+        <ul className="event-title">Title: {event.title}</ul>
+        <ul className="event-address">Address: {event.address}</ul>
+        <ul>Date: {event.date}</ul>
+        <ul>Time: {event.time}</ul>
+        <ul>Seats: {event.seats}</ul>
+        <ul>Host Id: {event.host_id}</ul>
       </div>
     ));
 
@@ -34,12 +36,12 @@ class CityEventIndex extends React.Component {
         <div className="event-index-header">
           <h2>Welcome! Check out the events below!</h2>
         </div>
+        <div className="event-nav-links">
+          <Link to="/new-event-form">Create New Event</Link>
+          <Link to="/cities">Back to cities</Link>
+        </div>
         <div className="event-index-container">
           {eventList}
-        </div>
-        <div className="event-nav-links">
-          <Link  to="/new-event-form">Create New Event</Link>
-          <Link to="/cities">Back to cities</Link>
         </div>
       </div>
     );
