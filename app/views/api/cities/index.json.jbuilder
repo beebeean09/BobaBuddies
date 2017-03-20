@@ -3,5 +3,6 @@
     json.id city.id
     json.name city.name
     json.image city.image
+    json.events city.events
   end
 end

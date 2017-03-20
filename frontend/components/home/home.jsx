@@ -11,9 +11,10 @@ const Home = ({currentUser}) => {
     } else {
     mainButton = <Link to="/sign-up">Let's get boba!</Link>;
     }
+    // <img className="boba-pic" src="/assets/boba1.jpg" alt="milk tea boba"/>
 
   return(
-    <div className="home-container">
+    <div className="home-main-container">
       <div className="home-container-links">
         {mainButton}
       </div>

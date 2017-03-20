@@ -1,21 +1,17 @@
 import { connect } from 'react-redux';
-import { fetchEvents, fetchEvent } from '../../actions/events_actions';
+import { fetchAllCities, fetchCity } from '../../actions/cities_actions';
 import CityEventIndex from './city_event_index';
 
 
 const mapStateToProps = (state, ownProps) => {
-  debugger;
   return{
-    events: Object.keys(state.events).map(id => state.events[id])
-
+    city: state.cities[ownProps.params.cityId]
   };
-  // ownProps.params.city_id
-  // events: state.events
-  // city: state.city
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchEvents: () => dispatch(fetchEvents())
+  fetchAllCities: () => dispatch(fetchAllCities()),
+  fetchCity: (id) => dispatch(fetchCity(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CityEventIndex);

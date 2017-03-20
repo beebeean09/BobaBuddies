@@ -1,15 +1,16 @@
 class Api::EventsController < ApplicationController
 
   def index
-    @events = Event.where(city_id: params[:id])
+    @events = Event.find_current_user(current_user.id)
   end
 
   def create
     @event = Event.new(event_params)
     @event.host_id = current_user.id
+    @event.city_id = current_user.city_id
 
     if @event.save
-      render :show
+      render :index
     else
       render json: @event.error.full_messages, status: 422
     end

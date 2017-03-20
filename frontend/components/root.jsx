@@ -39,7 +39,7 @@ const Root = ({ store }) => {
           <Route path="/sign-in" component={SessionFormContainer} onEnter={redirectIfLoggedIn} />
           <Route path="/sign-up" component={SessionFormContainer} onEnter={redirectIfLoggedIn} />
           <Route path="/cities" component={CitiesIndexContainer} />
-          <Route path="/cities/:city_id" component={CityEventIndexContainer} />
+          <Route path="/cities/:cityId" component={CityEventIndexContainer} />
           <Route path="/new-event-form" component={NewEventFormContainer} onEnter={redirectIfNotLoggedIn}/>
         </Route>
       </Router>

@@ -5,7 +5,6 @@
   flex-direction: row;
   justify-content: center;
   margin: 25px;
-  cursor: pointer;
 }
 
 .city-detail-container {
@@ -33,6 +32,7 @@
   border: 3px solid orange;
   width: 420px;
   height: 245px;
+  cursor: pointer;
 }
 
 .city-index-header p {

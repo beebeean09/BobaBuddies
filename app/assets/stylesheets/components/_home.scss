@@ -1,16 +1,27 @@
-.home-container {
+.home-main-container {
   // display: flex;
   background: #CCF2F2;
   font-family: arial;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 25%;
+  }
 
   .home-container-links {
     width: 100%;
     height: 900px;
+    // width: 100%;
+    // height: 25%;
     display: flex;
     align-items: center;
     justify-content: center;
 
+
     a {
+      // margin: 50% 50%;
+      position: absolute;
       border: 2px solid #91999A;
       border-radius: 7px;
       background: #91999A;
@@ -29,10 +40,9 @@
   }
 }
 
-
-#body {
-  background-color: blue;
-}
+// #body {
+//   background-color: blue;
+// }
 
 // #root {
 //   height: 100vh;
