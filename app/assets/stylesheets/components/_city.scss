@@ -8,32 +8,34 @@
 }
 
 .city-detail-container {
-  position: relative;
-  border: 3px solid blue;
+  // border: 3px solid blue;
   margin: 12px;
+
+  .city-detail-image-container {
+    position: relative;
+    margin: 0px 0px;
+
+    h1 {
+      // border: 3px solid green;
+      // position: absolute;
+      top: 50%;
+      left: 50%;
+      color: white;
+      font-family: 'Source Sans Pro';
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    img {
+      // border: 3px solid orange;
+      width: 420px;
+      height: 245px;
+      cursor: pointer;
+    }
+  }
 }
 
-.city-detail-image-container {
-  margin: 0px 0px;
-}
 
-.city-detail-container > a h1 {
-  border: 3px solid green;
-  // position: absolute;
-  top: 50%;
-  left: 50%;
-  color: white;
-  font-family: 'Source Sans Pro';
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.city-detail-container > a img {
-  border: 3px solid orange;
-  width: 420px;
-  height: 245px;
-  cursor: pointer;
-}
 
 .city-index-header p {
   font-family: 'Source Sans Pro';

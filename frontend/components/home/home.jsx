@@ -7,19 +7,29 @@ const Home = ({currentUser}) => {
   let mainButton;
 
   if (currentUser) {
-    mainButton = <Link to="/cities">Let's get boba!</Link>;
+    mainButton = <Link className="floating-button" to="/cities">Let's Find Boba Buddies</Link>;
     } else {
-    mainButton = <Link to="/sign-up">Let's get boba!</Link>;
+    mainButton = <Link className="floating-button" to="/sign-up">Let's Find Boba Buddies</Link>;
     }
-    // <img className="boba-pic" src="/assets/boba1.jpg" alt="milk tea boba"/>
 
   return(
-    <div className="home-main-container">
-      <div className="home-container-links">
+    <div className="home-container-links">
+      <img src="http://res.cloudinary.com/beebeean09/image/upload/v1490075035/DDDC7877-C40D-48A6-8BAF-3A9B4ED17D50_artp2z.jpg"
+        alt="boba-home-image-cover"/>
+      <div className="floating-container">
+        <div className="floating-header">
+          <h1>We have coffee everyday...</h1>
+          <h2>So why can't we do the same with boba?</h2>
+        </div>
         {mainButton}
       </div>
+
     </div>
   );
 };
 
 export default Home;
+
+
+// <div className="home-main-container">
+// </div>
