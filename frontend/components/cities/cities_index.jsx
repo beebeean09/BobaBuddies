@@ -20,7 +20,7 @@ class CitiesIndex extends React.Component {
       <div key={city.id} className="city-detail-container">
         <a className="city-detail-image-container" onClick={this.handleClick.bind(this, router, `/cities/${city.id}`)}>
           <h1 className="city-detail-name">{city.name}</h1>
-          <img src={`./assets/${city.image}`} alt={`${city.image}`}/>
+          <img src={city.image} alt={city.name}/>
         </a>
       </div>
     ));

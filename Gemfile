@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 gem 'font-awesome-sass', '~> 4.7.0'
 
+gem "figaro"
 gem 'rails_12factor'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'

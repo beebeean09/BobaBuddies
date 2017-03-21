@@ -64,6 +64,8 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
+    figaro (1.1.1)
+      thor (~> 0.14)
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
     globalid (0.3.7)
@@ -182,6 +184,7 @@ DEPENDENCIES
   binding_of_caller
   byebug
   coffee-rails (~> 4.2)
+  figaro
   font-awesome-sass (~> 4.7.0)
   jbuilder (~> 2.5)
   jquery-rails

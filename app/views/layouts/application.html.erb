@@ -9,6 +9,12 @@
 
     <link href="https://fonts.googleapis.com/css?family=Delius+Swash+Caps" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <script type="text/javascript">
+      window.cloudinary_options = {
+        cloud_name: '<%= ENV['CLOUD_NAME']%>',
+        upload_preset: '<%=ENV["UPLOAD_PRESET"]%>'
+      };
+    </script>
   </head>
 
   <body>
