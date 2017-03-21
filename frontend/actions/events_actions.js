@@ -27,9 +27,9 @@ export const fetchEvents = (cityId) => dispatch => (
   EventAPIUtil.fetchEvents(cityId).then(events => dispatch(receiveEvents(events)))
 );
 
-export const createEvent = (newEvent) => dispatch => (
-  // debugger;
-  EventAPIUtil.createEvent(newEvent).then(event => dispatch(receiveEvent(event)))
-);
+export const createEvent = (newEvent) => dispatch => {
+  debugger;
 
-// .then(hashHistory.push(`/cities/${event.city_id}`))
+  return EventAPIUtil.createEvent(newEvent).then(event => dispatch(receiveEvent(event)))
+                              .then(hashHistory.push('/cities'));
+};

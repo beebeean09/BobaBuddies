@@ -49,8 +49,8 @@ Note model
     - [x] `CityEventIndex`
   - NewEventFormContainer
     - [x] `NewEventForm`
-- [ ] Style cities page and individual cities page
-- [ ] Seed test data
+- [x] Style cities page and individual cities page
+- [x] Seed test data
 - [ ] Seed cities and events
 
 ### Phase 3: Events Dashboard, Join Events, and Guest Login (2 days)

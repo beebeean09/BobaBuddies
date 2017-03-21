@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       resources :events, only: [:index]
     end
     resources :events, only: [:create, :destroy, :update]
-    resources :attendances, only: [:show, :index]
+    resources :attendances, only: [:create, :destroy]
   end
 
   root "static_pages#root"

@@ -10,6 +10,7 @@ class CityEventIndex extends React.Component {
   }
 
   componentWillMount() {
+    // debugger;
     this.props.fetchCity(this.props.city.id);
   }
 
@@ -24,6 +25,9 @@ class CityEventIndex extends React.Component {
         <ul>Time: {event.time}</ul>
         <ul>Seats: {event.seats}</ul>
         <ul>Host Id: {event.host_id}</ul>
+        <div className="join-unjoin-button">
+          <button>Join</button>
+        </div>
       </div>
     ));
 
@@ -31,7 +35,7 @@ class CityEventIndex extends React.Component {
       <div className="event-index-main-container">
         <div className="event-index-cover">
           <h1>{city.name}</h1>
-          <img src={`/assets/${city.image}`} alt={`${city.name}`} />
+          <img src={city.image} alt={city.name} />
         </div>
         <div className="event-index-header">
           <h2>Welcome! Check out the events below!</h2>

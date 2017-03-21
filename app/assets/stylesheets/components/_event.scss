@@ -31,6 +31,13 @@
   ul {
     margin: 18px 0;
   }
+
+  .join-unjoin-button {
+    border: 1px solid grey;
+    padding: 5px 20px;
+    text-align: center;
+
+  }
 }
 
 .event-title, .event-address {
@@ -40,7 +47,8 @@
 .event-index-header {
   text-align: center;
   padding: 80px 0;
-  background: #0E5146;
+  background: #003C32;
+  // background: #0E5146;
   // color: #355161 darkblue;
 }
 
