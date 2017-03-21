@@ -18,9 +18,9 @@ City.create!(name: "Washington D.C.", image: 'http://res.cloudinary.com/beebeean
 City.create!(name: "New York", image: 'http://res.cloudinary.com/beebeean09/image/upload/v1490057535/NY_ezvbug.jpg')
 
 
-Event.create!(title: "Milk Tea Boba Party", address: "135 4th St., San Francisco, CA", city_id: 1, host_id: 2, date: "2017-10-09", time: "12:00:00", seats: 10)
-Event.create!(title: "What is Boba?!", address: "333 S. State St., Chicago, IL", city_id: 2, host_id: 2, date: "2017-05-20", time: "09:00:00", seats: 10)
-Event.create!(title: "How much boba...is too much boba??", address: "700 Western St. Los Angeles, CA", city_id: 3, host_id: 2, date: "2017-07-01", time: "3:30:00", seats: 7)
-Event.create!(title: "Alcoholic Boba Drinks", address: "606 E. Pine St., Seattle, WA", city_id: 4, host_id: 3, date: "2017-06-28", time: "6:30:00", seats: 20)
-Event.create!(title: "Cup of Boba a day, keeps the doctor away~", address: "400 8th St. NW, Washington, DC ", city_id: 5, host_id: 3, date: "2017-09-05", time: "10:00:00", seats: 10)
-Event.create!(title: "Matcha Boba Drinks!", address: "23 Clinton St., New York, NY", city_id: 6, host_id: 3, date: "2017-08-15", time: "2:30:00", seats: 10)
+Event.create!(city_id: 1, host_id: 2, title: "Milk Tea Boba Party", date: "2017-10-09", time: "12:00:00", address: "135 4th St., San Francisco, CA", seats: 10)
+Event.create!(city_id: 2, host_id: 2, title: "What is Boba?!", date: "2017-05-20", time: "09:00:00", address: "333 S. State St., Chicago, IL", seats: 10)
+Event.create!(city_id: 3, host_id: 2, title: "How much boba...is too much boba??", date: "2017-07-01", time: "03:30:00", address: "700 Western St. Los Angeles, CA", seats: 7)
+Event.create!(city_id: 4, host_id: 3, title: "Alcoholic Boba Drinks", date: "2017-06-28", time: "06:30:00", address: "606 E. Pine St., Seattle, WA", seats: 20)
+Event.create!(city_id: 5, host_id: 3, title: "Cup of Boba a day, keeps the doctor away~", date: "2017-09-05", time: "10:00:00", address: "400 8th St. NW, Washington, DC ", seats: 10)
+Event.create!(city_id: 6, host_id: 3, title: "Matcha Boba Drinks!", date: "2017-08-15", time: "02:30:00", address: "23 Clinton St., New York, NY", seats: 10)
