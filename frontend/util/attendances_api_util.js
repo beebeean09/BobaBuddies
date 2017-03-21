@@ -1,10 +1,13 @@
-export const createAttendance = (attendance) => (
+export const createAttendance = (attendance) => {
+  debugger;
+  return (
   $.ajax({
     method: 'POST',
     url: 'api/attendances',
     data: { attendance }
   })
 );
+};
 
 export const deleteAttendance = (id) => (
   $.ajax({

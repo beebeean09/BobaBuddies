@@ -4,19 +4,24 @@ import { Link } from 'react-router';
 class CityEventIndex extends React.Component {
   constructor(props) {
     super(props);
-    // debugger;
+    debugger;
     // this.state = {city_id: 1, host_id: 3, title: "Boba Party", date: "2017-03-20", time: "03:00:00",
     //               address: "1234 App Academy St.", seats: 5};
-    this.handleAttendance = this.handleAttendance.bind(this);
   }
 
   componentWillMount() {
     // debugger;
-    this.props.fetchCity(this.props.city.id);
+    if (this.props.city) {
+      this.props.fetchCity(this.props.city.id);
+    }
   }
 
-  handleAttendance(userId, eventId) {
-    const attendance = { user_id: userId, event_id: eventId };
+  handleAttendance(id) {
+    // e.preventDefault();
+    debugger;
+    // const userId = this.props.userId;
+    // const eventId = this.props.eventId;
+    const attendance = { event_id: id };
     this.props.createAttendance(attendance);
   }
 
@@ -34,7 +39,7 @@ class CityEventIndex extends React.Component {
         <ul>Seats: {event.seats}</ul>
         <ul>Host Id: {event.host_id}</ul>
         <div className="join-unjoin-button">
-          <button onClick={this.handleAttendance(currentUser.id, event.id)}>Join</button>
+          <button onClick={this.handleAttendance.bind(this, event.id)}>Join</button>
         </div>
       </div>
     ));
@@ -51,7 +56,7 @@ class CityEventIndex extends React.Component {
           <h2>Welcome! Check out the events below!</h2>
         </div>
         <div className="event-nav-links">
-          <Link to="/new-event-form">Create New Event</Link>
+          <Link to={`/cities/${city.id}/new-event-form`}>Create New Event</Link>
           <Link to="/cities">Back to cities</Link>
         </div>
         <div className="event-index-container">

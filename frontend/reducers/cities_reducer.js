@@ -1,7 +1,8 @@
 import {
    RECEIVE_CITIES,
    RECEIVE_CITY,
-   CLEAR_CITY } from '../actions/cities_actions';
+   CLEAR_CITY,
+   RECEIVE_EVENT} from '../actions/cities_actions';
 
 import merge from 'lodash/merge';
 
@@ -20,6 +21,11 @@ export const CityReducer = (state = {}, action) => {
   switch(action.type) {
     case RECEIVE_CITY:
       return merge({}, state, action.city);
+    case RECEIVE_EVENT:
+    debugger;
+      const newState = merge({}, state);
+      newState.events.push(action.event);
+      return newState;
     case CLEAR_CITY:
       return {};
     default:

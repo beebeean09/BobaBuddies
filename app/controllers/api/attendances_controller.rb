@@ -7,11 +7,11 @@ class Api::AttendancesController < ApplicationController
   def create
     @attendance = Attendance.new(attendance_params)
     @attendance.user_id = current_user.id
-
+    debugger
     if @attendance.save
       event = @attendance.event
       event.update(seats: event.seats - 1)
-      render json: @attendance
+      render 'api/attendances/show'
     else
       render json: @attendance.errors.full_messages, status: 422
     end
@@ -21,7 +21,7 @@ class Api::AttendancesController < ApplicationController
     @attendance = Attendance.where(event_id: params[:event_id], user_id: params[:user_id])
     event = @attendance.event
     event.update(seats: event.seats + 1)
-    @attendance.destroy 
+    @attendance.destroy
     render json: @attendance
   end
 
