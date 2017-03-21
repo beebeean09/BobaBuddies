@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 City.delete_all
-Event.delete_all
 
 User.create( email: "bobabuddies@gmail.com", password: "bobaboba", first_name: "Buddy", host: false )
 User.create( email: "paul@gmail.com", password: "iloveboba", first_name: "Paul", host: true )
