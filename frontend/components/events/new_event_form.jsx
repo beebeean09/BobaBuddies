@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Datetime from 'react-datetime';
 
 class NewEventForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {title: "", address: "", date: "2017-06-20", time: "01:00:00",
+    this.state = {title: "", address: "", date: "", time: "",
       seats: 0, city_id: this.props.cityId};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -18,6 +19,7 @@ class NewEventForm extends React.Component {
   }
 
   update(field) {
+    debugger;
     return e => {
       this.setState({[field]: e.target.value});
     };
@@ -49,7 +51,16 @@ class NewEventForm extends React.Component {
                 placeholder="Address"
                 onChange={this.update('address')}/>
             </label>
-            <br/>
+            <Datetime
+              className="date"
+              value={this.state.date}
+              onChange={this.update('date')}
+              timeFormat={false}/>
+            <Datetime
+              className="time"
+              value={this.state.time}
+              onChange={this.update('time')}
+              dateFormat={false}/>
             <input className="new-event-submit-button" type="submit" value="Create New Event"/>
           </form>
         </div>
@@ -59,18 +70,15 @@ class NewEventForm extends React.Component {
 }
 
 export default NewEventForm;
+// <br/>
 
+// value={this.state.date}
+// onChange={this.update('date')}
 // <label>Seats:
 //   <input
 //     type="number"
 //     value={this.state.seats}
 //     onChange={this.update('seats')}/>
-// </label>
-// <label>Date:
-//   <input
-//     type="date"
-//     value={this.state.date.time.strtftime()}
-//     onChange={this.update('date')}/>
 // </label>
 // <label>
 //   <input
@@ -78,3 +86,9 @@ export default NewEventForm;
 //     value={this.state.date}
 //     onChange={this.update('date')}/>
 // </label>
+// <Datetime
+//   className="time"
+//   value={this.state.time}
+//   onChange={this.update('time')}
+//   dateFormat={false}>
+// </Datetime>

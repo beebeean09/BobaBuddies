@@ -31,17 +31,22 @@
   display: flex;
   justify-content: center;
 
+  .date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid red;
+  }
+  .rdtPicker {
+    display: block;
+    align-items: center;
+  }
+
   label, form {
     display: flex;
     flex-direction: column;
     align-content: center;
     margin: 20px;
-
-    span {
-      text-align: center;
-      font-size: 18px;
-      color: black;
-    }
 
     input {
       border: 1px solid black;
@@ -51,7 +56,8 @@
       background: ghostwhite;
       font-size: 18px;
     }
-  }
+
+}
 
   .new-event-submit-button {
     // text-align: center;
