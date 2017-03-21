@@ -9,15 +9,19 @@ class Api::AttendancesController < ApplicationController
     @attendance.user_id = current_user.id
 
     if @attendance.save
-      render :show
+      event = @attendance.event
+      event.update(seats: event.seats - 1)
+      render json: @attendance
     else
       render json: @attendance.errors.full_messages, status: 422
     end
   end
 
   def destroy
-    @attendance = Attendance.where(user_id: params[:user_id])
-    @attendance.delete
+    @attendance = Attendance.where(event_id: params[:event_id], user_id: params[:user_id])
+    event = @attendance.event
+    event.update(seats: event.seats + 1)
+    @attendance.destroy 
     render json: @attendance
   end
 

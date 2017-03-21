@@ -10,7 +10,7 @@
 #
 
 class Attendance < ApplicationRecord
-  validates :user, :events, presence: true
+  validates :user, :event, presence: true
 
   belongs_to :user
   belongs_to :event

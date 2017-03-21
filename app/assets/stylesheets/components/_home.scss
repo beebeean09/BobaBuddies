@@ -24,10 +24,10 @@
       position: absolute;
       left: 0;
       right: 0;
-      top: 19%;
+      top: 25%;
       margin-left: auto;
       margin-right: auto;
-      width: 500px;
+      width: 800px;
 
       .floating-header {
         margin: 0 0 45px 0;
@@ -68,7 +68,7 @@
     	// filter: grayscale(100%);
     	-webkit-transition: .3s ease-in-out;
     	transition: .3s ease-in-out;
-      opacity: 0.5;
+      opacity: 0.6;
     }
     img:hover {
       // -webkit-filter: grayscale(0);

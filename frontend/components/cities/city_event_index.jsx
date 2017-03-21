@@ -4,9 +4,10 @@ import { Link } from 'react-router';
 class CityEventIndex extends React.Component {
   constructor(props) {
     super(props);
-
+    debugger;
     // this.state = {city_id: 1, host_id: 3, title: "Boba Party", date: "2017-03-20", time: "03:00:00",
     //               address: "1234 App Academy St.", seats: 5};
+    this.handleAttendance = this.handleAttendance.bind(this);
   }
 
   componentWillMount() {
@@ -14,9 +15,16 @@ class CityEventIndex extends React.Component {
     this.props.fetchCity(this.props.city.id);
   }
 
+  handleAttendance(user_id, event_id) {
+    const attendance = {user_id: user_id, event_id: event_id}
+    this.props.createAttendance(attendance);
+  }
+
   render() {
 
     const { city } = this.props;
+    const currentUser = this.props;
+
     const eventList = city.events.map(event => (
       <div key={event.id} className="event-index">
         <ul className="event-title">Title: {event.title}</ul>
@@ -26,7 +34,7 @@ class CityEventIndex extends React.Component {
         <ul>Seats: {event.seats}</ul>
         <ul>Host Id: {event.host_id}</ul>
         <div className="join-unjoin-button">
-          <button>Join</button>
+          <button onClick={this.handleAttendance(currentUser.id, event.id)}>Join</button>
         </div>
       </div>
     ));

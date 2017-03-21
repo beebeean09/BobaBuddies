@@ -6,7 +6,7 @@ export const createAttendance = (attendance) => (
   })
 );
 
-export const removeAttendance = (id) => (
+export const deleteAttendance = (id) => (
   $.ajax({
     method: 'DELETE',
     url: `api/attendances/${id}`
