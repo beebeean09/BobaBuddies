@@ -7,8 +7,46 @@
 
 .event-index-cover {
   border: 2px solid yellow;
-  // width: 100%;
-  // height: 250px;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  // display: flex;
+  // align-items: center;
+  // flex-wrap: wrap;
+
+  h1 {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    right: 0;
+    z-index: 1;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .event-cover-img {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+
+    img {
+    }
+  }
+
 }
 
 

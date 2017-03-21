@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 class CityEventIndex extends React.Component {
   constructor(props) {
     super(props);
-    debugger;
+    // debugger;
     // this.state = {city_id: 1, host_id: 3, title: "Boba Party", date: "2017-03-20", time: "03:00:00",
     //               address: "1234 App Academy St.", seats: 5};
     this.handleAttendance = this.handleAttendance.bind(this);
@@ -15,8 +15,8 @@ class CityEventIndex extends React.Component {
     this.props.fetchCity(this.props.city.id);
   }
 
-  handleAttendance(user_id, event_id) {
-    const attendance = {user_id: user_id, event_id: event_id}
+  handleAttendance(userId, eventId) {
+    const attendance = { user_id: userId, event_id: eventId };
     this.props.createAttendance(attendance);
   }
 
@@ -42,8 +42,10 @@ class CityEventIndex extends React.Component {
     return (
       <div className="event-index-main-container">
         <div className="event-index-cover">
+          <div className="event-cover-img">
+            <img src={city.image} alt={city.name} />
+          </div>
           <h1>{city.name}</h1>
-          <img src={city.image} alt={city.name} />
         </div>
         <div className="event-index-header">
           <h2>Welcome! Check out the events below!</h2>
