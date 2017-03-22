@@ -9,6 +9,7 @@
   font-size: 25px;
   color: #007E90;
   font-weight: bold;
+  height: 500px;
 }
 
 .new-event-form-header {
@@ -47,15 +48,17 @@
     display: flex;
     flex-direction: column;
     align-content: center;
-    margin: 20px;
+    // margin: 20px;
 
     input {
       border: 1px solid black;
-      padding: 8px 170px;
       border-radius: 7px;
       text-align: center;
       background: ghostwhite;
       font-size: 18px;
+      width: 495px;
+      height: 43px;
+      margin: 20px 0;
     }
 
 }

@@ -14,6 +14,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  background: grey;
 
   // display: flex;
   // align-items: center;
@@ -42,9 +43,10 @@
     background-size: cover;
     background-position: center;
     justify-content: center;
+  }
 
-    img {
-    }
+  img {
+    opacity: 0.5;
   }
 
 }
@@ -111,6 +113,6 @@
   a:hover {
     opacity: 1.0;
     filter: alpha(opacity=100)
-    
+
   }
 }

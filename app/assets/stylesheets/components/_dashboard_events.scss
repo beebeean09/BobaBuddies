@@ -1,0 +1,61 @@
+.dashboard-main-container {
+  font-family: 'Source Sans Pro';
+
+  .dashboard-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5% 10%;
+  }
+
+  .dashboard-event-card {
+    border: 2px solid grey;
+    width: 260px;
+    height: 245px;
+    margin: 30px;
+    background: ghostwhite;
+    color: gray;
+    padding: 20px;
+    box-shadow: 0 4px 9px rgba(0,0,0,.4);
+
+  }
+
+  .dashboard-events-header {
+    // text-transform: uppercase;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 33px;
+    color: grey;
+
+    h1 {
+      font-family: 'Delius Swash Caps';
+    }
+  }
+
+  .dashboard-navbar {
+    text-align: left;
+    font-size: 22px;
+    background: #84a1c1;
+    height: 68px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+
+    a {
+      display: flex;
+      border-radius: 7px;
+      padding: 5px 0;
+      margin: 0 16px;
+    }
+
+    a:hover {
+      background: grey;
+      padding: 10px 8px;
+
+    }
+  }
+}

@@ -17,7 +17,6 @@ class DashboardHosting extends React.Component {
           <Link to="/dashboard/hosting">Hosting Events</Link>
         </div>
         <div className="dashboard-hosting">
-          <h1>DashboardHosting Here!!!</h1>
           {this.props.hostedEvents.map((event, idx) => (
             <ul key={idx}>
               <li>Event Id: {event.id}</li>

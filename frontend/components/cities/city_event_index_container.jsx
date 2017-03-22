@@ -6,12 +6,13 @@ import { subtractSeat, fetchEvents } from '../../actions/events_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger;
+  debugger;
   return{
     city: state.cities[ownProps.params.cityId],
-    currentUser: state.session.currentUser
-    // userId: ,
-    // eventId: state.session.event.id,
+    currentUser: state.session.currentUser,
+    // events: state.cities.events,
+    events: state.events
+
   };
 };
 

@@ -51,13 +51,13 @@ export const fetchUserEvents = () => dispatch => (
 export const createEvent = (newEvent) => dispatch => {
   debugger;
 
-  return EventAPIUtil.createEvent(newEvent).then(event => dispatch(receiveEvent(event)))
-                          .then(res => hashHistory.push(`/cities/${res.event.city_id}`));
+  return EventAPIUtil.createEvent(newEvent).then(event => dispatch(receiveEvent(event)));
 };
 
 export const removeEvent = (id) => dispatch => (
   EventAPIUtil.removeEvent(id).then(event => dispatch(deleteEvent(event)))
 );
 
+// .then(res => hashHistory.push(`/cities/${res.event.city_id}`));
 // .then(res => console.log(res.event))
 // hashHistory.push(`/cities/${res.cit}`)

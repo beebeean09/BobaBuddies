@@ -6,26 +6,19 @@ class NewEventForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {title: "", address: "", date: "2017-09-10", time: "06:00:00",
+    this.state = {title: "", address: "", date: "2017-10-09", time: "06:00:00",
       seats: 7, city_id: this.props.cityId};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
-  // componentWillReceiveProps(newProps) {
-  //   debugger;
-  //   if (newProps !== this.props) {
-  //     hashHistory.push(`/cities/${this.props.cityId}`);
-  //   }
-  // }
-
   handleSubmit(e) {
-    // debugger;
+    debugger;
     // const event = this.state;
     e.preventDefault();
 
     this.props.createEvent(this.state);
-    // return hashHistory.push(`/cities/${this.props.cityId}`);
+    return hashHistory.push(`/cities/${this.props.cityId}`);
   }
 
   update(field) {
@@ -35,7 +28,7 @@ class NewEventForm extends React.Component {
   }
 
   render() {
-    // debugger;
+    debugger;
 
 
     return (
@@ -60,6 +53,7 @@ class NewEventForm extends React.Component {
                 placeholder="Address"
                 onChange={this.update('address')}/>
             </label>
+            <br/>
             <input className="new-event-submit-button" type="submit" value="Create New Event"/>
           </form>
         </div>
@@ -69,17 +63,25 @@ class NewEventForm extends React.Component {
 }
 
 export default NewEventForm;
+// <label>
+//   <input
+//     type="date"
+//     value={this.state.date}
+//     onChange={this.update('date')}/>
+// </label>
+
 // <Datetime
 //   className="date"
-//   value={this.state.date}
+//   value={""}
 //   onChange={this.update('date')}
 //   timeFormat={false}/>
+
+
 // <Datetime
 //   className="time"
 //   value={this.state.time}
 //   onChange={this.update('time')}
 //   dateFormat={false}/>
-// <br/>
 
 // value={this.state.date}
 // onChange={this.update('date')}

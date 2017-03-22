@@ -7,6 +7,7 @@ export const EventsReducer = (state = {}, action) => {
     case RECEIVE_EVENTS:
       return merge({}, state, action.events);
     case RECEIVE_EVENT:
+      debugger;
       return merge({}, state, action.event);
     case DELETE_EVENT:
       return {};

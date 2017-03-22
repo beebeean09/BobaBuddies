@@ -23,7 +23,6 @@ export const CityReducer = (state = {}, action) => {
     case RECEIVE_CITY:
       return merge({}, state, action.city);
     case RECEIVE_EVENT:
-    debugger;
       const newState = merge({}, state);
       newState.events.push(action.event);
       return newState;

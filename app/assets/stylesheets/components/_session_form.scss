@@ -7,8 +7,8 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  height: 300px;
-  margin: 120px 0px;
+  height: 100%;
+  margin: 150px 0px;
 
     .greeting-container {
       text-align: center;
@@ -28,10 +28,11 @@
 
     .session-form-input {
       border: 1px solid black;
-      padding: 8px 170px;
       border-radius: 7px;
       text-align: center;
       background: ghostwhite;
+      width: 495px;
+      height: 43px;
     }
 
     .session-form-submit-button {

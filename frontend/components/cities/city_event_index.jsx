@@ -4,28 +4,39 @@ import { Link } from 'react-router';
 class CityEventIndex extends React.Component {
   constructor(props) {
     super(props);
-    debugger;
+    // debugger;
     // this.state = {city_id: 1, host_id: 3, title: "Boba Party", date: "2017-03-20", time: "03:00:00",
     //               address: "1234 App Academy St.", seats: 5};
   }
 
-  // componentWillReceiveProps(nextProps) {
+  // componentWillMount(nextProps) {
   //   debugger;
-  //   if (nextProps !== this.props) {
-  //     this.props.
+  //   // if (nextProps.events !== this.props.events) {
+  //   //   this.props.events.push(nextProps.event) ;
+  //   // }
+  //   if (this.props.events) {
+  //     this.props.fetchCity(this.props.city.id);
   //   }
   // }
 
+  componentDidUpdate() {
+    debugger;
+    if (this.props.events.length !== undefined) {
+      this.props.fetchEvents();
+    }
+  }
+
   componentDidMount() {
-    // debugger;
+    debugger;
     if (this.props.city) {
       this.props.fetchCity(this.props.city.id);
-  }
+      // this.props.fetchEvents();
+    }
   }
 
   handleAttendance(id) {
     // e.preventDefault();
-    debugger;
+    // debugger;
     // const userId = this.props.userId;
     // const eventId = this.props.eventId;
     const attendance = { event_id: id };

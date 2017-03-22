@@ -11,7 +11,7 @@ class DashboardEvents extends React.Component {
     const {events} = this.props;
 
     const dashboardEvents = events.map((event, idx) => (
-      <ul key={idx}>
+      <ul className="dashboard-event-card" key={idx}>
         <li>Event Id: {event.id}</li>
         <li>Title: {event.title}</li>
         <li>Address: {event.address}</li>
@@ -28,9 +28,10 @@ class DashboardEvents extends React.Component {
           <Link to="/dashboard/events">Current Events</Link>
           <Link to="/dashboard/hosting">Hosting Events</Link>
         </div>
-
+        <div className="dashboard-events-header">
+          <h1>Upcoming Events</h1>
+        </div>
         <div className="dashboard-content">
-          <h1>DashboardEvents Here!!!</h1>
           {this.props.currentUser ?
            dashboardEvents :
             <DashboardHostingContainer />}
