@@ -42,7 +42,6 @@ const Root = ({ store }) => {
           <Route path="/cities/:cityId" component={CityEventIndexContainer} />
           <Route path="/cities/:cityId/new-event-form" component={NewEventFormContainer} onEnter={redirectIfNotLoggedIn}/>
           <Route path="/dashboard/events" component={DashboardEventsContainer} />
-          <Route path="/dashboard/history" component={DashboardHistoryContainer} />
         </Route>
       </Router>
     </Provider>
@@ -53,3 +52,5 @@ const Root = ({ store }) => {
 
 
 export default Root;
+
+// <Route path="/dashboard/history" component={DashboardHistoryContainer} />

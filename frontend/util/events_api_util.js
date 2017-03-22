@@ -16,9 +16,16 @@ export const createEvent = event => (
 
 export const removeEvent = (id) => {
   return (
+    $.ajax({
+      method: 'DELETE',
+      url: `/api/events/${id}`
+    })
+  );
+};
+
+export const fetchUserEvents = (cityId) => (
   $.ajax({
-    method: 'DELETE',
-    url: `/api/events/${id}`
+    method: 'GET',
+    url: '/api/events/user_events'
   })
 );
-};

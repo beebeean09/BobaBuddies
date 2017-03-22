@@ -6,6 +6,7 @@ export const RECEIVE_EVENT = "RECEIVE_EVENT";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 export const DELETE_EVENT = "DELETE_EVENT";
 export const SUBTRACT_SEAT = "SUBTRACT_SEAT";
+export const RECEIVE_USER_EVENTS = "RECEIVE_USER_EVENTS";
 
 export const receiveEvents = events => ({
   type: RECEIVE_EVENTS,
@@ -15,6 +16,11 @@ export const receiveEvents = events => ({
 export const receiveEvent = event => ({
   type: RECEIVE_EVENT,
   event
+});
+
+export const receiveUserEvents = events => ({
+  type: RECEIVE_USER_EVENTS,
+  events
 });
 
 export const receiveErrors = () => ({
@@ -36,6 +42,10 @@ export const fetchEvent = (id) => dispatch => (
 
 export const fetchEvents = (cityId) => dispatch => (
   EventAPIUtil.fetchEvents(cityId).then(events => dispatch(receiveEvents(events)))
+);
+
+export const fetchUserEvents = () => dispatch => (
+  EventAPIUtil.fetchUserEvents().then(events => dispatch(receiveUserEvents(events)))
 );
 
 export const createEvent = (newEvent) => dispatch => {

@@ -7,9 +7,11 @@ Rails.application.routes.draw do
     resources :cities, only: [:show, :index] do
       resources :events, only: [:index]
     end
-    resources :events, only: [:create, :destroy, :update]
+    resources :events, only: [:create, :destroy, :update, :user_events]
     resources :attendances, only: [:create, :destroy]
   end
+
+  get 'events/user_events', :to => 'events#user_events'
 
   root "static_pages#root"
 end
