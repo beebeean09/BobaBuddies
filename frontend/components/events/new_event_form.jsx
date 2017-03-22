@@ -11,21 +11,14 @@ class NewEventForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // componentWillUpdate() {
-  //   this.redirectToCitiesIndex();
-  // }
-  //
-  // redirectToCitiesIndex() {
-  //   hashHistory.push(`/cities/${this.props.cityId}`);
-  // }
 
   handleSubmit(e) {
-    debugger;
+    // debugger;
     // const event = this.state;
     e.preventDefault();
 
     this.props.createEvent(this.state);
-    return hashHistory.push(`/cities/${this.props.cityId}`);
+    // return hashHistory.push(`/cities/${this.props.cityId}`);
   }
 
   update(field) {

@@ -5,7 +5,7 @@ import { createAttendance } from '../../actions/attendances_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-  debugger;
+  // debugger;
   return{
     city: state.cities[ownProps.params.cityId],
     currentUser: state.session.currentUser

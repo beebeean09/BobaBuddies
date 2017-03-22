@@ -9,7 +9,7 @@ class CityEventIndex extends React.Component {
     //               address: "1234 App Academy St.", seats: 5};
   }
 
-  componentWillMount() {
+  componentDidMount() {
     // debugger;
     if (this.props.city) {
       this.props.fetchCity(this.props.city.id);
