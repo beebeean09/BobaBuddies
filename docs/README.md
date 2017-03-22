@@ -7,9 +7,9 @@
 BobaBuddies is a web application inspired by TeaWithStrangers built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 - [x] Hosting on Heroku
 - [x] New account creation, login, and guest/demo login
-- [ ] Choose your current city
-- [ ] Ability to host events
-- [ ] Ability to join events
+- [x] Choose your current city
+- [x] Ability to host events
+- [x] Ability to join events
 - [ ] Dashboard of joined/hosted events
 - [ ] [Production README]()
 
@@ -51,16 +51,16 @@ Note model
     - [x] `NewEventForm`
 - [x] Style cities page and individual cities page
 - [x] Seed test data
-- [ ] Seed cities and events
+- [x] Seed cities and events
 
 ### Phase 3: Events Dashboard, Join Events, and Guest Login (2 days)
-- [ ] Ability to join events
-- [ ] Ability to host events
+- [x] Ability to join events
+- [x] Ability to host events
 - [ ] Create a dashboard so users can see all events
   - [ ] Current events
   - [ ] Hosting events
   - [ ] Past events (History)
-- [ ] Footer Component
+- [x] Footer Component
 
 ### Bonus Features (TBD)
 - [ ] User Profile viewing available

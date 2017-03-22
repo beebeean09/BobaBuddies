@@ -5,7 +5,7 @@ import React from 'react';
 const Footer = () => {
 
   return (
-    <div>
+    <div className="footer">
       <div className="footer-main-container">
         <div className="footer-side-links">
           <h3>Github</h3>
@@ -13,11 +13,6 @@ const Footer = () => {
           <h3>Portfolio</h3>
         </div>
         <div className="footer-about-text">
-          <p>Boba buddies is all about making communities feel more like neighborhoods.
-            Do you have a love for boba? Looking for a new boba place to try,
-            but you don't know where to go?
-            Why not do both by attending an event with Boba Buddies!
-          </p>
         </div>
       </div>
     </div>
@@ -25,3 +20,10 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+// <p>Boba buddies is all about making communities feel more like neighborhoods.
+//   Do you crave boba? Dream about it all the time... Are you in search for a buddy who feels the same way
+//   as you? Or maybe you're looking for a new boba place to try, but you don't know where all the
+//   boba lovers frequently visit? Why not do both by attending an event with Boba Buddies!
+// </p>

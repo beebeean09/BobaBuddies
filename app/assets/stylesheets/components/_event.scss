@@ -1,12 +1,12 @@
 .event-index-main-container {
-  border: 2px solid blue;
+  // border: 2px solid blue;
   color: white;
   font-size: 30px;
   font-family: 'Source Sans Pro'
 }
 
 .event-index-cover {
-  border: 2px solid yellow;
+  // border: 2px solid yellow;
   width: 100%;
   height: 400px;
   text-align: center;
@@ -51,7 +51,7 @@
 
 
 .event-index-container {
-  border: 2px solid green;
+  // border: 2px solid green;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -111,5 +111,6 @@
   a:hover {
     opacity: 1.0;
     filter: alpha(opacity=100)
+    
   }
 }

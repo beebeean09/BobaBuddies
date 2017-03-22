@@ -11,7 +11,7 @@
     background: #CCF2F2;
     font-family: arial;
     position: relative;
-    display: inline-block;
+    // display: inline-block;
     text-align: center;
     width: 100%;
     height: 50%;
@@ -27,7 +27,7 @@
       top: 25%;
       margin-left: auto;
       margin-right: auto;
-      width: 800px;
+      width: 100%;
 
       .floating-header {
         margin: 0 0 45px 0;
