@@ -18,8 +18,6 @@ const Home = ({currentUser}) => {
         alt="boba-home-image-cover"/>
       <div className="floating-container">
         <div className="floating-header">
-          <h1>It's common to have coffee everyday...</h1>
-          <h2>Why can't we do the same with boba?</h2>
         </div>
         {mainButton}
       </div>
@@ -29,3 +27,7 @@ const Home = ({currentUser}) => {
 };
 
 export default Home;
+
+
+// <h1>It's common to have coffee everyday...</h1>
+// <h2>Why can't we do the same with boba?</h2>

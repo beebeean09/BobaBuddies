@@ -12,6 +12,13 @@ class NewEventForm extends React.Component {
   }
 
 
+  // componentWillReceiveProps(newProps) {
+  //   debugger;
+  //   if (newProps !== this.props) {
+  //     hashHistory.push(`/cities/${this.props.cityId}`);
+  //   }
+  // }
+
   handleSubmit(e) {
     // debugger;
     // const event = this.state;

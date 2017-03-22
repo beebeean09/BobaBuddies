@@ -7,7 +7,7 @@ class Api::AttendancesController < ApplicationController
   def create
     @attendance = Attendance.new(attendance_params)
     @attendance.user_id = current_user.id
-    debugger
+
     if @attendance.save
       event = @attendance.event
       event.update(seats: event.seats - 1)

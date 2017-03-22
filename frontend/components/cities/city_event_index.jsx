@@ -9,11 +9,18 @@ class CityEventIndex extends React.Component {
     //               address: "1234 App Academy St.", seats: 5};
   }
 
-  componentWillReceiveProps(newProps) {
-    debugger;
-    // if (this.props.city) {
-    newProps.fetchCity(newProps.city.id);
-    // }
+  // componentWillReceiveProps(nextProps) {
+  //   debugger;
+  //   if (nextProps !== this.props) {
+  //     this.props.
+  //   }
+  // }
+
+  componentDidMount() {
+    // debugger;
+    if (this.props.city) {
+      this.props.fetchCity(this.props.city.id);
+  }
   }
 
   handleAttendance(id) {
@@ -23,6 +30,7 @@ class CityEventIndex extends React.Component {
     // const eventId = this.props.eventId;
     const attendance = { event_id: id };
     this.props.createAttendance(attendance);
+    // this.props.subtractSeat(id);
   }
 
   render() {

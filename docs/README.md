@@ -54,7 +54,7 @@ Note model
 - [x] Seed cities and events
 
 ### Phase 3: Events Dashboard, Join Events, and Guest Login (2 days)
-- [x] Ability to join events
+- [ ] Ability to join events
 - [x] Ability to host events
 - [ ] Create a dashboard so users can see all events
   - [ ] Current events

@@ -5,7 +5,7 @@ import configureStore from './store/store.js';
 import Root from './components/root';
 import { createAttendance } from './actions/attendances_actions';
 
-import { fetchEvents } from './actions/events_actions';
+import { removeEvent } from './actions/events_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.store = store;
   window.createAttendance = createAttendance;
-  
+  window.removeEvent = removeEvent;
+
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);
 });

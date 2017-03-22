@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { fetchAllCities, fetchCity } from '../../actions/cities_actions';
 import CityEventIndex from './city_event_index';
 import { createAttendance } from '../../actions/attendances_actions';
+import { subtractSeat, fetchEvents } from '../../actions/events_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -17,7 +18,9 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => ({
   fetchAllCities: () => dispatch(fetchAllCities()),
   fetchCity: (id) => dispatch(fetchCity(id)),
-  createAttendance: (attendance) => dispatch(createAttendance(attendance))
+  createAttendance: (attendance) => dispatch(createAttendance(attendance)),
+  subtractSeat: (id) => dispatch(subtractSeat(id)),
+  fetchEvents: () => dispatch(fetchEvents())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CityEventIndex);
