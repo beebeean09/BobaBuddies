@@ -10,7 +10,7 @@ import CitiesIndexContainer from './cities/cities_index_container';
 import CityEventIndexContainer from './cities/city_event_index_container';
 import NewEventFormContainer from './events/new_event_form_container';
 import DashboardEventsContainer from './dashboard/dashboard_events_container';
-import DashboardHistoryContainer from './dashboard/dashboard_history_container';
+import DashboardHostingContainer from './dashboard/dashboard_hosting_container';
 
 const Root = ({ store }) => {
 
@@ -42,6 +42,7 @@ const Root = ({ store }) => {
           <Route path="/cities/:cityId" component={CityEventIndexContainer} />
           <Route path="/cities/:cityId/new-event-form" component={NewEventFormContainer} onEnter={redirectIfNotLoggedIn}/>
           <Route path="/dashboard/events" component={DashboardEventsContainer} />
+          <Route path="/dashboard/hosting" component={DashboardHostingContainer} />
         </Route>
       </Router>
     </Provider>
@@ -52,5 +53,3 @@ const Root = ({ store }) => {
 
 
 export default Root;
-
-// <Route path="/dashboard/history" component={DashboardHistoryContainer} />
