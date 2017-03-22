@@ -23,7 +23,8 @@ export default Footer;
 
 
 // <p>Boba buddies is all about making communities feel more like neighborhoods.
-//   Do you crave boba? Dream about it all the time... Are you in search for a buddy who feels the same way
-//   as you? Or maybe you're looking for a new boba place to try, but you don't know where all the
-//   boba lovers frequently visit? Why not do both by attending an event with Boba Buddies!
+//   Are you constantly thinking about boba? Maybe you're just looking for a new boba place to try,
+// `but you don't know where all the avid boba drinkers go.
+// Well we're here to help you make that connection, so
+//   why not do them all by attending an event with Boba Buddies!
 // </p>

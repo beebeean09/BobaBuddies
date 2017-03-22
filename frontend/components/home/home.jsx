@@ -17,6 +17,10 @@ const Home = ({currentUser}) => {
       <img src="http://res.cloudinary.com/beebeean09/image/upload/v1490075035/DDDC7877-C40D-48A6-8BAF-3A9B4ED17D50_artp2z.jpg"
         alt="boba-home-image-cover"/>
       <div className="floating-container">
+        <div className="floating-header">
+          <h1>It's common to have coffee everyday...</h1>
+          <h2>Why can't we do the same with boba?</h2>
+        </div>
         {mainButton}
       </div>
 
@@ -25,9 +29,3 @@ const Home = ({currentUser}) => {
 };
 
 export default Home;
-
-
-// <div className="floating-header">
-// <h1>Some of us have coffee everyday...</h1>
-// <h2>Why can't we do the same with boba?</h2>
-// </div>
