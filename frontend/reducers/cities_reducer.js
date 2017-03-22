@@ -1,8 +1,9 @@
 import {
    RECEIVE_CITIES,
    RECEIVE_CITY,
-   CLEAR_CITY,
-   RECEIVE_EVENT} from '../actions/cities_actions';
+   CLEAR_CITY} from '../actions/cities_actions';
+
+import { RECEIVE_EVENT } from '../actions/events_actions';
 
 import merge from 'lodash/merge';
 

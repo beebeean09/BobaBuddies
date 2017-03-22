@@ -3,6 +3,9 @@
     json.id city.id
     json.name city.name
     json.image city.image
-    json.events city.events
+    json.events city.events do |event|
+      json.partial! 'api/events/event', event: event
+    end
   end
+
 end
