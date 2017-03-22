@@ -16,27 +16,22 @@ class DashboardHosting extends React.Component {
           <Link to="/dashboard/events">Current Events</Link>
           <Link to="/dashboard/hosting">Hosting Events</Link>
         </div>
-        <h1>DashboardHosting Here!!</h1>
+        <div className="dashboard-hosting">
+          <h1>DashboardHosting Here!!!</h1>
+          {this.props.hostedEvents.map((event, idx) => (
+            <ul key={idx}>
+              <li>Event Id: {event.id}</li>
+              <li>Title: {event.title}</li>
+              <li>Address: {event.address}</li>
+              <li>Date: {event.date}</li>
+              <li>Time: {event.time}</li>
+              <li>Seats: {event.seats}</li>
+            </ul>
+          ))}
+        </div>
       </div>
     );
   }
 }
 
 export default DashboardHosting;
-
-
-
-
-// <div className="dashboard-hosting">
-//   <h1>DashboardHosting Here!!!</h1>
-//   {this.props.hostedEvents.map((event, idx) => (
-//     <ul key={idx}>
-//       <li>Event Id: {event.id}</li>
-//       <li>Title: {event.title}</li>
-//       <li>Address: {event.address}</li>
-//       <li>Date: {event.date}</li>
-//       <li>Time: {event.time}</li>
-//       <li>Seats: {event.seats}</li>
-//     </ul>
-//   ))}
-// </div>

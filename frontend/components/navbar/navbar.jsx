@@ -22,6 +22,7 @@ class Navbar extends React.Component {
     if (this.props.currentUser) {
       navbarButton =
       <div className="navbar-main-right">
+        <Link className="log-button" to='/dashboard/events'>Dashboard</Link>
         <Link className="log-button" to='/cities'>Cities</Link>
         <button className="log-button" onClick={() => this.props.logout()}>Log Out</button>
       </div>;

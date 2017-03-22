@@ -41,8 +41,8 @@ const Root = ({ store }) => {
           <Route path="/cities" component={CitiesIndexContainer} />
           <Route path="/cities/:cityId" component={CityEventIndexContainer} />
           <Route path="/cities/:cityId/new-event-form" component={NewEventFormContainer} onEnter={redirectIfNotLoggedIn}/>
-          <Route path="/dashboard/events" component={DashboardEventsContainer} />
-          <Route path="/dashboard/hosting" component={DashboardHostingContainer} />
+          <Route path="/dashboard/events" component={DashboardEventsContainer} onEnter={redirectIfNotLoggedIn}/>
+          <Route path="/dashboard/hosting" component={DashboardHostingContainer} onEnter={redirectIfNotLoggedIn}/>
         </Route>
       </Router>
     </Provider>
