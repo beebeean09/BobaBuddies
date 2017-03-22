@@ -1,0 +1,30 @@
+.footer-main-container {
+  background: #ff574a;
+  font-family: 'Source Sans Pro';
+  padding: 30px;
+  color: white;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+
+  .footer-side-links {
+    margin: 0 57px 0 33px;
+
+    h3 {
+      font-size: 25px;
+      font-weight: bold;
+      padding: 5px;
+      margin: 0;
+    }
+
+  }
+
+  .footer-about-text {
+    font-size: 20px;
+    margin-top: 8px
+
+  }
+}
