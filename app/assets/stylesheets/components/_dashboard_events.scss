@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin: 5% 10%;
+    margin: 2% 5%;
     // font-size: 30px;
   }
 
@@ -20,6 +20,7 @@
     color: gray;
     padding: 20px;
     box-shadow: 0 4px 9px rgba(0,0,0,.4);
+    font-size: 20px;
   }
 
   .dashboard-events-header {
@@ -51,6 +52,7 @@
       padding: 8px 8px;
       margin: 0;
       margin-left: 29px;
+      text-transform: uppercase;
     }
 
     a:hover {

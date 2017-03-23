@@ -8,21 +8,28 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  margin: 150px 0px;
+  margin: 130px 0px;
+
+    form {
+      margin: 4px 0;
+      align-content: center;
+      justify-content: center;
+      flex-direction: column;
+    }
 
     .greeting-container {
       text-align: center;
       h1 {
         text-align: center;
         // margin: 20px 10px;
-        font-size: 30px;
+        font-size: 34px;
         color: #007E90;
         font-weight: bold;
       }
       h2 {
         text-align: center;
         margin: 10px;
-        font-size: 15px;
+        font-size: 20px;
       }
     }
 

@@ -10,8 +10,8 @@ export const EventsReducer = (state = {}, action) => {
       debugger;
       return merge({}, state, action.event);
     case DELETE_EVENT:
+    debugger;
       return {};
-    // case ADD_SEAT:
     default:
       return state;
   }

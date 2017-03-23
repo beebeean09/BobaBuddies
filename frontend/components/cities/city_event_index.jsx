@@ -8,22 +8,8 @@ class CityEventIndex extends React.Component {
 
   }
 
-  // componentWillMount(nextProps) {
-  //   debugger;
-  //   // if (nextProps.events !== this.props.events) {
-  //   //   this.props.events.push(nextProps.event) ;
-  //   // }
-  //   if (this.props.events) {
-  //     this.props.fetchCity(this.props.city.id);
-  //   }
-  // }
-
-
   componentDidMount() {
     this.props.fetchAllCities();
-    // if (this.props.city) {
-      // this.props.fetchEvents();
-    // }
   }
 
   handleAttendance(id) {
@@ -40,7 +26,7 @@ class CityEventIndex extends React.Component {
     const { city } = this.props;
     const currentUser = this.props;
 
-    const eventList = city.events.map(event => (
+    const eventList = (this.props.city) ? city.events.map(event => (
       <ul key={event.id} className="event-index">
         <li >Title: {event.title}</li>
         <li >Address: {event.address}</li>
@@ -52,9 +38,11 @@ class CityEventIndex extends React.Component {
           <button onClick={this.handleAttendance.bind(this, event.id)}>Join</button>
         </div>
       </ul>
-    ));
+    )) :
+    <div></div>;
 
     return (
+      (this.props.city) ?
       <div className="event-index-main-container">
         <div className="event-index-cover">
           <div className="event-cover-img">
@@ -72,7 +60,7 @@ class CityEventIndex extends React.Component {
         <div className="event-index-container">
           {eventList}
         </div>
-      </div>
+      </div> : <div></div>
     );
   }
 }
