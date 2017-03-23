@@ -8,9 +8,19 @@ class DashboardEvents extends React.Component {
   }
 
   render() {
-    const {events} = this.props;
 
-    const dashboardEvents = events.map((event, idx) => (
+    debugger;
+    const {events} = this.props;
+    const {hostedEvents} = this.props;
+    const currentLocation = this.props.location.pathname;
+
+    const dashboardEvents = (currentLocation === '/dashboard/events') ?
+    events : hostedEvents;
+
+    const dashboardHeader = (currentLocation === '/dashboard/events') ?
+    <h1>Upcoming Events</h1> : <h1>Hosting Events</h1>;
+
+    const dashboardEventsList = dashboardEvents.map((event, idx) => (
       <ul className="dashboard-event-card" key={idx}>
         <li>Event Id: {event.id}</li>
         <li>Title: {event.title}</li>
@@ -29,12 +39,10 @@ class DashboardEvents extends React.Component {
           <Link to="/dashboard/hosting">Hosting Events</Link>
         </div>
         <div className="dashboard-events-header">
-          <h1>Upcoming Events</h1>
+          {dashboardHeader}
         </div>
         <div className="dashboard-content">
-          {this.props.currentUser ?
-           dashboardEvents :
-            <DashboardHostingContainer />}
+          {dashboardEventsList}
         </div>
       </div>
     );

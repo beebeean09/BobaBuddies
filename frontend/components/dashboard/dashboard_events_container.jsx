@@ -1,10 +1,12 @@
 import { connect } from 'react-redux';
 import DashboardEvents from './dashboard_events';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
+  debugger;
   return {
-    events: Object.keys(state.session.currentUser.events).map(id => state.session.currentUser.events[id]),
-    currentUser: state.session.currentUser
+    events: state.session.currentUser.events,
+    hostedEvents: state.session.currentUser.hosted_events,
+    currentUser: state.session.currentUser,
   };
 };
 

@@ -5,8 +5,7 @@ class CityEventIndex extends React.Component {
   constructor(props) {
     super(props);
     // debugger;
-    // this.state = {city_id: 1, host_id: 3, title: "Boba Party", date: "2017-03-20", time: "03:00:00",
-    //               address: "1234 App Academy St.", seats: 5};
+
   }
 
   // componentWillMount(nextProps) {
@@ -19,19 +18,12 @@ class CityEventIndex extends React.Component {
   //   }
   // }
 
-  componentDidUpdate() {
-    debugger;
-    if (this.props.events.length !== undefined) {
-      this.props.fetchEvents();
-    }
-  }
 
   componentDidMount() {
-    debugger;
-    if (this.props.city) {
-      this.props.fetchCity(this.props.city.id);
+    this.props.fetchAllCities();
+    // if (this.props.city) {
       // this.props.fetchEvents();
-    }
+    // }
   }
 
   handleAttendance(id) {
@@ -45,22 +37,21 @@ class CityEventIndex extends React.Component {
   }
 
   render() {
-
     const { city } = this.props;
     const currentUser = this.props;
 
     const eventList = city.events.map(event => (
-      <div key={event.id} className="event-index">
-        <ul className="event-title">Title: {event.title}</ul>
-        <ul className="event-address">Address: {event.address}</ul>
-        <ul>Date: {event.date}</ul>
-        <ul>Time: {event.time}</ul>
-        <ul>Seats: {event.seats}</ul>
-        <ul>Host Id: {event.host_id}</ul>
+      <ul key={event.id} className="event-index">
+        <li >Title: {event.title}</li>
+        <li >Address: {event.address}</li>
+        <li>Date: {event.date}</li>
+        <li>Time: {event.time}</li>
+        <li>Seats: {event.seats}</li>
+        <li>Host Id: {event.host_id}</li>
         <div className="join-unjoin-button">
           <button onClick={this.handleAttendance.bind(this, event.id)}>Join</button>
         </div>
-      </div>
+      </ul>
     ));
 
     return (

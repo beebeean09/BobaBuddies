@@ -55,6 +55,7 @@
 .event-index-container {
   // border: 2px solid green;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   font-size: 18px;
@@ -64,13 +65,11 @@
   border: 2px solid grey;
   margin: 40px;
   padding: 20px;
+  width: 260px;
+  height: 245px;
   background: ghostwhite;
   color: gray;
   box-shadow: 0 4px 9px rgba(0,0,0,.4);
-
-  ul {
-    margin: 18px 0;
-  }
 
   .join-unjoin-button {
     border: 1px solid grey;

@@ -24,7 +24,9 @@ export const CityReducer = (state = {}, action) => {
       return merge({}, state, action.city);
     case RECEIVE_EVENT:
       const newState = merge({}, state);
-      newState.events.push(action.event);
+      if (newState.events) {
+        newState.events.push(action.event);
+      }
       return newState;
     case CLEAR_CITY:
       return {};

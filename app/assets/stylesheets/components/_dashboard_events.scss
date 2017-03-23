@@ -1,5 +1,6 @@
 .dashboard-main-container {
   font-family: 'Source Sans Pro';
+  text-align: center;
 
   .dashboard-content {
     display: flex;
@@ -7,6 +8,7 @@
     flex-direction: row;
     justify-content: center;
     margin: 5% 10%;
+    // font-size: 30px;
   }
 
   .dashboard-event-card {
@@ -18,13 +20,11 @@
     color: gray;
     padding: 20px;
     box-shadow: 0 4px 9px rgba(0,0,0,.4);
-
   }
 
   .dashboard-events-header {
     // text-transform: uppercase;
     font-size: 50px;
-    text-align: center;
     margin-top: 33px;
     color: grey;
 
@@ -48,13 +48,14 @@
     a {
       display: flex;
       border-radius: 7px;
-      padding: 5px 0;
-      margin: 0 16px;
+      padding: 8px 8px;
+      margin: 0;
+      margin-left: 29px;
     }
 
     a:hover {
       background: grey;
-      padding: 10px 8px;
+      padding: 8px 8px;
 
     }
   }
