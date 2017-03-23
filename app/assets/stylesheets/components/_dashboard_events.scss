@@ -9,8 +9,24 @@
     justify-content: center;
     margin: 2% 5%;
     // font-size: 30px;
-  }
 
+    .dashboard-message-bobasaur {
+      margin: 5px 0;
+
+      h1 {
+        margin: 50px 0;
+        font-size: 30px;
+        font-family: 'Source Sans Pro';
+        color: #75b3b3;
+      }
+
+      img {
+        display: inline-block;
+        width: 65%;
+        height: 65%;
+      }
+    }
+  }
   .dashboard-event-card {
     border: 2px solid grey;
     width: 260px;
@@ -56,7 +72,7 @@
     }
 
     a:hover {
-      background: grey;
+      background: #91999A;
       padding: 8px 8px;
 
     }

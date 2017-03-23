@@ -30,7 +30,7 @@ class DashboardEvents extends React.Component {
       </ul>
     ));
 
-    // debugger;
+    debugger;
     return (
       <div className="dashboard-main-container">
         <div className="dashboard-navbar">
@@ -41,7 +41,16 @@ class DashboardEvents extends React.Component {
           {dashboardHeader}
         </div>
         <div className="dashboard-content">
-          {dashboardEventsList}
+          {(dashboardEvents.length > 0) ?
+            dashboardEventsList :
+            <div>
+              <div className="dashboard-message-bobasaur">
+                <h1>Seems like you have no events in your dashboard. Hurry up and choose a city to join an event!</h1>
+                <img src="http://res.cloudinary.com/beebeean09/image/upload/v1490247543/1-Bulbasaur_f4qnao.png"
+                  alt="bobasaur_img"/>
+              </div>
+            </div>
+          }
         </div>
       </div>
     );

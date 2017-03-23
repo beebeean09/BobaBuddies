@@ -9,6 +9,7 @@ class CityEventIndex extends React.Component {
   }
 
   componentDidMount() {
+    debugger;
     this.props.fetchAllCities();
   }
 
