@@ -9,8 +9,8 @@ class Api::AttendancesController < ApplicationController
     @attendance.user_id = current_user.id
 
     if @attendance.save
-      event = @attendance.event
-      event.update(seats: event.seats - 1)
+      @event = @attendance.event
+      @event.update(seats: @event.seats - 1)
       render 'api/attendances/show'
     else
       render json: @attendance.errors.full_messages, status: 422
@@ -19,10 +19,14 @@ class Api::AttendancesController < ApplicationController
 
   def destroy
     debugger;
-    @event = current_user.events.where(id: params[:event_id])
-    @event.update(seats: event.seats + 1)
-    @event.destroy
-    render json: @attendance
+    @event = current_user.events.find(params[:id])
+    @event.update(seats: @event.seats + 1)
+
+    # @attendances = Attendance.find_by_id(current_user.id)
+    # @attendance = @attendances.find_by_event_id(params[:id])
+    @attendance = Attendance.where(event_id: params[:id], user_id: current_user.id).first
+    @attendance.destroy
+    render 'api/attendances/show'
   end
 
   private

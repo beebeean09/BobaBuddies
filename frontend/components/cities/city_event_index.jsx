@@ -13,7 +13,7 @@ class CityEventIndex extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    debugger;
+    // debugger;
     if (nextProps !== this.props) {
       this.setState({attendances: nextProps.attendances});
     }
@@ -30,8 +30,9 @@ class CityEventIndex extends React.Component {
 
   handleDeleteAttendance(id) {
     debugger;
-    const attendance = this.props.eventsAttending.find(this.findEvent(event, id));
-    this.props.deleteAttendance(attendance.id);
+    // const attendance = this.props.eventsAttending.find(this.findEvent(event, id));
+    // this.props.deleteAttendance(attendance.id);
+    this.props.deleteAttendance(id);
   }
 
   render() {
@@ -47,12 +48,14 @@ class CityEventIndex extends React.Component {
     //   <button onClick={this.handleDeleteAttendance.bind(this, event.id)}>Unjoin</button>
     // </div> }
 
+    // </div>
 
+    // <div className="event-index-header">
     // debugger;
     const eventList = (this.props.city) ? city.events.map(event => (
       <ul key={event.id} className="event-index">
-        <li >Title: {event.title}</li>
-        <li >Address: {event.address}</li>
+          <li >Title: {event.title}</li>
+          <li >Address: {event.address}</li>
         <li>Date: {event.date}</li>
         <li>Time: {event.time}</li>
         <li>Seats: {event.seats}</li>

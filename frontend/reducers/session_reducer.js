@@ -5,7 +5,7 @@ import {
   CLEAR_ERRORS
 } from '../actions/session_actions';
 
-import { RECEIVE_ATTENDANCE } from '../actions/attendances_actions';
+import { RECEIVE_ATTENDANCE, REMOVE_ATTENDANCE } from '../actions/attendances_actions';
 
 import merge from 'lodash/merge';
 
@@ -33,8 +33,13 @@ const SessionReducer = (state = _nullUser, action) => {
       return Object.assign({}, state, { errors: [] });
     case RECEIVE_ATTENDANCE:
       debugger;
-      let newState = Object.assign({}, _nullUser, { currentUser });
-      newState.currentUser.events.push(action.attendance);
+      let newState = merge({}, state);
+      newState.currentUser.events.push(action.attendance.event);
+      return newState;
+    case REMOVE_ATTENDANCE:
+      debugger;
+      newState = merge({}, state);
+      delete newState.currentUser.events[action.attendance.event.id];
       return newState;
     default:
       return state;
