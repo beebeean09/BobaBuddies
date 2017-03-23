@@ -10,7 +10,7 @@ BobaBuddies is a web application inspired by TeaWithStrangers built using Ruby o
 - [x] Choose your current city
 - [x] Ability to host events
 - [x] Ability to join events
-- [ ] Dashboard of joined/hosted events
+- [x] Dashboard of joined/hosted events
 - [ ] [Production README]()
 
 ## Design Docs

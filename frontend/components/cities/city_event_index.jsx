@@ -9,24 +9,46 @@ class CityEventIndex extends React.Component {
   }
 
   componentDidMount() {
-    debugger;
     this.props.fetchAllCities();
   }
 
-  handleAttendance(id) {
-    // e.preventDefault();
-    // debugger;
-    // const userId = this.props.userId;
-    // const eventId = this.props.eventId;
+  componentWillReceiveProps(nextProps) {
+    debugger;
+    if (nextProps !== this.props) {
+      this.setState({attendances: nextProps.attendances});
+    }
+  }
+
+  handleAddAttendance(id) {
     const attendance = { event_id: id };
     this.props.createAttendance(attendance);
+    debugger;
     // this.props.subtractSeat(id);
   }
 
+  findEvent(event, id) { event.id === id;}
+
+  handleDeleteAttendance(id) {
+    debugger;
+    const attendance = this.props.eventsAttending.find(this.findEvent(event, id));
+    this.props.deleteAttendance(attendance.id);
+  }
+
   render() {
+
     const { city } = this.props;
     const currentUser = this.props;
 
+    // const attendanceButton = {this.props.eventsAttending.includes(event.id) ?
+    // <div className="join-unjoin-button">
+    //   <button onClick={this.handleAddAttendance.bind(this, event.id)}>Join</button>
+    // </div> :
+    // <div className="join-unjoin-button">
+    //   <button onClick={this.handleDeleteAttendance.bind(this, event.id)}>Unjoin</button>
+    // </div> }
+
+
+    // debugger;
     const eventList = (this.props.city) ? city.events.map(event => (
       <ul key={event.id} className="event-index">
         <li >Title: {event.title}</li>
@@ -35,9 +57,14 @@ class CityEventIndex extends React.Component {
         <li>Time: {event.time}</li>
         <li>Seats: {event.seats}</li>
         <li>Host Id: {event.host_id}</li>
-        <div className="join-unjoin-button">
-          <button onClick={this.handleAttendance.bind(this, event.id)}>Join</button>
-        </div>
+      {this.props.eventsAttending.includes(event.id) ?
+      <div className="join-unjoin-button">
+        <button onClick={this.handleDeleteAttendance.bind(this, event.id)}>Unjoin</button>
+      </div> :
+      <div className="join-unjoin-button">
+        <button onClick={this.handleAddAttendance.bind(this, event.id)}>Join</button>
+      </div> }
+
       </ul>
     )) :
     <div></div>;

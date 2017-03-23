@@ -18,10 +18,10 @@ class Api::AttendancesController < ApplicationController
   end
 
   def destroy
-    @attendance = Attendance.where(event_id: params[:event_id], user_id: params[:user_id])
-    event = @attendance.event
-    event.update(seats: event.seats + 1)
-    @attendance.destroy
+    debugger;
+    @event = current_user.events.where(id: params[:event_id])
+    @event.update(seats: event.seats + 1)
+    @event.destroy
     render json: @attendance
   end
 

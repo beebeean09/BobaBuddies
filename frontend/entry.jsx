@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { login, signup, logout } from './actions/session_actions';
 import configureStore from './store/store.js';
 import Root from './components/root';
-import { createAttendance } from './actions/attendances_actions';
+import { createAttendance, deleteAttendance } from './actions/attendances_actions';
 
 import { removeEvent } from './actions/events_actions';
 
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.store = store;
   window.createAttendance = createAttendance;
-  window.removeEvent = removeEvent;
+  window.deleteAttendance = deleteAttendance;
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);

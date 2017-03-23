@@ -5,6 +5,8 @@ import {
   CLEAR_ERRORS
 } from '../actions/session_actions';
 
+import { RECEIVE_ATTENDANCE } from '../actions/attendances_actions';
+
 import merge from 'lodash/merge';
 
 const _nullUser = Object.freeze({
@@ -29,6 +31,11 @@ const SessionReducer = (state = _nullUser, action) => {
       });
     case CLEAR_ERRORS:
       return Object.assign({}, state, { errors: [] });
+    case RECEIVE_ATTENDANCE:
+      debugger;
+      let newState = Object.assign({}, _nullUser, { currentUser });
+      newState.currentUser.events.push(action.attendance);
+      return newState;
     default:
       return state;
   }

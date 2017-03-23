@@ -5,10 +5,10 @@ import { EventsReducer } from './events_reducer';
 import { AttendancesReducer } from './attendances_reducer';
 
 const RootReducer = combineReducers({
+  attendances: AttendancesReducer,
   session: SessionReducer,
   cities: CitiesReducer,
   city: CityReducer,
-  attendances: AttendancesReducer,
   events: EventsReducer
 });
 

@@ -6,6 +6,11 @@ class DashboardEvents extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    debugger;
+    this.props.fetchEvents();
+  }
+
   render() {
 
     debugger;
@@ -30,6 +35,16 @@ class DashboardEvents extends React.Component {
       </ul>
     ));
 
+    const bobasaurMessageFilled =
+    <div className="dashboard-message-bobasaur">
+      <div className="dashboard-bobasaur-filled">
+        <h1>Yay it seems like you've got a couple events coming up!</h1>
+        <img src="http://res.cloudinary.com/beebeean09/image/upload/v1490247543/1-Bulbasaur_f4qnao.png"
+          alt="bobasaur_img"/>
+      </div>
+    </div> ;
+
+
     debugger;
     return (
       <div className="dashboard-main-container">
@@ -42,15 +57,22 @@ class DashboardEvents extends React.Component {
         </div>
         <div className="dashboard-content">
           {(dashboardEvents.length > 0) ?
-            dashboardEventsList :
+            <div>
+              {bobasaurMessageFilled}
+              <div className="dashboard-eventlist">
+                {dashboardEventsList}
+              </div>
+            </div>
+            :
             <div>
               <div className="dashboard-message-bobasaur">
-                <h1>Seems like you have no events in your dashboard. Hurry up and choose a city to join an event!</h1>
+                <h1>Seems like your dashboard is empty. Choose a city to join an event!</h1>
                 <img src="http://res.cloudinary.com/beebeean09/image/upload/v1490247543/1-Bulbasaur_f4qnao.png"
                   alt="bobasaur_img"/>
               </div>
             </div>
           }
+
         </div>
       </div>
     );

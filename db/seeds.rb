@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-City.delete_all
+# City.delete_all
 Event.delete_all
 
 User.create( email: "bobabuddies@gmail.com", password: "bobaboba", first_name: "Buddy", host: false )
@@ -33,3 +33,8 @@ Event.create!(city_id: 3, host_id: 1, title: "How many bobas are in your average
 Event.create!(city_id: 4, host_id: 1, title: "Fruit Smoothies and Boba?!", date: "2017-06-28", time: "08:30:00", address: "619 S King St. Seattle, WA", seats: 20)
 Event.create!(city_id: 5, host_id: 3, title: "What's the most you've had in one day?", date: "2017-09-05", time: "12:30:00", address: "1624 Wisconsin Ave. NW, Washington, DC ", seats: 10)
 Event.create!(city_id: 6, host_id: 3, title: "Mini Bobas vs Regular Bobas", date: "2017-08-15", time: "09:30:00", address: "129 E 45th St. New York, NY", seats: 9)
+
+
+Attendance.create!(user_id: 1, event_id: 1)
+Attendance.create!(user_id: 2, event_id: 2)
+Attendance.create!(user_id: 3, event_id: 3)

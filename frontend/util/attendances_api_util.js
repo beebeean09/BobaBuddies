@@ -15,3 +15,17 @@ export const deleteAttendance = (id) => (
     url: `api/attendances/${id}`
   })
 );
+
+export const fetchAttendances = () => {
+  return $.ajax({
+    method: 'GET',
+    url: 'api/attendances'
+  });
+};
+
+export const fetchAttendance = (id) => {
+  return $.ajax({
+    method: 'GET',
+    url: `api/attendances/${id}`
+  });
+};
