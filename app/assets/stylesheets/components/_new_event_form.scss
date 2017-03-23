@@ -3,7 +3,7 @@
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  margin: 80px 150px;
+  margin: 80px 100px;
   font-family: 'Source Sans Pro';
   font-size: 25px;
   color: #007E90;
@@ -29,23 +29,10 @@
   display: flex;
   justify-content: center;
 
-  // .date {
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   border: 5px solid red;
-  // }
-  // .rdtPicker {
-  //   display: block;
-  //   align-items: center;
-  // }
-
-
   label, form {
     display: flex;
     flex-direction: column;
     align-content: center;
-    // margin: 20px;
 
     input {
       border: 1px solid black;
@@ -54,8 +41,7 @@
       background: ghostwhite;
       font-size: 18px;
       width: 414px;
-      height: 43px;
-      margin: 20px 0;
+      margin: 8px 0;
       color: grey;
     }
 }
@@ -67,10 +53,13 @@
     .datetime {
       color: grey;
       width: 195px;
-      height: 52px;
+      height: 40px;
       display: flex;
-
     }
+
+  }
+  .title-address-input {
+    height: 40px;
   }
 
   .new-event-submit-button {
@@ -83,6 +72,8 @@
     padding: 0 100px;
     opacity: 0.8;
     filter: alpha(opacity=50);
+    text-transform: uppercase;
+    height: 50px;
   }
 
   .new-event-submit-button:hover {

@@ -6,8 +6,8 @@ class NewEventForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {title: "", address: "", date: "2017-10-09", time: "06:00:00",
-      seats: 7, city_id: this.props.cityId};
+    this.state = {title: "", address: "", date: "", time: "",
+      seats: 20, city_id: this.props.cityId};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -41,6 +41,7 @@ class NewEventForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <label>
               <input
+                className="title-address-input"
                 type="text"
                 value={this.state.title}
                 placeholder="Title"
@@ -48,6 +49,7 @@ class NewEventForm extends React.Component {
             </label>
             <label>
               <input
+                className="title-address-input"
                 type="text"
                 value={this.state.address}
                 placeholder="Address"
@@ -69,7 +71,6 @@ class NewEventForm extends React.Component {
                   onChange={this.update('time')}/>
               </label>
             </div>
-            <br/>
             <input className="new-event-submit-button" type="submit" value="Create New Event"/>
           </form>
         </div>

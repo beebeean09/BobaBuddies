@@ -79,10 +79,6 @@
   }
 }
 
-.event-title, .event-address {
-
-}
-
 .event-index-header {
   text-align: center;
   padding: 80px 0;
@@ -98,6 +94,7 @@
   flex-direction: row;
   margin: 30px 30px;
   font-size: 15px;
+  text-transform: uppercase;
 
   a {
     border: 1px solid gray;
