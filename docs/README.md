@@ -56,10 +56,9 @@ Note model
 ### Phase 3: Events Dashboard, Join Events, and Guest Login (2 days)
 - [ ] Ability to join events
 - [x] Ability to host events
-- [ ] Create a dashboard so users can see all events
-  - [ ] Current events
-  - [ ] Hosting events
-  - [ ] Past events (History)
+- [x] Create a dashboard so users can see all events
+  - [x] Current events
+  - [x] Hosting events
 - [x] Footer Component
 
 ### Bonus Features (TBD)

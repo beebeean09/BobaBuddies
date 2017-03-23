@@ -1,5 +1,4 @@
 import React from 'react';
-import DashboardHostingContainer from './dashboard_hosting_container';
 import { Link } from 'react-router';
 
 class DashboardEvents extends React.Component {

@@ -53,6 +53,22 @@ class NewEventForm extends React.Component {
                 placeholder="Address"
                 onChange={this.update('address')}/>
             </label>
+            <div className="datetime-container">
+              <label>
+                <input
+                  className="datetime"
+                  type="date"
+                  value={this.state.date}
+                  onChange={this.update('date')}/>
+              </label>
+              <label>
+                <input
+                  className="datetime"
+                  type="time"
+                  value={this.state.time}
+                  onChange={this.update('time')}/>
+              </label>
+            </div>
             <br/>
             <input className="new-event-submit-button" type="submit" value="Create New Event"/>
           </form>
@@ -63,12 +79,6 @@ class NewEventForm extends React.Component {
 }
 
 export default NewEventForm;
-// <label>
-//   <input
-//     type="date"
-//     value={this.state.date}
-//     onChange={this.update('date')}/>
-// </label>
 
 // <Datetime
 //   className="date"
@@ -90,12 +100,6 @@ export default NewEventForm;
 //     type="number"
 //     value={this.state.seats}
 //     onChange={this.update('seats')}/>
-// </label>
-// <label>
-//   <input
-//     type="dateTime"
-//     value={this.state.date}
-//     onChange={this.update('date')}/>
 // </label>
 // <Datetime
 //   className="time"

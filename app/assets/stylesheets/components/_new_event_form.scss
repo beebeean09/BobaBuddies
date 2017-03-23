@@ -1,5 +1,4 @@
 .new-event-form-main {
-  border: 2px solid black;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -13,31 +12,29 @@
 }
 
 .new-event-form-header {
-  border: 2px solid blue;
   // margin-bottom: 32px;
   text-align: center;
 
   h1, h2 {
     margin: 30px;
-    font-size: 25px;
+    font-size: 34px;
   }
   h2 {
-    font-size: 17px;
+    font-size: 20px;
     color: black;
   }
 }
 
 .new-event-form {
-  border: 2px solid green;
   display: flex;
   justify-content: center;
 
-  .date {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 5px solid red;
-  }
+  // .date {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   border: 5px solid red;
+  // }
   // .rdtPicker {
   //   display: block;
   //   align-items: center;
@@ -56,12 +53,25 @@
       text-align: center;
       background: ghostwhite;
       font-size: 18px;
-      width: 495px;
+      width: 414px;
       height: 43px;
       margin: 20px 0;
+      color: grey;
     }
-
 }
+  .datetime-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .datetime {
+      color: grey;
+      width: 195px;
+      height: 52px;
+      display: flex;
+
+    }
+  }
 
   .new-event-submit-button {
     // text-align: center;
@@ -70,7 +80,7 @@
     border: 2px solid grey;
     color: white;
     background: #91999A;
-    padding: 10px 100px;
+    padding: 0 100px;
     opacity: 0.8;
     filter: alpha(opacity=50);
   }

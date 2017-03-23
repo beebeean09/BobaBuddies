@@ -10,7 +10,6 @@ import CitiesIndexContainer from './cities/cities_index_container';
 import CityEventIndexContainer from './cities/city_event_index_container';
 import NewEventFormContainer from './events/new_event_form_container';
 import DashboardEventsContainer from './dashboard/dashboard_events_container';
-import DashboardHostingContainer from './dashboard/dashboard_hosting_container';
 
 const Root = ({ store }) => {
 
@@ -28,7 +27,6 @@ const Root = ({ store }) => {
       replace('/sign-in');
     }
   };
-
 
 
   return (
@@ -49,8 +47,4 @@ const Root = ({ store }) => {
   );
 };
 
-
-
-
 export default Root;
-// <Route path="/dashboard/hosting" component={DashboardHostingContainer} onEnter={redirectIfNotLoggedIn}/>
