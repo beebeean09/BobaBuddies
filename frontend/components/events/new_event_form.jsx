@@ -13,11 +13,11 @@ class NewEventForm extends React.Component {
 
 
   handleSubmit(e) {
-    debugger;
     // const event = this.state;
     e.preventDefault();
 
     this.props.createEvent(this.state);
+    debugger;
     return hashHistory.push(`/cities/${this.props.cityId}`);
   }
 
@@ -25,6 +25,19 @@ class NewEventForm extends React.Component {
     return e => {
       this.setState({[field]: e.target.value});
     };
+  }
+
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, idx) => (
+          <li
+            key={`error-${idx}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   render() {
@@ -39,6 +52,7 @@ class NewEventForm extends React.Component {
         </div>
         <div className="new-event-form">
           <form onSubmit={this.handleSubmit}>
+            {this.renderErrors()}
             <label>
               <input
                 className="title-address-input"

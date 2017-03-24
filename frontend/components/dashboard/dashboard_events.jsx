@@ -7,13 +7,11 @@ class DashboardEvents extends React.Component {
   }
 
   componentDidMount() {
-    debugger;
     this.props.fetchEvents();
   }
 
   render() {
 
-    debugger;
     const {events} = this.props;
     const {hostedEvents} = this.props;
     const currentLocation = this.props.location.pathname;

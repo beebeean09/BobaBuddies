@@ -3,7 +3,8 @@ import { hashHistory } from 'react-router';
 
 export const RECEIVE_EVENTS = "RECEIVE_EVENTS";
 export const RECEIVE_EVENT = "RECEIVE_EVENT";
-export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const RECEIVE_EVENT_ERRORS = "RECEIVE_EVENT_ERRORS";
+export const CLEAR_EVENT_ERRORS = "CLEAR_EVENT_ERRORS";
 export const DELETE_EVENT = "DELETE_EVENT";
 export const SUBTRACT_SEAT = "SUBTRACT_SEAT";
 export const RECEIVE_USER_EVENTS = "RECEIVE_USER_EVENTS";
@@ -23,8 +24,13 @@ export const receiveUserEvents = events => ({
   events
 });
 
-export const receiveErrors = () => ({
-  type: RECEIVE_ERRORS
+export const receiveEventErrors = errors => ({
+  type: RECEIVE_EVENT_ERRORS,
+  errors
+});
+
+export const clearEventErrors = () => ({
+  type: CLEAR_EVENT_ERRORS
 });
 
 export const deleteEvent = (event) => ({

@@ -3,9 +3,9 @@ import NewEventForm from './new_event_form';
 import { createEvent } from '../../actions/events_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger;
   return {
-    cityId: state.city.id || ownProps.params.cityId
+    cityId: state.city.id || ownProps.params.cityId,
+    errors: state.session.errors
   };
 };
 

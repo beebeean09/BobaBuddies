@@ -23,10 +23,9 @@ class CityEventIndex extends React.Component {
     const attendance = { event_id: id };
     this.props.createAttendance(attendance);
     debugger;
-    // this.props.subtractSeat(id);
   }
 
-  findEvent(event, id) { event.id === id;}
+  // findEvent(event, id) { event.id === id;}
 
   handleDeleteAttendance(id) {
     debugger;
@@ -39,16 +38,6 @@ class CityEventIndex extends React.Component {
 
     const { city } = this.props;
     const currentUser = this.props;
-
-    // const attendanceButton = {this.props.eventsAttending.includes(event.id) ?
-    // <div className="join-unjoin-button">
-    //   <button onClick={this.handleAddAttendance.bind(this, event.id)}>Join</button>
-    // </div> :
-    // <div className="join-unjoin-button">
-    //   <button onClick={this.handleDeleteAttendance.bind(this, event.id)}>Unjoin</button>
-    // </div> }
-
-
     // debugger;
     const eventList = (this.props.city) ? city.events.map(event => (
       <ul key={event.id} className="event-index">

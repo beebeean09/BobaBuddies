@@ -8,7 +8,6 @@ import { fetchEvents } from '../../actions/events_actions';
 const mapStateToProps = (state, ownProps) => {
 
   let eventsAttending = [];
-  debugger;
   if (state.session.currentUser) {
     eventsAttending = state.session.currentUser.events.map(event => event.id);
   }
