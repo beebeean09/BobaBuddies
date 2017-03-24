@@ -8,6 +8,12 @@ BobaBuddies is a full-stack web application inspired by Tea With Strangers. It u
 
 ## Features & Implementation
 
+### Home Page
+
+Home page has a link that directs user to either cities page or sign-up page depending on whether the user is logged in or not.
+
+![image of home page](wireframes/homepage.png)
+
 ### Dashboard Rendering (Hosted or Current Events)
 
 Every event is stored in the database with a required `city_id`, `host_id`, `title`, `address`, `date`, `time`, and `seats`. Because each user can either attend/unattend an event or host an event, it was necessary to make a join table named Attendances, which contained a user_id and event_id to allow a connection between users (host/attendee) and events.
