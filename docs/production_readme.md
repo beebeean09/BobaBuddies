@@ -9,22 +9,32 @@ BobaBuddies is a full-stack web application inspired by Tea With Strangers. It u
 ## Features & Implementation
 
 ### Dashboard Rendering (Hosted or Current Events)
-dashboard current and hosted events
-###
 
-![image of notebook index](wireframes/home-logged-in.png)
+Every event is stored in the database with a required `city_id`, `host_id`, `title`, `address`, `date`, `time`, and `seats`. Because each user can either attend/unattend an event or host an event, it was necessary to make a join table named Attendances, which contained a user_id and event_id to allow a connection between users (host/attendee) and events.
+
+With the Attendances table, it was possible to then store that data to keep track of when users decide to host an event or attend/unattend an event. Using associations from the user, the events a user was attending was accessible through `attendances` and the events a user was hosting was accessible through `hosted_events` from the `host_id` in the events table.
+
+The component rendering the current events and hosting events is all done within the `DashboardEvents`. There are two links on the page: 'Current Events' and 'Hosting Events'. It checks the pathname of the current location and depending on the pathname, it will then render either the current events or hosting events. This also allowed me to use just one component for both routes (`/dashboard/events` and `/dashboard/hosting`).
+
+The `DashboardEvents` render method discussed can be seen below:
+
+```javascript
+render: function () {
+  const { events } = this.props;
+  const { hostedEvents } = this.props;
+  const currentLocation = this.props.location.pathname;
+
+  const dashboardEvents = (currentLocation === '/dashboard/events') ?
+  events : hostedEvents;
+}
+```
+![image of dashboard events](wireframes/home-logged-in.png)
 
 ### City Event Index Rendering
 
 
-<!-- ```javascript
-render: function () {
-  return ({this.state.notebooks.map(function (notebook) {
-    return <CondensedNotebook notebook={notebook} />
-  }
-  <ExpandedNotebook notebook={this.state.selectedNotebook} />)
-}
-``` -->
+
+
 
 
 ![tag screenshot](wireframes/tag-search.png)
