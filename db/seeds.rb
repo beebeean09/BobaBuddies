@@ -12,13 +12,13 @@
 User.create( email: "bobabuddies@gmail.com", password: "bobaboba", first_name: "Buddy", host: false )
 User.create( email: "paul@gmail.com", password: "iloveboba", first_name: "Paul", host: true )
 User.create( email: "sarah2@gmail.com", password: "iloveboba2", first_name: "Sarah", host: true )
-#
-# City.create!(name: "San Francisco", image: 'http://res.cloudinary.com/beebeean09/image/upload/v1490057537/SF_vysi0o.jpg')
-# City.create!(name: "Chicago", image: 'http://res.cloudinary.com/beebeean09/image/upload/v1490067089/Chicago_i9fiwb.jpg')
-# City.create!(name: "Los Angeles", image: 'http://res.cloudinary.com/beebeean09/image/upload/v1490057534/los_angeles_cmfmup.jpg')
-# City.create!(name: "Seattle", image: 'http://res.cloudinary.com/beebeean09/image/upload/v1490057536/seattle_lcuoan.jpg')
-# City.create!(name: "Washington D.C.", image: 'http://res.cloudinary.com/beebeean09/image/upload/v1490057537/washington_dc_cvix4r.jpg')
-# City.create!(name: "New York", image: 'http://res.cloudinary.com/beebeean09/image/upload/v1490057535/NY_ezvbug.jpg')
+
+City.create!(name: "San Francisco", image: 'http://res.cloudinary.com/beebeean09/image/upload/v1490057537/SF_vysi0o.jpg')
+City.create!(name: "Chicago", image: 'http://res.cloudinary.com/beebeean09/image/upload/v1490067089/Chicago_i9fiwb.jpg')
+City.create!(name: "Los Angeles", image: 'http://res.cloudinary.com/beebeean09/image/upload/v1490057534/los_angeles_cmfmup.jpg')
+City.create!(name: "Seattle", image: 'http://res.cloudinary.com/beebeean09/image/upload/v1490057536/seattle_lcuoan.jpg')
+City.create!(name: "Washington D.C.", image: 'http://res.cloudinary.com/beebeean09/image/upload/v1490057537/washington_dc_cvix4r.jpg')
+City.create!(name: "New York", image: 'http://res.cloudinary.com/beebeean09/image/upload/v1490057535/NY_ezvbug.jpg')
 
 
 Event.create!(city_id: 1, host_id: 2, title: "Milk Tea Boba Party", date: "2017-10-09 12:00:00PM", time: "2017-10-09 12:00:00PM", address: "135 4th St. San Francisco, CA", seats: 6)
@@ -40,7 +40,7 @@ Event.create!(city_id: 4, host_id: 1, title: "Coffee Boba?!", date: "2017-06-28 
 Event.create!(city_id: 5, host_id: 3, title: "Boba Happy Hour", date: "2017-07-01 03:30:00PM", time: "2017-07-01 03:30:00PM", address: "800 Connecticut Ave. NW, Washington, DC ", seats: 5)
 Event.create!(city_id: 6, host_id: 3, title: "Bobasaurs!", date: "2017-08-15 09:30:00PM", time: "2017-08-15 09:30:00PM", address: "2320 86th St. New York, NY", seats: 9)
 Event.create!(city_id: 1, host_id: 1, title: "Mango A-go-go", date: "2017-12-10 06:30:00PM", time: "2017-12-10 06:30:00PM", address: "528 Larkin St. San Francisco, CA", seats: 4)
-Event.create!(city_id: 2, host_id: 2, title: "", date: "2017-12-10 06:30:00PM", time: "2017-12-10 06:30:00PM", address: "528 Larkin St. San Francisco, CA", seats: 4)
+Event.create!(city_id: 2, host_id: 2, title: "Meet the Boba Master!", date: "2017-12-10 06:30:00PM", time: "2017-12-10 06:30:00PM", address: "528 Larkin St. San Francisco, CA", seats: 4)
 
 
 Attendance.create!(user_id: 1, event_id: 1)
