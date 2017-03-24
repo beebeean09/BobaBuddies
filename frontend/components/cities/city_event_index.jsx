@@ -48,25 +48,35 @@ class CityEventIndex extends React.Component {
     //   <button onClick={this.handleDeleteAttendance.bind(this, event.id)}>Unjoin</button>
     // </div> }
 
-    // </div>
 
-    // <div className="event-index-header">
     // debugger;
     const eventList = (this.props.city) ? city.events.map(event => (
       <ul key={event.id} className="event-index">
-          <li >Title: {event.title}</li>
-          <li >Address: {event.address}</li>
-        <li>Date: {event.date}</li>
-        <li>Time: {event.time}</li>
-        <li>Seats: {event.seats}</li>
-        <li>Host Id: {event.host_id}</li>
-      {this.props.eventsAttending.includes(event.id) ?
-      <div className="join-unjoin-button">
-        <button onClick={this.handleDeleteAttendance.bind(this, event.id)}>Unjoin</button>
-      </div> :
-      <div className="join-unjoin-button">
-        <button onClick={this.handleAddAttendance.bind(this, event.id)}>Join</button>
-      </div> }
+        <div className="event-index-card">
+          <div className="event-index-top">
+            <div className="event-index-datetime">
+              <li>Date:  {event.date}</li>
+              <li>Time:  {event.time}</li>
+            </div>
+            <div className="event-index-profile">
+              <img />
+            </div>
+          </div>
+          <div className="event-index-main-title">
+            <li >{event.title}</li>
+            <li >Address: {event.address}</li>
+          </div>
+          <div className="event-index-seats">
+            <li>Seats: {event.seats}</li>
+          </div>
+          {this.props.eventsAttending.includes(event.id) ?
+            <div className="join-unjoin-button">
+              <button onClick={this.handleDeleteAttendance.bind(this, event.id)}>Unjoin</button>
+            </div> :
+            <div className="join-unjoin-button">
+              <button onClick={this.handleAddAttendance.bind(this, event.id)}>Join</button>
+            </div> }
+        </div>
 
       </ul>
     )) :

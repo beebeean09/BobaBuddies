@@ -6,7 +6,6 @@ import { subtractSeat, fetchEvents } from '../../actions/events_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-  debugger;
 
   let eventsAttending = [];
   if (state.session.currentUser.events) {
