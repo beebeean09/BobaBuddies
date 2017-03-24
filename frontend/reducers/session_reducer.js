@@ -5,7 +5,10 @@ import {
   CLEAR_ERRORS
 } from '../actions/session_actions';
 
-import { RECEIVE_ATTENDANCE, REMOVE_ATTENDANCE } from '../actions/attendances_actions';
+import { RECEIVE_ATTENDANCE,
+  REMOVE_ATTENDANCE,
+  ADD_SEAT,
+  SUBTRACT_SEAT } from '../actions/attendances_actions';
 
 import merge from 'lodash/merge';
 
@@ -37,11 +40,18 @@ const SessionReducer = (state = _nullUser, action) => {
       return newState;
     case REMOVE_ATTENDANCE:
       debugger;
-      const events = state.currentUser.events.slice();
-      const index = events.indexOf(action.id.event_id);
+      let events = state.currentUser.events.slice();
+      let index = events.indexOf(action.id.event_id);
       events.splice(index, 1);
       currentUser = Object.assign({}, state.currentUser, { events });
       return Object.assign({}, state, { currentUser });
+    // case ADD_SEAT:
+    //   events = state.currentUser.events.slice();
+    //   index = events.indexOf(action.event_id);
+    //   let seats = events[index].seats + 1;
+    //   currentUser = Object.assing({}, state.)
+    //   debugger;
+    // case SUBTRACT_SEAT:
 
     default:
       return state;

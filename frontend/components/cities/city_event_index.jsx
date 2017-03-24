@@ -25,6 +25,7 @@ class CityEventIndex extends React.Component {
 
 
   handleDeleteAttendance(id) {
+    debugger;
     this.props.deleteAttendance(id);
   }
 

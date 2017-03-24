@@ -7,7 +7,7 @@ class NewEventForm extends React.Component {
     super(props);
 
     this.state = {title: "", address: "", date: "", time: "",
-      seats: 20, city_id: this.props.cityId};
+      seats: 10, city_id: this.props.cityId};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 

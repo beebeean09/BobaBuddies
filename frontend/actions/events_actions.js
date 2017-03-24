@@ -7,6 +7,7 @@ export const RECEIVE_EVENT_ERRORS = "RECEIVE_EVENT_ERRORS";
 export const CLEAR_EVENT_ERRORS = "CLEAR_EVENT_ERRORS";
 export const DELETE_EVENT = "DELETE_EVENT";
 export const SUBTRACT_SEAT = "SUBTRACT_SEAT";
+export const ADD_SEAT = "ADD_SEAT";
 export const RECEIVE_USER_EVENTS = "RECEIVE_USER_EVENTS";
 
 export const receiveEvents = events => ({
@@ -37,10 +38,15 @@ export const deleteEvent = (event) => ({
   type: DELETE_EVENT
 });
 
-export const subtractSeat = eventId => ({
-  type: SUBTRACT_SEAT,
-  eventId
-});
+// export const subtractSeat = eventId => ({
+//   type: SUBTRACT_SEAT,
+//   eventId
+// });
+//
+// export const addSeat = eventId => ({
+//   type: ADD_SEAT,
+//   eventId
+// });
 
 export const fetchEvent = (id) => dispatch => (
   EventAPIUtil.fetchEvent(id).then(event => dispatch(receiveEvent(event)))
@@ -62,7 +68,3 @@ export const createEvent = (newEvent) => dispatch => {
 export const removeEvent = (id) => dispatch => (
   EventAPIUtil.removeEvent(id).then(event => dispatch(deleteEvent(event)))
 );
-
-// .then(res => hashHistory.push(`/cities/${res.event.city_id}`));
-// .then(res => console.log(res.event))
-// hashHistory.push(`/cities/${res.cit}`)
