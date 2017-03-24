@@ -16,7 +16,7 @@ const Footer = () => {
           <p>Boba Buddies is all about making our cities feel
             more like neighborhoods. We're more 'connected'
             than ever before, but we're also more alone. And all we want to do
-              is enjoy our favorite choice of boba drinks and bring boba buddies
+              is enjoy our favorite boba drinks and bring boba buddies
               together because, well, the world is better that way.
 
               And you don't have to feel alone. Boba Buddies are here for you!
