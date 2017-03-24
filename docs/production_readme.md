@@ -28,16 +28,39 @@ render: function () {
   events : hostedEvents;
 }
 ```
-![image of dashboard events](wireframes/home-logged-in.png)
+![image of dashboard events](wireframes/dashboard.png)
 
 ### City Event Index Rendering
 
+The component rendering all of the events in the selected city is the `CityEventIndex`. Each event listed has a button to either 'JOIN' or 'UNJOIN', which was implemented by checking in the render method if the events attending by the current user is listed on the page. If the `id` of an event on the `CityEventIndex` matches the `id` of an event listed as attending under the current user, then if would render the button would render as 'UNJOIN', if not, it would render as 'JOIN'. Once clicked, it would carry out the `handleDeleteAttendance` method which deletes that attendance from the database or the `handleAddAttendance` method which creates that attendance from the database.
+
+Because the events for each city is nested under the corresponding city, I used the Session Reducer to handle the attendance action and cause a change in the state, so that the page would re-render.
+
+```javascript
+const SessionReducer = (state = _nullUser, action) => {
+  Object.freeze(state);
+  switch(action.type) {
+    case RECEIVE_ATTENDANCE:
+      let newState = merge({}, state);
+      newState.currentUser.events.push(action.attendance.event);
+      return newState;
+    case REMOVE_ATTENDANCE:
+      debugger;
+      let events = state.currentUser.events.slice();
+      let index = events.indexOf(action.id.event_id);
+      events.splice(index, 1);
+      currentUser = Object.assign({}, state.currentUser, { events });
+      return Object.assign({}, state, { currentUser });
+    default:
+      return state;
+  }
+};
+```
+<!--
+For the `handleDeleteAttendance` method, the `id` of the event to delete is passed in instead of the attendance because it allowed me to easily have all of the information about the event, providing me with a way to easily edit the number of seats in the event as well. -->
 
 
-
-
-
-![tag screenshot](wireframes/tag-search.png)
+![CityIndexEvent](wireframes/CityEventIndex.png)
 
 ## Future Directions for the Project
 

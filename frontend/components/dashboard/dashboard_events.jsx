@@ -27,8 +27,8 @@ class DashboardEvents extends React.Component {
         <div className="event-index-card">
           <div className="event-index-top">
             <div className="event-index-datetime">
-              <li>{event.date}</li>
-              <li>{event.time}</li>
+              <li className="date">{event.date}</li>
+              <li className="time">{event.time}</li>
             </div>
             <div className="event-index-profile">
               <img src="https://res.cloudinary.com/beebeean09/image/upload/v1490342606/boba_fett-10_1x_wzaqyy.png"/>
@@ -36,7 +36,7 @@ class DashboardEvents extends React.Component {
             </div>
           </div>
           <div className="event-index-main-title">
-            <li >{event.title}</li>
+            <li className="dashboard-title">{event.title}</li>
             <li >Address: {event.address}</li>
           </div>
           <div className="event-index-seats">
@@ -56,7 +56,7 @@ class DashboardEvents extends React.Component {
     </div> ;
 
 
-    debugger;
+
     return (
       <div className="dashboard-main-container">
         <div className="dashboard-navbar">
@@ -68,7 +68,7 @@ class DashboardEvents extends React.Component {
         </div>
         <div className="dashboard-content">
           {(dashboardEvents.length > 0) ?
-            <div>
+            <div className="event-index-container">
               {bobasaurMessageFilled}
               <div className="dashboard-eventlist">
                 {dashboardEventsList}
