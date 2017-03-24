@@ -60,7 +60,13 @@ const SessionReducer = (state = _nullUser, action) => {
 For the `handleDeleteAttendance` method, the `id` of the event to delete is passed in instead of the attendance because it allowed me to easily have all of the information about the event, providing me with a way to easily edit the number of seats in the event as well. -->
 
 
-![CityIndexEvent](wireframes/CityEventIndex.png)
+![CityEventIndex](wireframes/CityEventIndex.png)
+
+### CityIndex
+
+Below is the CityIndex page, which lists all the possible cities a user can click on to see what events are available in that selected city.
+
+![CityIndex](wireframes/CityIndex.png)
 
 ## Future Directions for the Project
 
