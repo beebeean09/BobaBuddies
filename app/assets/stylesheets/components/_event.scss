@@ -105,8 +105,13 @@
 
     .join-unjoin-button {
       border: 1px solid grey;
-      padding: 5px 20px;
-      text-align: center;
+      padding: 5px 87px;
+      display: flex;
+      // margin-top: 26px;
+
+      button {
+        text-align: center;
+      }
     }
 
   }

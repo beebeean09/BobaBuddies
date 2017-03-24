@@ -18,12 +18,9 @@ class Api::AttendancesController < ApplicationController
   end
 
   def destroy
-    debugger;
+    # debugger;
     @event = current_user.events.find(params[:id])
     @event.update(seats: @event.seats + 1)
-
-    # @attendances = Attendance.find_by_id(current_user.id)
-    # @attendance = @attendances.find_by_event_id(params[:id])
     @attendance = Attendance.where(event_id: params[:id], user_id: current_user.id).first
     @attendance.destroy
     render 'api/attendances/show'

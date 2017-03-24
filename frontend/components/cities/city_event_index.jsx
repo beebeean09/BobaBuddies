@@ -13,7 +13,7 @@ class CityEventIndex extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    // debugger;
+    debugger;
     if (nextProps !== this.props) {
       this.setState({attendances: nextProps.attendances});
     }
@@ -69,13 +69,17 @@ class CityEventIndex extends React.Component {
           <div className="event-index-seats">
             <li>Seats: {event.seats}</li>
           </div>
-          {this.props.eventsAttending.includes(event.id) ?
+
+          {this.props.currentUser ?
+            (this.props.eventsAttending.includes(event.id) ?
             <div className="join-unjoin-button">
               <button onClick={this.handleDeleteAttendance.bind(this, event.id)}>Unjoin</button>
             </div> :
             <div className="join-unjoin-button">
               <button onClick={this.handleAddAttendance.bind(this, event.id)}>Join</button>
-            </div> }
+            </div> ) :
+            <Link className="join-unjoin-button" to='/sign-up'>Sign In to Join</Link>
+          }
         </div>
 
       </ul>

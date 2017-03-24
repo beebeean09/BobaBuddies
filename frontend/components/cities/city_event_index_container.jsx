@@ -2,13 +2,14 @@ import { connect } from 'react-redux';
 import { fetchAllCities, fetchCity } from '../../actions/cities_actions';
 import CityEventIndex from './city_event_index';
 import { createAttendance, fetchAttendance, deleteAttendance } from '../../actions/attendances_actions';
-import { subtractSeat, fetchEvents } from '../../actions/events_actions';
+import { fetchEvents } from '../../actions/events_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
 
   let eventsAttending = [];
-  if (state.session.currentUser.events) {
+  debugger;
+  if (state.session.currentUser) {
     eventsAttending = state.session.currentUser.events.map(event => event.id);
   }
 
@@ -25,7 +26,6 @@ const mapDispatchToProps = (dispatch) => ({
   fetchAllCities: () => dispatch(fetchAllCities()),
   fetchCity: (id) => dispatch(fetchCity(id)),
   createAttendance: (attendance) => dispatch(createAttendance(attendance)),
-  subtractSeat: (id) => dispatch(subtractSeat(id)),
   fetchEvents: () => dispatch(fetchEvents()),
   fetchAttendance: (id) => dispatch(fetchAttendance(id)),
   deleteAttendance: (id) => dispatch(deleteAttendance(id))

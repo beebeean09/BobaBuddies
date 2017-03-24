@@ -10,7 +10,8 @@ export const receiveAttendance = (attendance) => ({
 });
 
 export const removeAttendance = (id) => ({
-  type: REMOVE_ATTENDANCE
+  type: REMOVE_ATTENDANCE,
+  id
 });
 
 export const receiveAttendances = () => ({
@@ -22,10 +23,13 @@ export const createAttendance = (newAttendance) => dispatch => (
                    .then(attendance => dispatch(receiveAttendance(attendance)))
 );
 
-export const deleteAttendance = (id) => dispatch => (
+export const deleteAttendance = (id) => dispatch => {
+  debugger;
+  return (
   AttendanceAPIUtil.deleteAttendance(id)
-                   .then(attendance => dispatch(removeAttendance(attendance)))
+  .then(attendance => dispatch(removeAttendance(attendance)))
 );
+};
 
 export const fetchAttendances = () => dispatch => (
   AttendanceAPIUtil.fetchAttendances()

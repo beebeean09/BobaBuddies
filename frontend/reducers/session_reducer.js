@@ -18,7 +18,7 @@ const SessionReducer = (state = _nullUser, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
-      const currentUser = action.currentUser;
+      let currentUser = action.currentUser;
       return merge({}, _nullUser, {
         currentUser
       });
@@ -32,19 +32,24 @@ const SessionReducer = (state = _nullUser, action) => {
     case CLEAR_ERRORS:
       return Object.assign({}, state, { errors: [] });
     case RECEIVE_ATTENDANCE:
-      debugger;
       let newState = merge({}, state);
       newState.currentUser.events.push(action.attendance.event);
       return newState;
     case REMOVE_ATTENDANCE:
       debugger;
-      newState = merge({}, state);
-      delete newState.currentUser.events[action.attendance.event.id];
-      return newState;
+      const events = state.currentUser.events.slice();
+      const index = events.indexOf(action.id.event_id);
+      events.splice(index, 1);
+      currentUser = Object.assign({}, state.currentUser, { events });
+      return Object.assign({}, state, { currentUser });
+
     default:
       return state;
   }
 };
 
+// newState = merge({}, state);
+// delete newState.currentUser.events[action.id.event_id];
+// return newState;
 
 export default SessionReducer;
