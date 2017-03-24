@@ -45,14 +45,6 @@ const SessionReducer = (state = _nullUser, action) => {
       events.splice(index, 1);
       currentUser = Object.assign({}, state.currentUser, { events });
       return Object.assign({}, state, { currentUser });
-    // case ADD_SEAT:
-    //   events = state.currentUser.events.slice();
-    //   index = events.indexOf(action.event_id);
-    //   let seats = events[index].seats + 1;
-    //   currentUser = Object.assing({}, state.)
-    //   debugger;
-    // case SUBTRACT_SEAT:
-
     default:
       return state;
   }

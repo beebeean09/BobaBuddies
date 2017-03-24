@@ -28,6 +28,9 @@ class CityEventIndex extends React.Component {
     debugger;
     this.props.deleteAttendance(id);
   }
+  // <div className="event-index-seats">
+  //   <li>Seats Left: {event.seats}</li>
+  // </div>
 
   render() {
 
@@ -51,9 +54,6 @@ class CityEventIndex extends React.Component {
             <div className="event-index-main-title">
               <li >{event.title}</li>
               <li >Address: {event.address}</li>
-            </div>
-            <div className="event-index-seats">
-              <li>Seats Left: {event.seats}</li>
             </div>
 
             {this.props.currentUser ?
