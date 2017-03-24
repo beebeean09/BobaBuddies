@@ -13,7 +13,6 @@ class CityEventIndex extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    debugger;
     if (nextProps !== this.props) {
       this.setState({attendances: nextProps.attendances});
     }
@@ -44,31 +43,34 @@ class CityEventIndex extends React.Component {
         <div className="event-index-card">
           <div className="event-index-top">
             <div className="event-index-datetime">
-              <li>Date:  {event.date}</li>
-              <li>Time:  {event.time}</li>
+              <li>{event.date}</li>
+              <li>{event.time}</li>
             </div>
             <div className="event-index-profile">
-              <img />
+              <img src="https://res.cloudinary.com/beebeean09/image/upload/v1490342606/boba_fett-10_1x_wzaqyy.png"/>
+              <h2>Boba Master</h2>
             </div>
           </div>
-          <div className="event-index-main-title">
-            <li >{event.title}</li>
-            <li >Address: {event.address}</li>
-          </div>
-          <div className="event-index-seats">
-            <li>Seats: {event.seats}</li>
-          </div>
+          <div className="event-index-bottom">
+            <div className="event-index-main-title">
+              <li >{event.title}</li>
+              <li >Address: {event.address}</li>
+            </div>
+            <div className="event-index-seats">
+              <li>Seats Left: {event.seats}</li>
+            </div>
 
-          {this.props.currentUser ?
-            (this.props.eventsAttending.includes(event.id) ?
-            <div className="join-unjoin-button">
-              <button onClick={this.handleDeleteAttendance.bind(this, event.id)}>Unjoin</button>
-            </div> :
-            <div className="join-unjoin-button">
-              <button onClick={this.handleAddAttendance.bind(this, event.id)}>Join</button>
-            </div> ) :
-            <Link className="join-unjoin-button" to='/sign-up'>Sign In to Join</Link>
-          }
+            {this.props.currentUser ?
+              (this.props.eventsAttending.includes(event.id) ?
+              <div className="join-unjoin-button">
+                <button onClick={this.handleDeleteAttendance.bind(this, event.id)}>Unjoin</button>
+              </div> :
+              <div className="join-unjoin-button">
+                <button onClick={this.handleAddAttendance.bind(this, event.id)}>Join</button>
+              </div> ) :
+              <Link className="join-unjoin-button" to='/sign-up'>Sign In to Join</Link>
+            }          
+          </div>
         </div>
 
       </ul>

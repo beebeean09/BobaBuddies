@@ -22,7 +22,7 @@ export const EventsReducer = (state = {}, action) => {
   }
 };
 
-export const EventErrors = (state = [], action) => {
+export const EventsErrorsReducer = (state = [], action) => {
   switch (action.type) {
     case RECEIVE_EVENT_ERRORS:
       return action.errors;

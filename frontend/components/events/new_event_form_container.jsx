@@ -5,7 +5,7 @@ import { createEvent } from '../../actions/events_actions';
 const mapStateToProps = (state, ownProps) => {
   return {
     cityId: state.city.id || ownProps.params.cityId,
-    errors: state.session.errors
+    errors: state.session.errors || []
   };
 };
 

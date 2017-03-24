@@ -63,27 +63,63 @@
 }
 
 .event-index {
-  display: flex;
   border: 2px solid grey;
   margin: 40px;
   padding: 20px;
-  width: 290px;
+  width: 328px;
   height: 330px;
   background: ghostwhite;
   color: gray;
   box-shadow: 0 4px 9px rgba(0,0,0,.4);
 
   .event-index-card {
-    display: flex;
+    // display: flex;
     flex-direction: column;
 
     .event-index-top {
+      display: flex;
+      flex-direction: row;
 
       .event-index-datetime {
         border: 1px solid blue;
+        text-align: center;
+        font-size: 20px;
+        width: 81%;
+        height: auto;
       }
 
       .event-index-profile {
+        width: 50%;
+        height: auto;
+        position: relative;
+
+        // .event-index-profile-container {
+        //   display: flex;
+        //   flex-direction: column;
+        //   border: 2px solid grey;
+
+          h2 {
+            font-size: 15px;
+            margin: 0 0;
+            position: absolute;
+            left: 27px;
+            bottom: 27px;
+
+          }
+
+          img {
+            display: block;
+            width: 89%;
+            height: auto;
+            left: 16px;
+            bottom: 18px;
+            position: absolute;
+            padding: 9px 9px 36px;
+            border-radius: 7px;
+            border: 2px solid grey;
+            background: ghostwhite;
+          }
+        // }
 
       }
 
@@ -93,27 +129,27 @@
       margin: 10px 0;
     }
 
-    .event-index-main-title {
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-
-    .event-index-seats {
-    }
-
-    .join-unjoin-button {
-      border: 1px solid grey;
-      padding: 5px 87px;
-      display: flex;
-      // margin-top: 26px;
-
-      button {
+    .event-index-bottom {
+      .event-index-main-title {
+        font-size: 20px;
+        font-weight: bold;
         text-align: center;
       }
-    }
 
+
+      .event-index-seats {
+      }
+
+      .join-unjoin-button {
+        border: 1px solid grey;
+        padding: 5px 87px;
+        // margin-top: 26px;
+
+        button {
+          text-align: center;
+        }
+      }
+    }
   }
 }
 

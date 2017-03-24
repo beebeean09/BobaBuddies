@@ -23,13 +23,26 @@ class DashboardEvents extends React.Component {
     <h1>Upcoming Events</h1> : <h1>Hosting Events</h1>;
 
     const dashboardEventsList = dashboardEvents.map((event, idx) => (
-      <ul className="dashboard-event-card" key={idx}>
-        <li>Event Id: {event.id}</li>
-        <li>Title: {event.title}</li>
-        <li>Address: {event.address}</li>
-        <li>Date: {event.date}</li>
-        <li>Time: {event.time}</li>
-        <li>Seats: {event.seats}</li>
+      <ul key={event.id} className="event-index">
+        <div className="event-index-card">
+          <div className="event-index-top">
+            <div className="event-index-datetime">
+              <li>{event.date}</li>
+              <li>{event.time}</li>
+            </div>
+            <div className="event-index-profile">
+              <img src="https://res.cloudinary.com/beebeean09/image/upload/v1490342606/boba_fett-10_1x_wzaqyy.png"/>
+              <h2>Boba Master</h2>
+            </div>
+          </div>
+          <div className="event-index-main-title">
+            <li >{event.title}</li>
+            <li >Address: {event.address}</li>
+          </div>
+          <div className="event-index-seats">
+            <li>Seats Left: {event.seats}</li>
+          </div>
+        </div>
       </ul>
     ));
 
