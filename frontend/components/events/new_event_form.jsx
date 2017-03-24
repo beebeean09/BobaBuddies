@@ -13,7 +13,6 @@ class NewEventForm extends React.Component {
 
 
   handleSubmit(e) {
-    // const event = this.state;
     e.preventDefault();
 
     this.props.createEvent(this.state);

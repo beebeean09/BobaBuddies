@@ -21,15 +21,10 @@ class CityEventIndex extends React.Component {
   handleAddAttendance(id) {
     const attendance = { event_id: id };
     this.props.createAttendance(attendance);
-    debugger;
   }
 
-  // findEvent(event, id) { event.id === id;}
 
   handleDeleteAttendance(id) {
-    debugger;
-    // const attendance = this.props.eventsAttending.find(this.findEvent(event, id));
-    // this.props.deleteAttendance(attendance.id);
     this.props.deleteAttendance(id);
   }
 
@@ -69,7 +64,7 @@ class CityEventIndex extends React.Component {
                 <button onClick={this.handleAddAttendance.bind(this, event.id)}>Join</button>
               </div> ) :
               <Link className="join-unjoin-button" to='/sign-up'>Sign In to Join</Link>
-            }          
+            }
           </div>
         </div>
 
