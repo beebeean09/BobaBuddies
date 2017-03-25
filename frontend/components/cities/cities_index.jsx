@@ -12,7 +12,6 @@ class CitiesIndex extends React.Component {
   }
 
   render() {
-    // debugger;
 
     const {router} = this.props;
 

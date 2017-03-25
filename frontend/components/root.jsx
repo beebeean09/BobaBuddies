@@ -28,6 +28,10 @@ const Root = ({ store }) => {
     }
   };
 
+  const redirectToCities = (nextState, replace) => {
+    replace('/cities');
+  };
+
 
   return (
     <Provider store={store}>

@@ -16,7 +16,6 @@ class NewEventForm extends React.Component {
     e.preventDefault();
 
     this.props.createEvent(this.state);
-    debugger;
     return hashHistory.push(`/cities/${this.props.cityId}`);
   }
 

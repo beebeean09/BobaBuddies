@@ -24,7 +24,6 @@ export const createAttendance = (newAttendance) => dispatch => (
 );
 
 export const deleteAttendance = (id) => dispatch => {
-  debugger;
   return (
   AttendanceAPIUtil.deleteAttendance(id)
   .then(attendance => dispatch(removeAttendance(attendance)))

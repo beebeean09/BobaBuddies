@@ -1,5 +1,4 @@
 export const createAttendance = (attendance) => {
-  debugger;
   return (
   $.ajax({
     method: 'POST',
