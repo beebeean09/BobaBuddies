@@ -28,6 +28,8 @@ const mapDispatchToProps = (dispatch) => ({
   fetchEvents: () => dispatch(fetchEvents()),
   fetchAttendance: (id) => dispatch(fetchAttendance(id)),
   deleteAttendance: (id) => dispatch(deleteAttendance(id)),
+  subtractSeat: (eventId) => dispatch(subtractSeat(eventId)),
+  addSeat: (eventId) => dispatch(addSeat(eventId))
 
 });
 

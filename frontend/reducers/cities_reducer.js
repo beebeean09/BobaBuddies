@@ -3,7 +3,7 @@ import {
    RECEIVE_CITY,
    CLEAR_CITY} from '../actions/cities_actions';
 
-import { RECEIVE_EVENT } from '../actions/events_actions';
+import { RECEIVE_EVENT, SUBTRACT_SEAT, ADD_SEAT } from '../actions/events_actions';
 
 import merge from 'lodash/merge';
 
@@ -12,6 +12,24 @@ export const CitiesReducer = (state = {}, action) => {
   switch(action.type) {
     case RECEIVE_CITIES:
       return merge({}, state, action.cities);
+    // case SUBTRACT_SEAT:
+    //   let newState = merge({}, state);
+    //   if (newState.events) {
+    //     let events = newState.events.slice();
+    //     let index = events.indexOf(action.eventId);
+    //     events.splice(index, 1);
+    //     let seats = events.seats - 1;
+    //     let cities = Object.assign({}, state.cities.events, { seats });
+    //     return Object.assign({}, state, { cities });
+    //   }
+    //   return newState;
+    // case ADD_SEAT:
+    //   debugger;
+    //   newState = merge({}, state);
+    //   if (newState.events) {
+    //     newState.events.seats = newState.events.seats + 1;
+    //   }
+    //   return newState;
     default:
       return state;
   }

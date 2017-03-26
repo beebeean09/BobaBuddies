@@ -35,18 +35,19 @@ export const clearEventErrors = () => ({
 });
 
 export const deleteEvent = (event) => ({
-  type: DELETE_EVENT
+  type: DELETE_EVENT,
+  event
 });
 
-// export const subtractSeat = eventId => ({
-//   type: SUBTRACT_SEAT,
-//   eventId
-// });
-//
-// export const addSeat = eventId => ({
-//   type: ADD_SEAT,
-//   eventId
-// });
+export const subtractSeat = eventId => ({
+  type: SUBTRACT_SEAT,
+  eventId
+});
+
+export const addSeat = eventId => ({
+  type: ADD_SEAT,
+  eventId
+});
 
 export const fetchEvent = (id) => dispatch => (
   EventAPIUtil.fetchEvent(id).then(event => dispatch(receiveEvent(event)))

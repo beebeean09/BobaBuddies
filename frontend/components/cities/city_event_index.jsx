@@ -21,12 +21,15 @@ class CityEventIndex extends React.Component {
   handleAddAttendance(id) {
     const attendance = { event_id: id };
     this.props.createAttendance(attendance);
+    // this.props.subtractSeat(id);
   }
 
 
   handleDeleteAttendance(id) {
     this.props.deleteAttendance(id);
+    // this.props.addSeat(id);
   }
+
   // <div className="event-index-seats">
   //   <li>Seats Left: {event.seats}</li>
   // </div>
