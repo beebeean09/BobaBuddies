@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  margin: 8%;
+  margin: 2% 7%;;
 }
 
 .city-detail-container {
@@ -62,10 +62,26 @@
 
 
 
-.city-index-header p {
+.city-index-header {
   font-family: 'Source Sans Pro';
   color: #007E90;
   font-size: 35px;
-  margin: 85px 0px;
+  margin: 50px 0 0 30px;
   text-align: center;
+  border-bottom: 2px solid #bbbbbb;
+
+  h1 {
+    margin-bottom: 45px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin: 20px 0;
+  }
+  h3 {
+    font-size: 20px;
+    color: #565656;
+  }
+
 }

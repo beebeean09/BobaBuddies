@@ -27,7 +27,9 @@ class CitiesIndex extends React.Component {
     return (
       <div>
         <div className="city-index-header">
-          <p>Choose a city to find your closest boba buddies!</p>
+          <h1>Choose a city to find your closest boba buddies!</h1>
+          <h2>We're building communities here.</h2>
+          <h3>You should be able to sign up for an event today!</h3>
         </div>
         <div className="city-index-container">
           {cityList}

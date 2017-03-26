@@ -51,7 +51,7 @@ class CityEventIndex extends React.Component {
           </div>
           <div className="event-index-bottom">
             <div className="event-index-main-title">
-              <li>{event.title}</li>
+              <li className="dashboard-title">{event.title}</li>
               <li>Address: {event.address}</li>
             </div>
 
