@@ -63,7 +63,6 @@
     font-size: 22px;
     background: #84a1c1;
     height: 68px;
-    cursor: pointer;
     color: white;
     display: flex;
     justify-content: flex-start;
@@ -72,6 +71,7 @@
 
     a {
       display: flex;
+      cursor: pointer;
       border-radius: 7px;
       padding: 8px 8px;
       margin: 0;
