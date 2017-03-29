@@ -12,7 +12,7 @@ BobaBuddies is a full-stack web application inspired by Tea With Strangers. It u
 
 Home page has a link that directs user to either cities page or sign-up page depending on whether the user is logged in or not.
 
-![image of home page](wireframes/homepage.png)
+![image of home page](docs/wireframes/homepage.png)
 
 ### Dashboard Rendering (Hosted or Current Events)
 
@@ -34,7 +34,7 @@ render: function () {
   events : hostedEvents;
 }
 ```
-![image of dashboard events](wireframes/dashboard.png)
+![image of dashboard events](docs/wireframes/dashboard.png)
 
 ### City Event Index Rendering
 
@@ -65,13 +65,13 @@ const SessionReducer = (state = _nullUser, action) => {
 For the `handleDeleteAttendance` method, the `id` of the event to delete is passed in instead of the attendance because it allowed me to easily have all of the information about the event, providing me with a way to easily edit the number of seats in the event as well. -->
 
 
-![CityEventIndex](wireframes/CityEventIndex.png)
+![CityEventIndex](docs/wireframes/CityEventIndex.png)
 
 ### CityIndex
 
 Below is the CityIndex page, which lists all the possible cities a user can click on to see what events are available in that selected city.
 
-![CityIndex](wireframes/CityIndex.png)
+![CityIndex](docs/wireframes/CityIndex.png)
 
 ## Future Directions for the Project
 
