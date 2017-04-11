@@ -8,9 +8,9 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-main-container">
         <div className="footer-side-links">
-          <h3>Github</h3>
-          <h3>LinkedIn</h3>
-          <h3>Portfolio</h3>
+          <li><a href="https://github.com/beebeean09">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/beebeean09/">LinkedIn</a></li>
+          <li><a href="">Portfolio</a></li>
         </div>
         <div className="footer-about-text">
           <p>Boba Buddies is all about making our cities feel

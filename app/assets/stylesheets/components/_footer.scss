@@ -22,7 +22,8 @@
     flex-direction: column;
     flex: 1;
 
-    h3 {
+    li {
+      list-style: none;
       font-size: 25px;
       font-weight: bold;
       padding: 5px;
