@@ -11,6 +11,13 @@ class CitiesIndex extends React.Component {
     router.push(url);
   }
 
+  cropPhoto(cityUrl) {
+    const photoCrop = "/upload/c_thumb,h_250,w_384/";
+    const photoUrlSplit = cityUrl.split("/upload/");
+    const croppedUrl = photoUrlSplit[0] + photoCrop + photoUrlSplit[1];
+    return croppedUrl;
+  }
+
   render() {
 
     const {router} = this.props;
@@ -19,7 +26,7 @@ class CitiesIndex extends React.Component {
       <div key={city.id} className="city-detail-container">
         <a className="city-detail-image-container" onClick={this.handleClick.bind(this, router, `/cities/${city.id}`)}>
           <h1 className="city-detail-name">{city.name}</h1>
-          <img  src={city.image} alt={city.name}/>
+          <img src={this.cropPhoto(`${city.image}`)} alt={city.name}/>
         </a>
       </div>
     ));
