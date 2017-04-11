@@ -56,6 +56,7 @@ class CityEventIndex extends React.Component {
             <div className="event-index-main-title">
               <li className="dashboard-title">{event.title}</li>
               <li>Address: {event.address}</li>
+              <li className="seats">{parseInt(event.seats) < 5 ? "Almost full!" : "Plenty of seats!" }</li>
             </div>
 
             {this.props.currentUser ?

@@ -39,7 +39,6 @@ const SessionReducer = (state = _nullUser, action) => {
       newState.currentUser.events.push(action.attendance.event);
       return newState;
     case REMOVE_ATTENDANCE:
-      debugger;
       let events = state.currentUser.events.slice();
       let index = events.indexOf(action.id.event_id);
       // let seats = events[0].seats + 1;

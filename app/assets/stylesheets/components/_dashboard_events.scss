@@ -1,5 +1,5 @@
 .dashboard-main-container {
-  font-family: 'Source Sans Pro';
+  font-family: 'Quicksand', sans-serif;
   text-align: center;
 
   .dashboard-content {
@@ -30,11 +30,12 @@
 
       img {
         display: inline-block;
-        width: 60%;
+        width: 50%;
         height: 50%;
       }
     }
   }
+
   .dashboard-event-card {
     border: 2px solid grey;
     width: 260px;

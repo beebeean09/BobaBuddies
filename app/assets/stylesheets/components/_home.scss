@@ -7,15 +7,38 @@
   // }
 
   .home-container-links {
-    // overflow: hidden;
-    background: #CCF2F2;
+    overflow: hidden;
+    // background: #CCF2F2;
+    background: rgb(37, 230, 255);
     font-family: arial;
     position: relative;
     // display: inline-block;
     text-align: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     width: 100%;
     height: 50%;
+    // height: 600px;
     font-family: 'Source Sans Pro';
+    // display: block;
+
+    // .home-container-links img {
+    //   // overflow: hidden;
+    //   position: absolute;
+    //   top: 0;
+    //   bottom: 0;
+    // }
+
+    .home-img {
+      width: 100%;
+      height: auto;
+      // display: flex;
+      // align-items: center;
+      // background-size: cover;
+      // background-position: center;
+      // justify-content: center;
+    }
 
 
     // display: flex;
@@ -71,7 +94,8 @@
     	transition: .3s ease-in-out;
       // opacity: 0.7;
       opacity: 0.9;
-
+      // overflow: hidden;
+      // height: 400px;
       // overflow: hidden;
       // position: relative;
       // width: 100%;
