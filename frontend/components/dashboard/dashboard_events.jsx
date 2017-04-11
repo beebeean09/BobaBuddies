@@ -37,7 +37,7 @@ class DashboardEvents extends React.Component {
           </div>
           <div className="event-index-main-title">
             <li className="dashboard-title">{event.title}</li>
-            <li >Address: {event.address}</li>
+            <li className="address">Address: {event.address}</li>
           </div>
           <div className="event-index-seats">
             <li>Seats Left: {event.seats}</li>
