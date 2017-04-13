@@ -11,12 +11,7 @@ class CitiesIndex extends React.Component {
     router.push(url);
   }
 
-  cropPhoto(cityUrl) {
-    const photoCrop = "/upload/c_thumb,h_250,w_384/";
-    const photoUrlSplit = cityUrl.split("/upload/");
-    const croppedUrl = photoUrlSplit[0] + photoCrop + photoUrlSplit[1];
-    return croppedUrl;
-  }
+
 
   render() {
 
