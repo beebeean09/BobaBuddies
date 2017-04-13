@@ -2,7 +2,7 @@
 
 [Boba Buddies][heroku]
 
-[heroku]: https://bobabuddies.herokuapp.com/#/
+[heroku]: https://bobabuddies.com/#/
 
 BobaBuddies is a full-stack web application inspired by Tea With Strangers. It utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the frontend.  
 
