@@ -34,6 +34,13 @@ class CityEventIndex extends React.Component {
   //   <li>Seats Left: {event.seats}</li>
   // </div>
 
+  cropPhoto(cityUrl) {
+    const photoCrop = "/upload/c_thumb,h_2158,w_3258/";
+    const photoUrlSplit = cityUrl.split("/upload/");
+    const croppedUrl = photoUrlSplit[0] + photoCrop + photoUrlSplit[1];
+    return croppedUrl;
+  }
+
   render() {
 
     const { city } = this.props;
@@ -81,7 +88,7 @@ class CityEventIndex extends React.Component {
       <div className="event-index-main-container">
         <div className="event-index-cover">
           <div className="event-cover-img">
-            <img src={city.image} alt={city.name} />
+            <img src={this.cropPhoto(`${city.image}`)} alt={city.name} />
           </div>
           <h1>{city.name}</h1>
         </div>
