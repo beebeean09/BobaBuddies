@@ -45,7 +45,7 @@ class CityEventIndex extends React.Component {
 
     const { city } = this.props;
     const currentUser = this.props;
-    // debugger;
+    debugger;
     // <img src="https://res.cloudinary.com/beebeean09/image/upload/v1490342606/boba_fett-10_1x_wzaqyy.png"/>
     const eventList = (this.props.city) ? city.events.map(event => (
       <ul key={event.id} className="event-index">

@@ -11,6 +11,7 @@
       json.date event.date.strftime("%A %b %d")
       json.time event.time.strftime("%I:%M %p")
       json.seats event.seats
+      json.host event.host
     end
   end
 end
