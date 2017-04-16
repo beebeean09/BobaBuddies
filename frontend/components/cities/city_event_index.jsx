@@ -46,6 +46,7 @@ class CityEventIndex extends React.Component {
     const { city } = this.props;
     const currentUser = this.props;
     // debugger;
+    // <img src="https://res.cloudinary.com/beebeean09/image/upload/v1490342606/boba_fett-10_1x_wzaqyy.png"/>
     const eventList = (this.props.city) ? city.events.map(event => (
       <ul key={event.id} className="event-index">
         <div className="event-index-card">
@@ -55,7 +56,7 @@ class CityEventIndex extends React.Component {
               <li className="time">{event.time}</li>
             </div>
             <div className="event-index-profile">
-              <img src="https://res.cloudinary.com/beebeean09/image/upload/v1490342606/boba_fett-10_1x_wzaqyy.png"/>
+              <img src="http://res.cloudinary.com/beebeean09/image/upload/v1491936390/man_e497pd.jpg"/>
               <h2>Boba Master</h2>
             </div>
           </div>
