@@ -56,8 +56,8 @@ class CityEventIndex extends React.Component {
               <li className="time">{event.time}</li>
             </div>
             <div className="event-index-profile">
-              <img src="http://res.cloudinary.com/beebeean09/image/upload/v1491936390/man_e497pd.jpg"/>
-              <h2>Boba Master</h2>
+              <img src={event.host.profile_image}/>
+              <h2>{event.host.first_name}</h2>
             </div>
           </div>
           <div className="event-index-bottom">
