@@ -11,10 +11,10 @@
 #
 User.create( email: "bobabuddies@gmail.com", password: "bobaboba", first_name: "Boba Master", host: false, profile_image: "http://res.cloudinary.com/beebeean09/image/upload/v1490342606/boba_fett-10_1x_wzaqyy.png" )
 User.create( email: "jacob@gmail.com", password: "bobaboba", first_name: "Jacob", host: false, profile_image: "http://res.cloudinary.com/beebeean09/image/upload/v1491936390/man_e497pd.jpg")
-User.create( email: "paul@gmail.com", password: "iloveboba", first_name: "Paul", host: true, profile_image: "http://res.cloudinary.com/beebeean09/image/upload/c_scale,h_659/v1491936063/man2_hiwjgi.jpg")
-User.create( email: "will@gmail.com", password: "iloveboba2", first_name: "Will", host: true, profile_image: "http://res.cloudinary.com/beebeean09/image/upload/v1491935967/brad_mdf2rg.jpg")
-User.create( email: "sarah2@gmail.com", password: "iloveboba2", first_name: "Sarah", host: true, profile_image: "http://res.cloudinary.com/beebeean09/image/upload/v1491936155/girl_liku3y.jpg")
-User.create( email: "sharon@gmail.com", password: "iloveboba2", first_name: "Sharon", host: true, profile_image: "http://res.cloudinary.com/beebeean09/image/upload/v1491935969/emma_bqlxlp.jpg")
+User.create( email: "paul@gmail.com", password: "iloveboba", first_name: "Paul", host: true, profile_image: "http://res.cloudinary.com/beebeean09/image/upload/c_scale,h_322/v1492382593/man2_hiwjgi.jpg")
+User.create( email: "will@gmail.com", password: "iloveboba2", first_name: "Will", host: true, profile_image: "http://res.cloudinary.com/beebeean09/image/upload/c_scale,h_281/v1492385286/brad_us4clm.jpg")
+User.create( email: "sarah2@gmail.com", password: "iloveboba2", first_name: "Sarah", host: true, profile_image: "http://res.cloudinary.com/beebeean09/image/upload/c_scale,h_328/v1492382659/girl_liku3y.jpg")
+User.create( email: "sharon@gmail.com", password: "iloveboba2", first_name: "Sharon", host: true, profile_image: "https://res.cloudinary.com/beebeean09/image/upload/v1492382540/emma_bqlxlp.jpg")
 
 City.create!(name: "San Francisco", image: 'http://res.cloudinary.com/beebeean09/image/upload/v1490057537/SF_vysi0o.jpg')
 City.create!(name: "Chicago", image: 'http://res.cloudinary.com/beebeean09/image/upload/v1490067089/Chicago_i9fiwb.jpg')

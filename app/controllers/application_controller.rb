@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
 
 
   def user_params
-    params.require(:user).permit(:email, :password, :first_name, :host)
+    params.require(:user).permit(:email, :password, :first_name, :host, :profile_image)
   end
 
 end
