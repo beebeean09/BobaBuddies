@@ -96,15 +96,22 @@
         position: relative;
         // float: left;
 //
+        .day {
+          font-size: 15px;
+          padding: 2px 0;
+        }
+
         .date {
-          font-size: 16px;
+          font-size: 34px;
+          padding: 2px 0;
           font-weight: bolder;
           text-transform: uppercase;
+          color: black;
         }
 
         .time {
-          font-size: 30px;
-          color: black;
+          font-size: 18px;
+          padding: 2px 0;
           font-weight: bolder;
         }
 

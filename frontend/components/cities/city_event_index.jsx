@@ -41,6 +41,16 @@ class CityEventIndex extends React.Component {
     return croppedUrl;
   }
 
+  splitDay(daydate) {
+    const day = daydate.split(" ")[0];
+    return day;
+  }
+
+  splitDate(daydate) {
+    const date = daydate.split(" ")[1] + " " + daydate.split(" ")[2];
+    return date;
+  }
+
   render() {
 
     const { city } = this.props;
@@ -50,7 +60,8 @@ class CityEventIndex extends React.Component {
         <div className="event-index-card">
           <div className="event-index-top">
             <div className="event-index-datetime">
-              <li className="date">{event.date}</li>
+              <li className="day">{this.splitDay(event.date)}</li>
+              <li className="date">{this.splitDate(event.date)}</li>
               <li className="time">{event.time}</li>
             </div>
             <div className="event-index-profile">
