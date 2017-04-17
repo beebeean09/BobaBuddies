@@ -18,12 +18,12 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  margin: 25px;
+  margin: 2% 5%;
 }
 
 /* line 10, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_city.scss */
 .city-detail-container {
-  margin: 12px;
+  margin: 25px;
 }
 /* line 14, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_city.scss */
 .city-detail-container .city-detail-image-container {
@@ -65,17 +65,33 @@
 }
 
 /* line 65, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_city.scss */
-.city-index-header p {
+.city-index-header {
   font-family: 'Source Sans Pro';
   color: #007E90;
   font-size: 35px;
-  margin: 85px 0px;
+  margin: 50px 0 0 30px;
   text-align: center;
+  border-bottom: 2px solid #bbbbbb;
+}
+/* line 73, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_city.scss */
+.city-index-header h1 {
+  margin-bottom: 45px;
+  font-weight: bold;
+}
+/* line 78, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_city.scss */
+.city-index-header h2 {
+  font-size: 28px;
+  margin: 20px 0;
+}
+/* line 82, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_city.scss */
+.city-index-header h3 {
+  font-size: 20px;
+  color: #565656;
 }
 
 /* line 1, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_dashboard_events.scss */
 .dashboard-main-container {
-  font-family: 'Source Sans Pro';
+  font-family: 'Quicksand', sans-serif;
   text-align: center;
 }
 /* line 5, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_dashboard_events.scss */
@@ -99,7 +115,7 @@
 }
 /* line 24, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_dashboard_events.scss */
 .dashboard-main-container .dashboard-content .dashboard-message-bobasaur h1 {
-  margin: 50px 0;
+  margin-bottom: 50px;
   font-size: 30px;
   font-family: 'Source Sans Pro';
   color: #75b3b3;
@@ -107,10 +123,11 @@
 /* line 31, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_dashboard_events.scss */
 .dashboard-main-container .dashboard-content .dashboard-message-bobasaur img {
   display: inline-block;
-  width: 60%;
+  width: 40%;
   height: 50%;
+  margin: 34px 0;
 }
-/* line 38, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_dashboard_events.scss */
+/* line 40, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_dashboard_events.scss */
 .dashboard-main-container .dashboard-event-card {
   border: 2px solid grey;
   width: 260px;
@@ -122,38 +139,38 @@
   box-shadow: 0 4px 9px rgba(0, 0, 0, 0.4);
   font-size: 20px;
 }
-/* line 50, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_dashboard_events.scss */
+/* line 52, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_dashboard_events.scss */
 .dashboard-main-container .dashboard-events-header {
   font-size: 50px;
   margin-top: 33px;
   color: grey;
 }
-/* line 56, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_dashboard_events.scss */
+/* line 58, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_dashboard_events.scss */
 .dashboard-main-container .dashboard-events-header h1 {
   font-family: 'Delius Swash Caps';
 }
-/* line 61, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_dashboard_events.scss */
+/* line 63, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_dashboard_events.scss */
 .dashboard-main-container .dashboard-navbar {
   text-align: left;
   font-size: 22px;
   background: #84a1c1;
   height: 68px;
-  cursor: pointer;
   color: white;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-/* line 73, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_dashboard_events.scss */
+/* line 74, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_dashboard_events.scss */
 .dashboard-main-container .dashboard-navbar a {
   display: flex;
+  cursor: pointer;
   border-radius: 7px;
   padding: 8px 8px;
   margin: 0;
   margin-left: 29px;
   text-transform: uppercase;
 }
-/* line 82, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_dashboard_events.scss */
+/* line 84, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_dashboard_events.scss */
 .dashboard-main-container .dashboard-navbar a:hover {
   background: #91999A;
   padding: 8px 8px;
@@ -163,10 +180,10 @@
 .event-index-main-container {
   color: white;
   font-size: 30px;
-  font-family: "Source Sans Pro";
+  font-family: 'Quicksand', sans-serif;
 }
 
-/* line 8, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+/* line 9, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
 .event-index-cover {
   width: 100%;
   height: 400px;
@@ -177,7 +194,17 @@
   position: relative;
   background: grey;
 }
-/* line 23, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+/* line 24, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+.event-index-cover .event-cover-img {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* line 36, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
 .event-index-cover h1 {
   position: absolute;
   left: 0;
@@ -190,24 +217,12 @@
   margin-right: auto;
   width: 100%;
 }
-/* line 36, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
-.event-index-cover .event-cover-img {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-  justify-content: center;
-}
-/* line 48, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+/* line 50, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
 .event-index-cover img {
   opacity: 0.5;
 }
 
-/* line 55, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+/* line 57, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
 .event-index-container {
   display: flex;
   flex-direction: row;
@@ -217,89 +232,129 @@
   margin: 33px 0;
 }
 
-/* line 65, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+/* line 67, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
 .event-index {
-  border: 2px solid grey;
+  border: 2px solid lightgrey;
   margin: 40px;
   padding: 20px;
-  width: 328px;
-  height: 330px;
+  width: 302px;
+  height: auto;
   background: ghostwhite;
   color: gray;
-  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
 }
-/* line 75, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
-.event-index .event-index-card {
-  flex-direction: column;
-}
-/* line 79, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+/* line 84, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
 .event-index .event-index-card .event-index-top {
   display: flex;
   flex-direction: row;
 }
-/* line 83, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+/* line 89, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
 .event-index .event-index-card .event-index-top .event-index-datetime {
-  border: 1px solid blue;
+  border-radius: 4px;
   text-align: center;
   font-size: 20px;
   width: 81%;
   height: auto;
+  position: relative;
 }
-/* line 91, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+/* line 99, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+.event-index .event-index-card .event-index-top .event-index-datetime .day {
+  font-size: 15px;
+  padding: 2px 0;
+  text-transform: uppercase;
+}
+/* line 105, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+.event-index .event-index-card .event-index-top .event-index-datetime .date {
+  font-size: 34px;
+  padding: 2px 0;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: black;
+}
+/* line 113, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+.event-index .event-index-card .event-index-top .event-index-datetime .time {
+  font-size: 18px;
+  padding: 2px 0;
+  font-weight: bolder;
+}
+/* line 121, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
 .event-index .event-index-card .event-index-top .event-index-profile {
-  width: 50%;
+  width: 55%;
   height: auto;
   position: relative;
 }
-/* line 101, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+/* line 127, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
 .event-index .event-index-card .event-index-top .event-index-profile h2 {
-  font-size: 15px;
-  margin: 0 0;
-  position: absolute;
-  left: 27px;
-  bottom: 27px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 56px;
+  margin-left: 28px;
 }
-/* line 110, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+/* line 145, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
 .event-index .event-index-card .event-index-top .event-index-profile img {
   display: block;
-  width: 89%;
+  width: 128%;
   height: auto;
-  left: 16px;
-  bottom: 18px;
   position: absolute;
-  padding: 9px 9px 36px;
-  border-radius: 7px;
-  border: 2px solid grey;
+  border: 4px solid #90aebd;
   background: ghostwhite;
+  border-radius: 50%;
+  left: 3px;
+  bottom: 43px;
 }
-/* line 128, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+/* line 172, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
 .event-index .event-index-card li {
-  margin: 10px 0;
+  padding: 9px 0;
 }
-/* line 133, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
-.event-index .event-index-card .event-index-bottom .event-index-main-title {
+/* line 176, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+.event-index .event-index-card .event-index-main-title {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
+  margin-top: 12px;
 }
-/* line 143, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+/* line 184, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+.event-index .event-index-card .event-index-bottom .seats {
+  font-weight: bold;
+  color: #00bf9f;
+  margin-bottom: 7px;
+}
+/* line 193, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
 .event-index .event-index-card .event-index-bottom .join-unjoin-button {
   border: 1px solid grey;
-  padding: 5px 87px;
+  padding: 5px 61px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background: green;
+  border-radius: 7px;
+  background: #90aebd;
+  color: white;
 }
-/* line 148, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+/* line 204, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
 .event-index .event-index-card .event-index-bottom .join-unjoin-button button {
   text-align: center;
 }
+/* line 208, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+.event-index .event-index-card .event-index-bottom .join-unjoin-button:hover {
+  background: none;
+  color: grey;
+  border: 3px solid grey;
+}
 
-/* line 156, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+/* line 218, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+.address {
+  font-size: 17px;
+}
+
+/* line 222, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
 .event-index-header {
   text-align: center;
   padding: 80px 0;
   background: #003C32;
 }
 
-/* line 164, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+/* line 230, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
 .event-nav-links {
   display: flex;
   align-items: center;
@@ -309,20 +364,32 @@
   font-size: 15px;
   text-transform: uppercase;
 }
-/* line 173, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+/* line 239, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
 .event-nav-links a {
   border: 1px solid gray;
-  padding: 10px 8px;
+  padding: 10px 18px;
   background: #91999A;
   cursor: pointer;
   border-radius: 7px;
+  font-size: 18px;
   opacity: 0.8;
   filter: alpha(opacity=50);
 }
-/* line 183, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+/* line 250, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
 .event-nav-links a:hover {
   opacity: 1.0;
   filter: alpha(opacity=100);
+}
+
+/* line 257, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+.dashboard-title {
+  font-size: 22px;
+  border-bottom: 1px solid grey;
+}
+
+/* line 262, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_event.scss */
+.dashboard-seats {
+  font-size: 15px;
 }
 
 /* line 1, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_footer.scss */
@@ -351,13 +418,14 @@
   flex: 1;
 }
 /* line 25, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_footer.scss */
-.footer-main-container .footer-side-links h3 {
+.footer-main-container .footer-side-links li {
+  list-style: none;
   font-size: 25px;
   font-weight: bold;
   padding: 5px;
   margin: 0;
 }
-/* line 34, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_footer.scss */
+/* line 35, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_footer.scss */
 .footer-main-container .footer-about-text {
   font-size: 20px;
   flex: 3;
@@ -365,7 +433,7 @@
 
 /* line 9, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
 .home-container-links {
-  background: #CCF2F2;
+  overflow: hidden;
   font-family: arial;
   position: relative;
   text-align: center;
@@ -373,7 +441,12 @@
   height: 50%;
   font-family: 'Source Sans Pro';
 }
-/* line 23, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
+/* line 32, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
+.home-container-links .home-img {
+  width: 100%;
+  height: auto;
+}
+/* line 46, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
 .home-container-links .floating-container {
   position: absolute;
   left: 0;
@@ -383,21 +456,21 @@
   margin-right: auto;
   width: 100%;
 }
-/* line 32, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
+/* line 55, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
 .home-container-links .floating-container .floating-header {
   margin: 0 0 45px 0;
   color: white;
 }
-/* line 36, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
+/* line 59, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
 .home-container-links .floating-container .floating-header h1 {
   font-size: 60px;
   margin: 12px 0;
 }
-/* line 41, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
+/* line 64, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
 .home-container-links .floating-container .floating-header h2 {
   font-size: 20px;
 }
-/* line 46, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
+/* line 69, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
 .home-container-links .floating-container .floating-button {
   border: 1px solid grey;
   border-radius: 7px;
@@ -408,19 +481,19 @@
   color: white;
   font-size: 25px;
 }
-/* line 57, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
+/* line 80, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
 .home-container-links .floating-container .floating-button:hover {
   opacity: 1.0;
   filter: alpha(opacity=100);
   text-align: center;
 }
-/* line 66, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
+/* line 89, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
 .home-container-links img {
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
-  opacity: 0.7;
+  opacity: 0.9;
 }
-/* line 73, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
+/* line 108, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_home.scss */
 .home-container-links img:hover {
   opacity: 0.9;
 }
@@ -855,80 +928,90 @@ td.rdtYear:hover {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  margin: 130px 0px;
+  margin: 11% 0px;
 }
 /* line 13, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
+.session-form-main-container .errors {
+  font-size: 20px;
+  color: red;
+  text-align: center;
+}
+/* line 19, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
 .session-form-main-container form {
   margin: 4px 0;
   align-content: center;
   justify-content: center;
   flex-direction: column;
+  font-size: 19px;
 }
-/* line 20, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
+/* line 27, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
 .session-form-main-container .greeting-container {
   text-align: center;
 }
-/* line 22, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
+/* line 29, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
 .session-form-main-container .greeting-container h1 {
   text-align: center;
-  font-size: 34px;
+  font-size: 46px;
   color: #007E90;
   font-weight: bold;
 }
-/* line 29, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
+/* line 36, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
 .session-form-main-container .greeting-container h2 {
   text-align: center;
   margin: 10px;
   font-size: 20px;
 }
-/* line 36, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
+/* line 43, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
 .session-form-main-container .session-form-input {
   border: 1px solid black;
   border-radius: 7px;
   text-align: center;
   background: ghostwhite;
-  width: 495px;
+  width: 585px;
   height: 43px;
 }
-/* line 45, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
+/* line 52, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
 .session-form-main-container .session-form-submit-button {
+  color: white;
   border-radius: 7px;
   background: #91999A;
   opacity: 0.7;
   filter: alpha(opacity=50);
-  padding: 9px 224px;
+  padding: 9px 265px;
 }
-/* line 54, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
+/* line 62, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
 .session-form-main-container .session-form-submit-button:hover {
   opacity: 1.0;
   filter: alpha(opacity=100);
   color: white;
   text-align: center;
 }
-/* line 61, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
+/* line 69, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
 .session-form-main-container .session-form-navlink {
+  font-size: 20px;
+  text-transform: uppercase;
   text-align: center;
-  padding: 20px 10px;
+  padding: 32px 10px;
   color: #007E90;
 }
-/* line 67, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
+/* line 77, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
 .session-form-main-container .session-form-navlink > input {
   margin: 5px;
 }
-/* line 71, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
+/* line 81, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
 .session-form-main-container .session-form-container input {
   margin: 10px;
 }
-/* line 75, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
+/* line 85, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
 .session-form-main-container .session-form-demo {
   border-radius: 7px;
   background: #b53d34;
   opacity: 0.7;
   filter: alpha(opacity=50);
-  padding: 9px 147px;
+  padding: 9px 175px;
   color: white;
 }
-/* line 84, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
+/* line 94, /Users/vivianlee/Desktop/FullStackProject/BobaBuddies/app/assets/stylesheets/components/_session_form.scss */
 .session-form-main-container .session-form-demo:hover {
   opacity: 1.0;
   filter: alpha(opacity=100);
