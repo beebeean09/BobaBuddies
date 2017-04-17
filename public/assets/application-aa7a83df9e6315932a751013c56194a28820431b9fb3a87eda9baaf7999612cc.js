@@ -37799,9 +37799,10 @@ return jQuery;
 	      newState.currentUser.events.push(action.attendance.event);
 	      return newState;
 	    case _attendances_actions.REMOVE_ATTENDANCE:
-	      debugger;
 	      var events = state.currentUser.events.slice();
 	      var index = events.indexOf(action.id.event_id);
+	      // let seats = events[0].seats + 1;
+	      // currentUser = Object.assign({}, state.currentUser.events, { seats });
 	      events.splice(index, 1);
 	      currentUser = Object.assign({}, state.currentUser, { events: events });
 	      return Object.assign({}, state, { currentUser: currentUser });
@@ -37810,9 +37811,12 @@ return jQuery;
 	  }
 	};
 	
-	// newState = merge({}, state);
-	// delete newState.currentUser.events[action.id.event_id];
-	// return newState;
+	// case REMOVE_ATTENDANCE:
+	// let events = state.currentUser.events.slice();
+	// let index = events.indexOf(action.id.event_id);
+	// events.splice(index, 1);
+	// currentUser = Object.assign({}, state.currentUser, { events });
+	// return Object.assign({}, state, { currentUser });
 	
 	exports.default = SessionReducer;
 
@@ -37867,7 +37871,6 @@ return jQuery;
 	
 	var deleteAttendance = exports.deleteAttendance = function deleteAttendance(id) {
 	  return function (dispatch) {
-	    debugger;
 	    return AttendanceAPIUtil.deleteAttendance(id).then(function (attendance) {
 	      return dispatch(removeAttendance(attendance));
 	    });
@@ -37900,7 +37903,6 @@ return jQuery;
 	  value: true
 	});
 	var createAttendance = exports.createAttendance = function createAttendance(attendance) {
-	  debugger;
 	  return $.ajax({
 	    method: 'POST',
 	    url: 'api/attendances',
@@ -40626,6 +40628,24 @@ return jQuery;
 	  switch (action.type) {
 	    case _cities_actions.RECEIVE_CITIES:
 	      return (0, _merge2.default)({}, state, action.cities);
+	    // case SUBTRACT_SEAT:
+	    //   let newState = merge({}, state);
+	    //   if (newState.events) {
+	    //     let events = newState.events.slice();
+	    //     let index = events.indexOf(action.eventId);
+	    //     events.splice(index, 1);
+	    //     let seats = events.seats - 1;
+	    //     let cities = Object.assign({}, state.cities.events, { seats });
+	    //     return Object.assign({}, state, { cities });
+	    //   }
+	    //   return newState;
+	    // case ADD_SEAT:
+	    //   debugger;
+	    //   newState = merge({}, state);
+	    //   if (newState.events) {
+	    //     newState.events.seats = newState.events.seats + 1;
+	    //   }
+	    //   return newState;
 	    default:
 	      return state;
 	  }
@@ -40640,7 +40660,6 @@ return jQuery;
 	    case _cities_actions.RECEIVE_CITY:
 	      return (0, _merge2.default)({}, state, action.city);
 	    case _events_actions.RECEIVE_EVENT:
-	      debugger;
 	      var newState = (0, _merge2.default)({}, state);
 	      if (newState.events) {
 	        newState.events.push(action.event);
@@ -40742,7 +40761,7 @@ return jQuery;
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.removeEvent = exports.createEvent = exports.fetchUserEvents = exports.fetchEvents = exports.fetchEvent = exports.deleteEvent = exports.clearEventErrors = exports.receiveEventErrors = exports.receiveUserEvents = exports.receiveEvent = exports.receiveEvents = exports.RECEIVE_USER_EVENTS = exports.ADD_SEAT = exports.SUBTRACT_SEAT = exports.DELETE_EVENT = exports.CLEAR_EVENT_ERRORS = exports.RECEIVE_EVENT_ERRORS = exports.RECEIVE_EVENT = exports.RECEIVE_EVENTS = undefined;
+	exports.removeEvent = exports.createEvent = exports.fetchUserEvents = exports.fetchEvents = exports.fetchEvent = exports.addSeat = exports.subtractSeat = exports.deleteEvent = exports.clearEventErrors = exports.receiveEventErrors = exports.receiveUserEvents = exports.receiveEvent = exports.receiveEvents = exports.RECEIVE_USER_EVENTS = exports.ADD_SEAT = exports.SUBTRACT_SEAT = exports.DELETE_EVENT = exports.CLEAR_EVENT_ERRORS = exports.RECEIVE_EVENT_ERRORS = exports.RECEIVE_EVENT = exports.RECEIVE_EVENTS = undefined;
 	
 	var _events_api_util = __webpack_require__(333);
 	
@@ -40797,19 +40816,24 @@ return jQuery;
 	
 	var deleteEvent = exports.deleteEvent = function deleteEvent(event) {
 	  return {
-	    type: DELETE_EVENT
+	    type: DELETE_EVENT,
+	    event: event
 	  };
 	};
 	
-	// export const subtractSeat = eventId => ({
-	//   type: SUBTRACT_SEAT,
-	//   eventId
-	// });
-	//
-	// export const addSeat = eventId => ({
-	//   type: ADD_SEAT,
-	//   eventId
-	// });
+	var subtractSeat = exports.subtractSeat = function subtractSeat(eventId) {
+	  return {
+	    type: SUBTRACT_SEAT,
+	    eventId: eventId
+	  };
+	};
+	
+	var addSeat = exports.addSeat = function addSeat(eventId) {
+	  return {
+	    type: ADD_SEAT,
+	    eventId: eventId
+	  };
+	};
 	
 	var fetchEvent = exports.fetchEvent = function fetchEvent(id) {
 	  return function (dispatch) {
@@ -40924,10 +40948,8 @@ return jQuery;
 	    case _events_actions.RECEIVE_EVENTS:
 	      return (0, _merge2.default)({}, state, action.events);
 	    case _events_actions.RECEIVE_EVENT:
-	      debugger;
 	      return (0, _merge2.default)({}, state, action.event);
 	    case _events_actions.DELETE_EVENT:
-	      debugger;
 	      return {};
 	    default:
 	      return state;
@@ -41080,6 +41102,10 @@ return jQuery;
 	    if (!currentUser) {
 	      replace('/sign-in');
 	    }
+	  };
+	
+	  var redirectToCities = function redirectToCities(nextState, replace) {
+	    replace('/cities');
 	  };
 	
 	  return _react2.default.createElement(
@@ -41947,19 +41973,31 @@ return jQuery;
 	        'div',
 	        { className: 'footer-side-links' },
 	        _react2.default.createElement(
-	          'h3',
+	          'li',
 	          null,
-	          'Github'
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://github.com/beebeean09' },
+	            'Github'
+	          )
 	        ),
 	        _react2.default.createElement(
-	          'h3',
+	          'li',
 	          null,
-	          'LinkedIn'
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://www.linkedin.com/in/beebeean09/' },
+	            'LinkedIn'
+	          )
 	        ),
 	        _react2.default.createElement(
-	          'h3',
+	          'li',
 	          null,
-	          'Portfolio'
+	          _react2.default.createElement(
+	            'a',
+	            { href: '' },
+	            'Portfolio'
+	          )
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -42071,7 +42109,8 @@ return jQuery;
 	
 	    var _this = _possibleConstructorReturn(this, (SessionForm.__proto__ || Object.getPrototypeOf(SessionForm)).call(this, props));
 	
-	    _this.state = { email: "", password: "", first_name: "", host: false, profile_image: "puppy.jpg" };
+	    _this.state = { email: "", password: "", first_name: "", host: false,
+	      profile_image: "http://res.cloudinary.com/beebeean09/image/upload/v1492384751/puppy_jvtfsh.jpg" };
 	    _this.handleSubmit = _this.handleSubmit.bind(_this);
 	    _this.handleDemoLogin = _this.handleDemoLogin.bind(_this);
 	    return _this;
@@ -42091,7 +42130,7 @@ return jQuery;
 	    key: 'redirectIfLoggedIn',
 	    value: function redirectIfLoggedIn() {
 	      if (this.props.loggedIn) {
-	        this.props.router.push("/");
+	        this.props.router.push("/cities");
 	      }
 	    }
 	  }, {
@@ -42145,6 +42184,7 @@ return jQuery;
 	          return _react2.default.createElement(
 	            'li',
 	            {
+	              className: 'errors',
 	              key: 'error-' + idx },
 	            error
 	          );
@@ -42465,11 +42505,17 @@ return jQuery;
 	      router.push(url);
 	    }
 	  }, {
+	    key: 'cropPhoto',
+	    value: function cropPhoto(cityUrl) {
+	      var photoCrop = "/upload/c_thumb,h_250,w_384/";
+	      var photoUrlSplit = cityUrl.split("/upload/");
+	      var croppedUrl = photoUrlSplit[0] + photoCrop + photoUrlSplit[1];
+	      return croppedUrl;
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var _this2 = this;
-	
-	      // debugger;
 	
 	      var router = this.props.router;
 	
@@ -42486,7 +42532,7 @@ return jQuery;
 	              { className: 'city-detail-name' },
 	              city.name
 	            ),
-	            _react2.default.createElement('img', { src: city.image, alt: city.name })
+	            _react2.default.createElement('img', { src: _this2.cropPhoto('' + city.image), alt: city.name })
 	          )
 	        );
 	      });
@@ -42498,9 +42544,19 @@ return jQuery;
 	          'div',
 	          { className: 'city-index-header' },
 	          _react2.default.createElement(
-	            'p',
+	            'h1',
 	            null,
 	            'Choose a city to find your closest boba buddies!'
+	          ),
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            'We\'re building communities here.'
+	          ),
+	          _react2.default.createElement(
+	            'h3',
+	            null,
+	            'You should be able to sign up for an event today!'
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -42578,6 +42634,12 @@ return jQuery;
 	    },
 	    deleteAttendance: function deleteAttendance(id) {
 	      return dispatch((0, _attendances_actions.deleteAttendance)(id));
+	    },
+	    subtractSeat: function subtractSeat(eventId) {
+	      return dispatch((0, _events_actions.subtractSeat)(eventId));
+	    },
+	    addSeat: function addSeat(eventId) {
+	      return dispatch((0, _events_actions.addSeat)(eventId));
 	    }
 	
 	  };
@@ -42638,17 +42700,39 @@ return jQuery;
 	    value: function handleAddAttendance(id) {
 	      var attendance = { event_id: id };
 	      this.props.createAttendance(attendance);
+	      // this.props.subtractSeat(id);
 	    }
 	  }, {
 	    key: 'handleDeleteAttendance',
 	    value: function handleDeleteAttendance(id) {
-	      debugger;
 	      this.props.deleteAttendance(id);
+	      // this.props.addSeat(id);
 	    }
+	
 	    // <div className="event-index-seats">
 	    //   <li>Seats Left: {event.seats}</li>
 	    // </div>
 	
+	  }, {
+	    key: 'cropPhoto',
+	    value: function cropPhoto(cityUrl) {
+	      var photoCrop = "/upload/c_thumb,h_2158,w_3258/";
+	      var photoUrlSplit = cityUrl.split("/upload/");
+	      var croppedUrl = photoUrlSplit[0] + photoCrop + photoUrlSplit[1];
+	      return croppedUrl;
+	    }
+	  }, {
+	    key: 'splitDay',
+	    value: function splitDay(daydate) {
+	      var day = daydate.split(" ")[0];
+	      return day;
+	    }
+	  }, {
+	    key: 'splitDate',
+	    value: function splitDate(daydate) {
+	      var date = daydate.split(" ")[1] + " " + daydate.split(" ")[2];
+	      return date;
+	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
@@ -42657,7 +42741,6 @@ return jQuery;
 	      var city = this.props.city;
 	
 	      var currentUser = this.props;
-	      // debugger;
 	      var eventList = this.props.city ? city.events.map(function (event) {
 	        return _react2.default.createElement(
 	          'ul',
@@ -42673,8 +42756,13 @@ return jQuery;
 	                { className: 'event-index-datetime' },
 	                _react2.default.createElement(
 	                  'li',
+	                  { className: 'day' },
+	                  _this2.splitDay(event.date)
+	                ),
+	                _react2.default.createElement(
+	                  'li',
 	                  { className: 'date' },
-	                  event.date
+	                  _this2.splitDate(event.date)
 	                ),
 	                _react2.default.createElement(
 	                  'li',
@@ -42685,11 +42773,11 @@ return jQuery;
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'event-index-profile' },
-	                _react2.default.createElement('img', { src: 'https://res.cloudinary.com/beebeean09/image/upload/v1490342606/boba_fett-10_1x_wzaqyy.png' }),
+	                _react2.default.createElement('img', { src: event.host.profile_image }),
 	                _react2.default.createElement(
 	                  'h2',
 	                  null,
-	                  'Boba Master'
+	                  event.host.first_name
 	                )
 	              )
 	            ),
@@ -42701,14 +42789,19 @@ return jQuery;
 	                { className: 'event-index-main-title' },
 	                _react2.default.createElement(
 	                  'li',
-	                  null,
+	                  { className: 'dashboard-title' },
 	                  event.title
 	                ),
 	                _react2.default.createElement(
 	                  'li',
-	                  null,
+	                  { className: 'address' },
 	                  'Address: ',
 	                  event.address
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'seats' },
+	                  parseInt(event.seats) < 5 ? "Almost full!" : "Plenty of seats left!"
 	                )
 	              ),
 	              _this2.props.currentUser ? _this2.props.eventsAttending.includes(event.id) ? _react2.default.createElement(
@@ -42746,7 +42839,7 @@ return jQuery;
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'event-cover-img' },
-	            _react2.default.createElement('img', { src: city.image, alt: city.name })
+	            _react2.default.createElement('img', { src: this.cropPhoto('' + city.image), alt: city.name })
 	          ),
 	          _react2.default.createElement(
 	            'h1',
@@ -42880,7 +42973,6 @@ return jQuery;
 	      e.preventDefault();
 	
 	      this.props.createEvent(this.state);
-	      debugger;
 	      return _reactRouter.hashHistory.push('/cities/' + this.props.cityId);
 	    }
 	  }, {
@@ -60337,13 +60429,27 @@ return jQuery;
 	      this.props.fetchEvents();
 	    }
 	  }, {
+	    key: 'splitDay',
+	    value: function splitDay(daydate) {
+	      var day = daydate.split(" ")[0];
+	      return day;
+	    }
+	  }, {
+	    key: 'splitDate',
+	    value: function splitDate(daydate) {
+	      var date = daydate.split(" ")[1] + " " + daydate.split(" ")[2];
+	      return date;
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var _this2 = this;
+	
 	      var events = this.props.events;
 	      var hostedEvents = this.props.hostedEvents;
 	
 	      var currentLocation = this.props.location.pathname;
-	
+	      // debugger;
 	      var dashboardEvents = currentLocation === '/dashboard/events' ? events : hostedEvents;
 	
 	      var dashboardHeader = currentLocation === '/dashboard/events' ? _react2.default.createElement(
@@ -60371,8 +60477,13 @@ return jQuery;
 	                { className: 'event-index-datetime' },
 	                _react2.default.createElement(
 	                  'li',
+	                  { className: 'day' },
+	                  _this2.splitDay(event.date)
+	                ),
+	                _react2.default.createElement(
+	                  'li',
 	                  { className: 'date' },
-	                  event.date
+	                  _this2.splitDate(event.date)
 	                ),
 	                _react2.default.createElement(
 	                  'li',
@@ -60383,11 +60494,11 @@ return jQuery;
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'event-index-profile' },
-	                _react2.default.createElement('img', { src: 'https://res.cloudinary.com/beebeean09/image/upload/v1490342606/boba_fett-10_1x_wzaqyy.png' }),
+	                _react2.default.createElement('img', { src: event.host.profile_image }),
 	                _react2.default.createElement(
 	                  'h2',
 	                  null,
-	                  'Boba Master'
+	                  event.host.first_name
 	                )
 	              )
 	            ),
@@ -60401,7 +60512,7 @@ return jQuery;
 	              ),
 	              _react2.default.createElement(
 	                'li',
-	                null,
+	                { className: 'address' },
 	                'Address: ',
 	                event.address
 	              )
@@ -60443,14 +60554,30 @@ return jQuery;
 	          'div',
 	          { className: 'dashboard-navbar' },
 	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/dashboard/events' },
-	            'Current Events'
+	            'div',
+	            { className: 'dashboard-navbar-left' },
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/dashboard/events' },
+	              'Current Events'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/dashboard/hosting' },
+	              'Hosting Events'
+	            )
 	          ),
 	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/dashboard/hosting' },
-	            'Hosting Events'
+	            'div',
+	            { className: 'dashboard-navbar-right' },
+	            _react2.default.createElement('img', { src: this.props.currentUser.profile_image }),
+	            _react2.default.createElement(
+	              'h3',
+	              null,
+	              'Hello, ',
+	              this.props.currentUser.first_name,
+	              '!'
+	            )
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -60463,7 +60590,7 @@ return jQuery;
 	          { className: 'dashboard-content' },
 	          dashboardEvents.length > 0 ? _react2.default.createElement(
 	            'div',
-	            { className: 'event-index-container' },
+	            { className: 'dashboard-index-container' },
 	            bobasaurMessageFilled,
 	            _react2.default.createElement(
 	              'div',
