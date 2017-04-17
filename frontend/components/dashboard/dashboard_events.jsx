@@ -71,8 +71,13 @@ class DashboardEvents extends React.Component {
     return (
       <div className="dashboard-main-container">
         <div className="dashboard-navbar">
-          <Link to="/dashboard/events">Current Events</Link>
-          <Link to="/dashboard/hosting">Hosting Events</Link>
+          <div className="dashboard-navbar-left">
+            <Link to="/dashboard/events">Current Events</Link>
+            <Link to="/dashboard/hosting">Hosting Events</Link>
+          </div>
+          <div className="dashboard-navbar-right">
+            <h3>Hello, {this.props.currentUser.first_name}!</h3>
+          </div>
         </div>
         <div className="dashboard-events-header">
           {dashboardHeader}
