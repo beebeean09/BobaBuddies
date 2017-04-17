@@ -25,7 +25,7 @@ class DashboardEvents extends React.Component {
     const {events} = this.props;
     const {hostedEvents} = this.props;
     const currentLocation = this.props.location.pathname;
-
+    // debugger;
     const dashboardEvents = (currentLocation === '/dashboard/events') ?
     events : hostedEvents;
 
@@ -42,8 +42,8 @@ class DashboardEvents extends React.Component {
               <li className="time">{event.time}</li>
             </div>
             <div className="event-index-profile">
-              <img src="https://res.cloudinary.com/beebeean09/image/upload/v1490342606/boba_fett-10_1x_wzaqyy.png"/>
-              <h2>Boba Master</h2>
+              <img src={event.host.profile_image}/>
+              <h2>{event.host.first_name}</h2>
             </div>
           </div>
           <div className="event-index-main-title">
@@ -76,6 +76,7 @@ class DashboardEvents extends React.Component {
             <Link to="/dashboard/hosting">Hosting Events</Link>
           </div>
           <div className="dashboard-navbar-right">
+            <img src={this.props.currentUser.profile_image}/>
             <h3>Hello, {this.props.currentUser.first_name}!</h3>
           </div>
         </div>
@@ -84,7 +85,7 @@ class DashboardEvents extends React.Component {
         </div>
         <div className="dashboard-content">
           {(dashboardEvents.length > 0) ?
-            <div className="event-index-container">
+            <div className="dashboard-index-container">
               {bobasaurMessageFilled}
               <div className="dashboard-eventlist">
                 {dashboardEventsList}

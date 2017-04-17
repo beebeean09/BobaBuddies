@@ -1,4 +1,4 @@
-json.extract! user, :id, :email, :first_name, :host
+json.extract! user, :id, :email, :first_name, :host, :profile_image
 
 json.events user.events.each do |event|
 
@@ -8,6 +8,7 @@ json.events user.events.each do |event|
     json.date event.date.strftime("%A %b %d")
     json.time event.time.strftime("%I:%M %p")
     json.seats event.seats
+    json.host event.host
 
 end
 
@@ -20,5 +21,6 @@ json.hosted_events user.hosted_events do |event|
     json.date event.date.strftime("%A %b %d")
     json.time event.time.strftime("%I:%M %p")
     json.seats event.seats
+    json.host event.host
 
 end
