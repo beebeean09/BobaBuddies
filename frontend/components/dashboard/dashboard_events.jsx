@@ -57,14 +57,22 @@ class DashboardEvents extends React.Component {
       </ul>
     ));
 
-    const bobasaurMessageFilled =
+    const bobasaurMessageFilled = (currentLocation == '/dashboard/events') ?
     <div className="dashboard-message-bobasaur">
       <div className="dashboard-bobasaur-filled">
         <h1>Yay it seems like you've got a couple events coming up!</h1>
         <img src="http://res.cloudinary.com/beebeean09/image/upload/v1490247543/1-Bulbasaur_f4qnao.png"
           alt="bobasaur_img"/>
       </div>
+    </div> :
+    <div className="dashboard-message-bobasaur">
+      <div className="dashboard-bobasaur-filled">
+        <h1>Bobasaur wants to remind you of the events you're hosting!</h1>
+        <img src="http://res.cloudinary.com/beebeean09/image/upload/c_scale,h_818/v1492494294/Bulbasaur_p1pfj0.png"
+          alt="bobasaur_img"/>
+      </div>
     </div> ;
+
 
 
 
