@@ -22,9 +22,20 @@ class Navbar extends React.Component {
     if (this.props.currentUser) {
       navbarButton =
       <div className="navbar-main-right">
-        <Link className="log-button" to='/dashboard/events'>Dashboard</Link>
-        <Link className="log-button" to='/cities'>Cities</Link>
-        <button className="log-button" onClick={() => this.props.logout()}>Log Out</button>
+        <ul className="nav">
+          <li><Link className="log-button" to='/dashboard/events'>Dashboard</Link></li>
+          <li><Link className="log-button" to='/cities'>Cities</Link></li>
+          <li><button className="log-button" onClick={() => this.props.logout()}>Log Out</button></li>
+        </ul>
+        <ul className="hamburger-dropdown">
+          <li className="ham-link">
+            <ul className="ham-link-content">
+              <li className="log-button-drop"><Link to='/dashboard/events'>Dashboard</Link></li>
+              <li className="log-button-drop"><Link to='/cities'>Cities</Link></li>
+              <li className="log-button-drop"><button onClick={() => this.props.logout()}>Log Out</button></li>
+            </ul>
+          </li>
+        </ul>
       </div>;
     } else {
       navbarButton =
