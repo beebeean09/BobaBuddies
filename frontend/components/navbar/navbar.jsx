@@ -38,8 +38,8 @@ class Navbar extends React.Component {
           </form>
         </ul>
         <ul className="hamburger-dropdown">
-          <li>
-            <ul>
+          <li className="ham-link">
+            <ul className="ham-link-content">
               <li className="log-button-drop"><Link to='/cities'>Cities</Link></li>
               <li className="log-button-drop"><Link to="/sign-in">Sign In</Link></li>
               <li className="log-button-drop"><Link to="/sign-up">Sign Up</Link></li>

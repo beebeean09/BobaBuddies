@@ -58,10 +58,11 @@
     display: flex;
   }
 
-  .hamburger-dropdown > li {
-    background: url('http://res.cloudinary.com/beebeean09/image/upload/v1494379807/hamburger_tnom69.png');
+  .ham-link {
+    display: flex;
+    background: url('http://res.cloudinary.com/beebeean09/image/upload/v1494389705/whiteham_shbvjd.png');
     background-repeat: no-repeat;
-    background-size: 40px 40px;
+    background-size: 70px 47px;;
     width: 50px;
     height: 50px;
     cursor: pointer;
@@ -69,18 +70,21 @@
     z-index: 1;
   }
 
-  .hamburger-dropdown ul {
+
+
+  .ham-link-content {
+    display: none;
     position: absolute;
     top: 48px;
-    right: 13px;
+    right: 0;
     flex-direction: column;
     cursor: pointer;
     box-shadow: black 3px 3px 5px;
     background: ghostwhite;
   }
 
-  .hamburger-dropdown:hover {
-    display: flex;
+  .ham-link:hover .ham-link-content {
+    display: block;
   }
 
   .log-button-drop:hover {
@@ -89,7 +93,8 @@
   }
 
   .log-button-drop {
-    padding: 10px 8px;
+    // display: block;
+    padding: 10px 25px;
     font-size: 21px;
     text-transform: uppercase;
     font-family: 'Source Sans Pro';
