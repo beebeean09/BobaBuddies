@@ -41865,28 +41865,83 @@ return jQuery;
 	      var _this2 = this;
 	
 	      var navbarButton = void 0;
-	      // debugger;
-	
 	      if (this.props.currentUser) {
 	        navbarButton = _react2.default.createElement(
 	          'div',
 	          { className: 'navbar-main-right' },
 	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { className: 'log-button', to: '/dashboard/events' },
-	            'Dashboard'
+	            'ul',
+	            { className: 'nav' },
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { className: 'log-button', to: '/dashboard/events' },
+	                'Dashboard'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { className: 'log-button', to: '/cities' },
+	                'Cities'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                'button',
+	                { className: 'log-button', onClick: function onClick() {
+	                    return _this2.props.logout();
+	                  } },
+	                'Log Out'
+	              )
+	            )
 	          ),
 	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { className: 'log-button', to: '/cities' },
-	            'Cities'
-	          ),
-	          _react2.default.createElement(
-	            'button',
-	            { className: 'log-button', onClick: function onClick() {
-	                return _this2.props.logout();
-	              } },
-	            'Log Out'
+	            'ul',
+	            { className: 'hamburger-dropdown' },
+	            _react2.default.createElement(
+	              'li',
+	              { className: 'ham-link' },
+	              _react2.default.createElement(
+	                'ul',
+	                { className: 'ham-link-content' },
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'log-button-drop' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/dashboard/events' },
+	                    'Dashboard'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'log-button-drop' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/cities' },
+	                    'Cities'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'log-button-drop' },
+	                  _react2.default.createElement(
+	                    'button',
+	                    { onClick: function onClick() {
+	                        return _this2.props.logout();
+	                      } },
+	                    'Log Out'
+	                  )
+	                )
+	              )
+	            )
 	          )
 	        );
 	      } else {
@@ -41894,24 +41949,92 @@ return jQuery;
 	          'div',
 	          { className: 'navbar-main-right' },
 	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { className: 'log-button', to: '/cities' },
-	            'Cities'
+	            'ul',
+	            { className: 'nav' },
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { className: 'log-button', to: '/cities' },
+	                'Cities'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { className: 'log-button', to: '/sign-in' },
+	                'Sign In'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { className: 'log-button', to: '/sign-up' },
+	                'Sign Up'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'form',
+	              { onSubmit: this.handleDemoLogin },
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement('input', { className: 'log-button', type: 'submit', value: 'Demo Login' })
+	              )
+	            )
 	          ),
 	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { className: 'log-button', to: '/sign-in' },
-	            'Sign In'
-	          ),
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { className: 'log-button', to: '/sign-up' },
-	            'Sign Up'
-	          ),
-	          _react2.default.createElement(
-	            'form',
-	            { onSubmit: this.handleDemoLogin },
-	            _react2.default.createElement('input', { className: 'log-button', type: 'submit', value: 'Demo Login' })
+	            'ul',
+	            { className: 'hamburger-dropdown' },
+	            _react2.default.createElement(
+	              'li',
+	              { className: 'ham-link' },
+	              _react2.default.createElement(
+	                'ul',
+	                { className: 'ham-link-content' },
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'log-button-drop' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/cities' },
+	                    'Cities'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'log-button-drop' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/sign-in' },
+	                    'Sign In'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'log-button-drop' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/sign-up' },
+	                    'Sign Up'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'form',
+	                  { onSubmit: this.handleDemoLogin },
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement('input', { className: 'log-button-drop', type: 'submit', value: 'Demo Login' })
+	                  )
+	                )
+	              )
+	            )
 	          )
 	        );
 	      }
@@ -42109,7 +42232,8 @@ return jQuery;
 	
 	    var _this = _possibleConstructorReturn(this, (SessionForm.__proto__ || Object.getPrototypeOf(SessionForm)).call(this, props));
 	
-	    _this.state = { email: "", password: "", first_name: "", host: false, profile_image: "puppy.jpg" };
+	    _this.state = { email: "", password: "", first_name: "", host: false,
+	      profile_image: "http://res.cloudinary.com/beebeean09/image/upload/v1492384751/puppy_jvtfsh.jpg" };
 	    _this.handleSubmit = _this.handleSubmit.bind(_this);
 	    _this.handleDemoLogin = _this.handleDemoLogin.bind(_this);
 	    return _this;
@@ -42183,6 +42307,7 @@ return jQuery;
 	          return _react2.default.createElement(
 	            'li',
 	            {
+	              className: 'errors',
 	              key: 'error-' + idx },
 	            error
 	          );
@@ -42712,6 +42837,26 @@ return jQuery;
 	    // </div>
 	
 	  }, {
+	    key: 'cropPhoto',
+	    value: function cropPhoto(cityUrl) {
+	      var photoCrop = "/upload/c_thumb,h_2158,w_3258/";
+	      var photoUrlSplit = cityUrl.split("/upload/");
+	      var croppedUrl = photoUrlSplit[0] + photoCrop + photoUrlSplit[1];
+	      return croppedUrl;
+	    }
+	  }, {
+	    key: 'splitDay',
+	    value: function splitDay(daydate) {
+	      var day = daydate.split(" ")[0];
+	      return day;
+	    }
+	  }, {
+	    key: 'splitDate',
+	    value: function splitDate(daydate) {
+	      var date = daydate.split(" ")[1] + " " + daydate.split(" ")[2];
+	      return date;
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var _this2 = this;
@@ -42719,7 +42864,6 @@ return jQuery;
 	      var city = this.props.city;
 	
 	      var currentUser = this.props;
-	      // debugger;
 	      var eventList = this.props.city ? city.events.map(function (event) {
 	        return _react2.default.createElement(
 	          'ul',
@@ -42735,8 +42879,13 @@ return jQuery;
 	                { className: 'event-index-datetime' },
 	                _react2.default.createElement(
 	                  'li',
+	                  { className: 'day' },
+	                  _this2.splitDay(event.date)
+	                ),
+	                _react2.default.createElement(
+	                  'li',
 	                  { className: 'date' },
-	                  event.date
+	                  _this2.splitDate(event.date)
 	                ),
 	                _react2.default.createElement(
 	                  'li',
@@ -42747,11 +42896,11 @@ return jQuery;
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'event-index-profile' },
-	                _react2.default.createElement('img', { src: 'https://res.cloudinary.com/beebeean09/image/upload/v1490342606/boba_fett-10_1x_wzaqyy.png' }),
+	                _react2.default.createElement('img', { src: event.host.profile_image }),
 	                _react2.default.createElement(
 	                  'h2',
 	                  null,
-	                  'Boba Master'
+	                  event.host.first_name
 	                )
 	              )
 	            ),
@@ -42813,7 +42962,7 @@ return jQuery;
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'event-cover-img' },
-	            _react2.default.createElement('img', { src: city.image, alt: city.name })
+	            _react2.default.createElement('img', { src: this.cropPhoto('' + city.image), alt: city.name })
 	          ),
 	          _react2.default.createElement(
 	            'h1',
@@ -60403,13 +60552,27 @@ return jQuery;
 	      this.props.fetchEvents();
 	    }
 	  }, {
+	    key: 'splitDay',
+	    value: function splitDay(daydate) {
+	      var day = daydate.split(" ")[0];
+	      return day;
+	    }
+	  }, {
+	    key: 'splitDate',
+	    value: function splitDate(daydate) {
+	      var date = daydate.split(" ")[1] + " " + daydate.split(" ")[2];
+	      return date;
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var _this2 = this;
+	
 	      var events = this.props.events;
 	      var hostedEvents = this.props.hostedEvents;
 	
 	      var currentLocation = this.props.location.pathname;
-	
+	      // debugger;
 	      var dashboardEvents = currentLocation === '/dashboard/events' ? events : hostedEvents;
 	
 	      var dashboardHeader = currentLocation === '/dashboard/events' ? _react2.default.createElement(
@@ -60437,8 +60600,13 @@ return jQuery;
 	                { className: 'event-index-datetime' },
 	                _react2.default.createElement(
 	                  'li',
+	                  { className: 'day' },
+	                  _this2.splitDay(event.date)
+	                ),
+	                _react2.default.createElement(
+	                  'li',
 	                  { className: 'date' },
-	                  event.date
+	                  _this2.splitDate(event.date)
 	                ),
 	                _react2.default.createElement(
 	                  'li',
@@ -60449,11 +60617,11 @@ return jQuery;
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'event-index-profile' },
-	                _react2.default.createElement('img', { src: 'https://res.cloudinary.com/beebeean09/image/upload/v1490342606/boba_fett-10_1x_wzaqyy.png' }),
+	                _react2.default.createElement('img', { src: event.host.profile_image }),
 	                _react2.default.createElement(
 	                  'h2',
 	                  null,
-	                  'Boba Master'
+	                  event.host.first_name
 	                )
 	              )
 	            ),
@@ -60486,7 +60654,7 @@ return jQuery;
 	        );
 	      });
 	
-	      var bobasaurMessageFilled = _react2.default.createElement(
+	      var bobasaurMessageFilled = currentLocation == '/dashboard/events' ? _react2.default.createElement(
 	        'div',
 	        { className: 'dashboard-message-bobasaur' },
 	        _react2.default.createElement(
@@ -60500,6 +60668,20 @@ return jQuery;
 	          _react2.default.createElement('img', { src: 'http://res.cloudinary.com/beebeean09/image/upload/v1490247543/1-Bulbasaur_f4qnao.png',
 	            alt: 'bobasaur_img' })
 	        )
+	      ) : _react2.default.createElement(
+	        'div',
+	        { className: 'dashboard-message-bobasaur' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'dashboard-bobasaur-filled' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            'Bobasaur wants to remind you of the events you\'re hosting!'
+	          ),
+	          _react2.default.createElement('img', { src: 'http://res.cloudinary.com/beebeean09/image/upload/c_scale,h_818/v1492494294/Bulbasaur_p1pfj0.png',
+	            alt: 'bobasaur_img' })
+	        )
 	      );
 	
 	      return _react2.default.createElement(
@@ -60509,14 +60691,30 @@ return jQuery;
 	          'div',
 	          { className: 'dashboard-navbar' },
 	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/dashboard/events' },
-	            'Current Events'
+	            'div',
+	            { className: 'dashboard-navbar-left' },
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/dashboard/events' },
+	              'Current Events'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/dashboard/hosting' },
+	              'Hosting Events'
+	            )
 	          ),
 	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/dashboard/hosting' },
-	            'Hosting Events'
+	            'div',
+	            { className: 'dashboard-navbar-right' },
+	            _react2.default.createElement('img', { src: this.props.currentUser.profile_image }),
+	            _react2.default.createElement(
+	              'h3',
+	              null,
+	              'Hello, ',
+	              this.props.currentUser.first_name,
+	              '!'
+	            )
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -60529,7 +60727,7 @@ return jQuery;
 	          { className: 'dashboard-content' },
 	          dashboardEvents.length > 0 ? _react2.default.createElement(
 	            'div',
-	            { className: 'event-index-container' },
+	            { className: 'dashboard-index-container' },
 	            bobasaurMessageFilled,
 	            _react2.default.createElement(
 	              'div',

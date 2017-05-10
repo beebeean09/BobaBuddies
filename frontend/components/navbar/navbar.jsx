@@ -17,8 +17,6 @@ class Navbar extends React.Component {
 
   render() {
     let navbarButton;
-    // debugger;
-
     if (this.props.currentUser) {
       navbarButton =
       <div className="navbar-main-right">
