@@ -4,9 +4,10 @@
   justify-content: space-between;
   background-color: #75B3B3;
   font-family: 'Source Sans Pro';
+  align-items: center;
 }
 
-.navbar-main-right, .navbar-main-left {
+.navbar-main-right, .navbar-main-left, .nav {
   display: flex;
   align-content: center;
 }
@@ -27,6 +28,7 @@
   padding: 10px 8px;
   font-size: 21px;
   text-transform: uppercase;
+  flex-direction: row;
 }
 
 .log-button:hover {
@@ -41,4 +43,55 @@
   align-items: center;
   margin: auto 12px;
   padding: 3px 3px;
+}
+
+.hamburger-dropdown {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .nav {
+    display: none;
+  }
+
+  .hamburger-dropdown {
+    display: flex;
+  }
+
+  .hamburger-dropdown > li {
+    background: url('http://res.cloudinary.com/beebeean09/image/upload/v1494379807/hamburger_tnom69.png');
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hamburger-dropdown ul {
+    position: absolute;
+    top: 48px;
+    right: 13px;
+    flex-direction: column;
+    cursor: pointer;
+    box-shadow: black 3px 3px 5px;
+    background: ghostwhite;
+  }
+
+  .hamburger-dropdown:hover {
+    display: flex;
+  }
+
+  .log-button-drop:hover {
+    background: #9dabac;
+    color: white;
+  }
+
+  .log-button-drop {
+    padding: 10px 8px;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro';
+  }
 }

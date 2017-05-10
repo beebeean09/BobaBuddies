@@ -29,12 +29,26 @@ class Navbar extends React.Component {
     } else {
       navbarButton =
       <div className="navbar-main-right">
-        <Link className="log-button" to='/cities'>Cities</Link>
-        <Link className="log-button" to="/sign-in">Sign In</Link>
-        <Link className="log-button" to="/sign-up">Sign Up</Link>
-        <form onSubmit={this.handleDemoLogin}>
-          <input className="log-button" type="submit" value="Demo Login" />
-        </form>
+        <ul className="nav">
+          <li><Link className="log-button" to='/cities'>Cities</Link></li>
+          <li><Link className="log-button" to="/sign-in">Sign In</Link></li>
+          <li><Link className="log-button" to="/sign-up">Sign Up</Link></li>
+          <form onSubmit={this.handleDemoLogin}>
+            <li><input className="log-button" type="submit" value="Demo Login" /></li>
+          </form>
+        </ul>
+        <ul className="hamburger-dropdown">
+          <li>
+            <ul>
+              <li className="log-button-drop"><Link to='/cities'>Cities</Link></li>
+              <li className="log-button-drop"><Link to="/sign-in">Sign In</Link></li>
+              <li className="log-button-drop"><Link to="/sign-up">Sign Up</Link></li>
+              <form onSubmit={this.handleDemoLogin}>
+                <li><input className="log-button-drop" type="submit" value="Demo Login" /></li>
+              </form>
+            </ul>
+          </li>
+        </ul>
       </div>;
     }
     return(

@@ -262,3 +262,16 @@
 .dashboard-seats {
   font-size: 15px;
 }
+
+@media screen and (max-width: 700px) {
+  .event-cover-img {
+    background-color: blue;
+    background-size: cover;
+    background-position: 50% 50%, 0%;
+    background-repeat: no-repeat;
+
+    img {
+    }
+  }
+
+}
