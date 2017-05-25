@@ -17,10 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
   }
 
-  window.store = store;
-  window.createAttendance = createAttendance;
-  window.deleteAttendance = deleteAttendance;
-
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);
 });
