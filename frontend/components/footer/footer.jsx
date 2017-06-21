@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-side-links">
           <li><a href="https://github.com/beebeean09">Github</a></li>
           <li><a href="https://www.linkedin.com/in/beebeean09/">LinkedIn</a></li>
-          <li><a href="http://www.vivianlee.life/">Portfolio</a></li>
+          <li><a href="http://www.vivianlee.life">Portfolio Here</a></li>
         </div>
         <div className="footer-about-text">
           <p>Boba Buddies is all about making our cities feel
