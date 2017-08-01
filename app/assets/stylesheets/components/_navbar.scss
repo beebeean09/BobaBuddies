@@ -31,6 +31,11 @@
   flex-direction: row;
 }
 
+.log-button-drop > input {
+  padding: 0;
+  text-transform: uppercase;
+}
+
 .log-button:hover {
   padding: 10px 8px;
   border-radius: 7px;
@@ -79,8 +84,10 @@
     flex-direction: column;
     cursor: pointer;
     box-shadow: #676767 2px 2px 10px;;
-    background: #f6ffff;
-    border-radius: 3px;
+    // background: #f6ffff;
+    background: rgb(254, 255, 255);
+    // border-radius: 3px;
+    width: 200px;
   }
 
   .ham-link:hover .ham-link-content {
@@ -88,7 +95,7 @@
   }
 
   .log-button-drop:hover {
-    background: #9dabac;
+    background: rgba(157, 171, 172, 0.47);
     color: white;
   }
 

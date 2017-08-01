@@ -53,7 +53,7 @@ class Navbar extends React.Component {
               <li className="log-button-drop"><Link to="/sign-in">Sign In</Link></li>
               <li className="log-button-drop"><Link to="/sign-up">Sign Up</Link></li>
               <form onSubmit={this.handleDemoLogin}>
-                <li><input className="log-button-drop" type="submit" value="Demo Login" /></li>
+                <li className="log-button-drop"><input type="submit" value="Demo Login" /></li>
               </form>
             </ul>
           </li>
