@@ -6,10 +6,12 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= favicon_link_tag 'favicon.ico' %>
 
     <link href="https://fonts.googleapis.com/css?family=Delius+Swash+Caps" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico">
     <script type="text/javascript">
       window.cloudinary_options = {
         cloud_name: '<%= ENV['CLOUD_NAME']%>',
